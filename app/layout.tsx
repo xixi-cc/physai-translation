@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   title: '物译｜PhysAI Translation',
   description: '独立维护的 AI 辅助物理文章、专著与讲义中文翻译资料库。',
   icons: { icon: '/wuyi-logo.svg' },
-  openGraph: { title: '物译｜PhysAI Translation', description: '原著、译本、术语与制作指南。', url: '/', siteName: '物译', locale: 'zh_CN', type: 'website', images: [{ url: '/og.png', width: 1734, height: 907, alt: '物译' }] },
-  twitter: { card: 'summary_large_image', title: '物译｜PhysAI Translation', description: '原著、译本、术语与制作指南。', images: ['/og.png'] },
+  openGraph: { title: '物译｜PhysAI Translation', description: '物理原著、中文译本与完整翻译指南。', url: '/', siteName: '物译', locale: 'zh_CN', type: 'website', images: [{ url: '/og.png', width: 1734, height: 907, alt: '物译' }] },
+  twitter: { card: 'summary_large_image', title: '物译｜PhysAI Translation', description: '物理原著、中文译本与完整翻译指南。', images: ['/og.png'] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
