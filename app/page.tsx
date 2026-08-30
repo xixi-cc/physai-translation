@@ -49,18 +49,18 @@ export default function Home() {
         </article>):<div className="empty">没有找到匹配的译本。</div>}</div>}
         {section==='originals'&&<div className="simple-list">{filtered.map(item=><article key={item.en}><img className="original-cover" src={item.cover} alt=""/><div><h2>{item.en}</h2><p>{item.field} · English PDF · {item.os}</p></div><a href={item.original} target="_blank"><FileText size={14}/>打开 PDF</a></article>)}</div>}
         {section==='guide'&&<div className="guide-page">
-          <section className="guide-intro"><span>CODEX TRANSLATION WORKFLOW</span><h2>我们怎样用 Codex 翻译一本物理原著</h2><p>每本书使用一个独立 Codex 任务和一个独立目录。原著 PDF 是唯一内容依据；Codex 负责提取、初译、LaTeX 编排、编译和审计，人负责确定版本、处理物理歧义并批准最终交付。</p></section>
-          <div className="guide-principles"><article><strong>你负责决策</strong><p>选择原著与版本，确认版权边界，回答歧义问题并批准最终译文。</p></article><article><strong>Codex 负责执行</strong><p>读取 PDF、维护术语和进度、分章翻译、编译、审计并生成交付包。</p></article><article><strong>工具负责验证</strong><p>PDF 提取保证页码可追溯，XeLaTeX 生成成品，Git 和哈希保留版本证据。</p></article></div>
-          <section className="codex-start"><span>如何开始</span><h2>在一个新 Codex 任务中提交原著 PDF</h2><p>建议直接说明交付标准，而不只说“请翻译这本书”。可以使用下面这段开场请求：</p><blockquote>请在独立目录中完整翻译这本物理原著。以我提供的 PDF 为唯一内容依据，保留公式、图表、编号和引用；建立中文 LaTeX 工程、术语表、问题记录与进度文件；逐章翻译并编译，完成三轮审核后交付可重新编译的工程、中文 PDF、清单和文件哈希。</blockquote></section>
+          <section className="guide-intro"><span>AI-ASSISTED TRANSLATION WORKFLOW</span><h2>怎样用 AI 辅助翻译一本物理原著</h2><p>每本书使用一个独立任务和一个独立目录。原著 PDF 是唯一内容依据；AI 工具协助提取、初译、LaTeX 编排与检查，人负责确定版本、处理物理歧义并批准最终交付。无论使用哪一种 AI 工具，都可以遵循下面的流程。</p></section>
+          <div className="guide-principles"><article><strong>人负责决策</strong><p>选择原著与版本，确认版权边界，回答歧义问题并批准最终译文。</p></article><article><strong>AI 协助执行</strong><p>读取 PDF、维护术语和进度、分章翻译、整理 LaTeX，并协助检查问题。</p></article><article><strong>工具负责验证</strong><p>PDF 提取保证页码可追溯，XeLaTeX 生成成品，Git 和哈希保留版本证据。</p></article></div>
+          <section className="workflow-start"><span>如何开始</span><h2>向 AI 工具提交原著 PDF 和交付要求</h2><p>建议直接说明完整交付标准，而不只说“请翻译这本书”。可以参考下面这段请求，并根据所用工具的能力调整：</p><blockquote>请协助我在独立目录中完整翻译这本物理原著。以我提供的 PDF 为唯一内容依据，保留公式、图表、编号和引用；建立中文 LaTeX 工程、术语表、问题记录与进度文件；逐章翻译并编译，完成三轮审核后交付可重新编译的工程、中文 PDF、清单和文件哈希。</blockquote></section>
           <div className="guide-content">
-            <section><span>01</span><div><h2>Codex 做只读预检</h2><p>先读取 PDF 元数据、页数、目录、文本层、图片与字体，计算原文件哈希并建立来源清单。此时不翻译，先确认版本、缺页、扫描质量、版权边界和交付范围。</p><small><b>产物：</b>来源清单、页码映射、风险与问题列表。</small></div></section>
-            <section><span>02</span><div><h2>Codex 建立可编译工程</h2><p>按原著目录建立 chapter 文件、图片目录、主 LaTeX 文件、术语表、问题记录、进度表和编译说明。先生成一个能够通过 XeLaTeX 的空骨架，再开始写译文。</p><small><b>产物：</b>可编译基线，而不是零散的聊天文本。</small></div></section>
-            <section><span>03</span><div><h2>Codex 固定翻译约定</h2><p>从前言和首章提取核心术语、符号、单位、人物名与书目格式，形成全书共享的约定。公式不改写，编号、标签、引用、粗斜体和定理环境与原著对应。</p><small><b>需要你确认：</b>有多种合理译法的核心术语和专名。</small></div></section>
-            <section><span>04</span><div><h2>Codex 按章、按小节翻译</h2><p>每次读取当前小节及必要的前后文，译入对应的 LaTeX 文件，并保留原著页码依据。图、表、脚注、引用和公式随正文一起处理；不把整本书一次性生成后再猜测缺失内容。</p><small><b>执行原则：</b>小批次、可编译、可回查、可继续。</small></div></section>
-            <section><span>05</span><div><h2>每完成一章立即编译</h2><p>Codex 运行 XeLaTeX，修复语法错误、缺图、断链引用、公式溢出和浮动体问题，同时更新进度表与遗留问题。编译成功只证明工程机械一致，并不等于翻译已经正确。</p><small><b>产物：</b>章节检查点 PDF 和可恢复的进度记录。</small></div></section>
-            <section><span>06</span><div><h2>Codex 执行三轮审核</h2><p><b>忠实性审核</b>逐段对照 PDF，检查漏译、增译与语气；<b>物理审核</b>检查定义、推导、符号、量纲和因果关系；<b>中文与版面审核</b>统一术语、标点、引用并检查逐页视觉结果。</p><small><b>需要你处理：</b>影响科学含义但原文仍有歧义的判断。</small></div></section>
-            <section><span>07</span><div><h2>Codex 做全书覆盖审计</h2><p>比较原著目录、页码范围与中文工程，检查每章、附录、索引、参考文献、图表和公式是否有对应内容；再从干净环境完整编译，避免只在开发目录中偶然成功。</p><small><b>完成条件：</b>覆盖完整、干净编译、PDF 逐页可读。</small></div></section>
-            <section><span>08</span><div><h2>Codex 打包并生成证据</h2><p>输出最终中文 PDF、可编辑 LaTeX、术语与问题记录、编译说明、文件清单和 SHA-256 哈希；随后解压交付包并重新编译一次，确认接收者能够复现成品。</p><small><b>最终批准：</b>由你查看 PDF 和审核记录后决定是否发布。</small></div></section>
+            <section><span>01</span><div><h2>先做只读预检</h2><p>读取 PDF 元数据、页数、目录、文本层、图片与字体，计算原文件哈希并建立来源清单。此时不翻译，先确认版本、缺页、扫描质量、版权边界和交付范围。</p><small><b>产物：</b>来源清单、页码映射、风险与问题列表。</small></div></section>
+            <section><span>02</span><div><h2>建立可编译工程</h2><p>按原著目录建立章节文件、图片目录、主 LaTeX 文件、术语表、问题记录、进度表和编译说明。先生成一个能够通过 XeLaTeX 的空骨架，再开始写译文。</p><small><b>产物：</b>可编译基线，而不是零散的聊天文本。</small></div></section>
+            <section><span>03</span><div><h2>固定翻译约定</h2><p>从前言和首章提取核心术语、符号、单位、人物名与书目格式，形成全书共享的约定。公式不改写，编号、标签、引用、粗斜体和定理环境与原著对应。</p><small><b>需要人工确认：</b>有多种合理译法的核心术语和专名。</small></div></section>
+            <section><span>04</span><div><h2>按章、按小节翻译</h2><p>每次向 AI 提供当前小节及必要的前后文，将译文写入对应的 LaTeX 文件，并保留原著页码依据。图、表、脚注、引用和公式随正文一起处理；不要一次生成整本书后再猜测缺失内容。</p><small><b>执行原则：</b>小批次、可编译、可回查、可继续。</small></div></section>
+            <section><span>05</span><div><h2>每完成一章立即编译</h2><p>运行 XeLaTeX，修复语法错误、缺图、断链引用、公式溢出和浮动体问题，同时更新进度表与遗留问题。编译成功只证明工程机械一致，并不等于翻译已经正确。</p><small><b>产物：</b>章节检查点 PDF 和可恢复的进度记录。</small></div></section>
+            <section><span>06</span><div><h2>执行三轮审核</h2><p><b>忠实性审核</b>逐段对照 PDF，检查漏译、增译与语气；<b>物理审核</b>检查定义、推导、符号、量纲和因果关系；<b>中文与版面审核</b>统一术语、标点、引用并检查逐页视觉结果。</p><small><b>必须人工处理：</b>影响科学含义但原文仍有歧义的判断。</small></div></section>
+            <section><span>07</span><div><h2>做全书覆盖审计</h2><p>比较原著目录、页码范围与中文工程，检查每章、附录、索引、参考文献、图表和公式是否有对应内容；再从干净环境完整编译，避免只在开发目录中偶然成功。</p><small><b>完成条件：</b>覆盖完整、干净编译、PDF 逐页可读。</small></div></section>
+            <section><span>08</span><div><h2>打包并保留验证证据</h2><p>输出最终中文 PDF、可编辑 LaTeX、术语与问题记录、编译说明、文件清单和 SHA-256 哈希；随后解压交付包并重新编译一次，确认接收者能够复现成品。</p><small><b>最终批准：</b>由人工查看 PDF 和审核记录后决定是否发布。</small></div></section>
           </div>
           <section className="delivery-check"><div><span>最终交付</span><h2>一份译本不仅是一份 PDF</h2></div><ul><li>中文译本 PDF</li><li>可重新编译的 LaTeX</li><li>原著版本与来源记录</li><li>术语和符号约定</li><li>审核与遗留问题</li><li>版本日期与文件哈希</li></ul></section>
         </div>}
