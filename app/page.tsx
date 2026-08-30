@@ -1,103 +1,213 @@
-import { ArrowRight, BookOpenText, Braces, Check, FileText, Languages, Mail, Quote, ScanSearch } from 'lucide-react';
+import {
+  BookMarked,
+  BookOpen,
+  CheckCircle2,
+  ChevronRight,
+  CircleDot,
+  ExternalLink,
+  FileCode2,
+  FileText,
+  GitBranch,
+  GitPullRequest,
+  Languages,
+  Search,
+  Sparkles,
+} from 'lucide-react';
 
-const works = [
-  { eyebrow: '统计物理 · 专著', title: 'Statistical Physics of Fields', zh: '场的统计物理', note: '术语统一、公式复核、中文 LaTeX 重排', tone: 'navy' },
-  { eyebrow: '非平衡物理 · 专著', title: 'The Physics of Flocking', zh: '集群运动的物理学', note: '图表保留、参考文献整理、全书一致性检查', tone: 'copper' },
-  { eyebrow: '相变与临界现象 · 专著', title: 'Elements of Phase Transitions', zh: '相变与临界现象基础', note: '物理语境校正、符号核验、可编译交付', tone: 'sage' },
+const githubUser = 'xixi-cc';
+const githubUrl = `https://github.com/${githubUser}`;
+
+type GithubProfile = {
+  login: string;
+  name: string | null;
+  avatar_url: string;
+  html_url: string;
+  public_repos: number;
+};
+
+async function getGithubProfile(): Promise<GithubProfile | null> {
+  try {
+    const response = await fetch(`https://api.github.com/users/${githubUser}`, {
+      headers: { Accept: 'application/vnd.github+json' },
+      next: { revalidate: 3600 },
+    });
+    if (!response.ok) return null;
+    return (await response.json()) as GithubProfile;
+  } catch {
+    return null;
+  }
+}
+
+const navItems = [
+  { label: '原著', href: '#originals', icon: BookOpen },
+  { label: '译本', href: '#translations', icon: Languages },
+  { label: '术语', href: '#terms', icon: BookMarked },
+  { label: '指南', href: '#guide', icon: FileText },
 ];
 
-const services = [
-  { icon: Languages, title: 'AI 辅助翻译', copy: '以物理语境为核心生成初稿，不做逐字直译。' },
-  { icon: ScanSearch, title: '人工物理审核', copy: '复核公式、符号、术语与论证关系，标出疑点。' },
-  { icon: Braces, title: 'LaTeX 重排', copy: '保留公式、图表与引用结构，交付可继续编辑的工程。' },
+const translations = [
+  {
+    zh: '场的统计物理',
+    en: 'Statistical Physics of Fields',
+    field: '统计场论',
+    status: '完整译本',
+    format: 'PDF · LaTeX',
+  },
+  {
+    zh: '集群运动的物理学',
+    en: 'The Physics of Flocking',
+    field: '非平衡物理',
+    status: '完整译本',
+    format: 'PDF · LaTeX',
+  },
+  {
+    zh: '相变与临界现象基础',
+    en: 'Elements of Phase Transitions and Critical Phenomena',
+    field: '相变与临界现象',
+    status: '完整译本',
+    format: 'PDF · LaTeX',
+  },
+  {
+    zh: '非平衡统计物理',
+    en: 'Nonequilibrium Statistical Physics',
+    field: '统计物理',
+    status: '完整译本',
+    format: 'PDF · LaTeX',
+  },
 ];
 
-export default function Home() {
+const terms = [
+  ['absorbing state', '吸收态', '非平衡相变'],
+  ['coarsening', '粗化', '相变动力学'],
+  ['flocking', '集群运动', '主动软物质'],
+  ['order parameter', '序参量', '统计物理'],
+];
+
+export default async function Home() {
+  const profile = await getGithubProfile();
+
   return (
     <main>
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="格物译研首页">
-          <img src="/gewu-logo.png" alt="" className="brand-mark" />
-          <span><strong>格物译研</strong><small>PHYSICS IN CHINESE</small></span>
-        </a>
-        <nav aria-label="主导航">
-          <a href="#works">译作</a><a href="#services">服务</a><a href="#process">流程</a>
-          <a className="nav-cta" href="#contact">联系我 <ArrowRight size={15} /></a>
-        </nav>
+      <header className="topbar">
+        <div className="topbar-inner">
+          <a className="brand" href="#top" aria-label="物译 AI 首页">
+            <span className="brand-icon">φ<span>AI</span></span>
+            <strong>物译 AI</strong>
+            <small>PhysAI</small>
+          </a>
+          <div className="site-search" role="search">
+            <Search size={16} />
+            <span>搜索原著、译本或术语</span>
+            <kbd>/</kbd>
+          </div>
+          <a className="github-link" href={githubUrl} target="_blank" rel="noreferrer">
+            <GitBranch size={19} /><span>{githubUser}</span><ExternalLink size={13} />
+          </a>
+        </div>
       </header>
 
-      <section className="hero" id="top">
-        <div className="hero-copy">
-          <div className="eyebrow"><span /> AI × PHYSICS × TRANSLATION</div>
-          <h1>让物理文章，<em>准确地说中文。</em></h1>
-          <p className="hero-lead">面向物理学论文、专著与讲义的中文翻译。AI 提升效率，物理审核守住准确，LaTeX 保留专业表达。</p>
-          <div className="hero-actions">
-            <a className="primary-button" href="#works">查看翻译案例 <ArrowRight size={17} /></a>
-            <a className="text-button" href="#process">了解工作流程</a>
-          </div>
-          <div className="trust-row" aria-label="服务特点">
-            <span><Check size={14} /> 公式与符号复核</span><span><Check size={14} /> 术语全篇统一</span><span><Check size={14} /> 可编辑 LaTeX 交付</span>
-          </div>
-        </div>
-
-        <div className="hero-visual" aria-label="从英文物理原文到中文译稿的示意图">
-          <div className="orbit orbit-one" /><div className="orbit orbit-two" />
-          <div className="paper paper-source">
-            <div className="paper-tag">SOURCE</div><p className="formula">∂<sub>t</sub>ρ + ∇·(ρv) = 0</p>
-            <div className="lines"><i /><i /><i /><i /></div><span>Non-equilibrium dynamics</span>
-          </div>
-          <div className="translation-path"><Languages size={20} /></div>
-          <div className="paper paper-target">
-            <div className="paper-tag">中文译稿</div><p className="formula">∂<sub>t</sub>ρ + ∇·(ρv) = 0</p><p>非平衡体系的连续性方程</p>
-            <div className="review-stamp"><Check size={13} /> 已复核</div>
-          </div>
-          <div className="phi-badge">φ</div>
-        </div>
-      </section>
-
-      <section className="statement"><Quote size={26} /><p>好的科学翻译，不只是换一种语言，<br />而是让推理、符号与语气一起抵达。</p></section>
-
-      <section className="section" id="works">
-        <div className="section-heading"><div><span className="section-index">01 / SELECTED WORKS</span><h2>近期译作</h2></div><p>以实际完成的物理专著为基础展示，后续可加入 PDF 预览与下载。</p></div>
-        <div className="works-grid">
-          {works.map((work, index) => (
-            <article className={`work-card ${work.tone}`} key={work.title}>
-              <div className="work-number">0{index + 1}</div><div className="book-glyph"><BookOpenText size={34} /></div>
-              <span>{work.eyebrow}</span><h3>{work.zh}</h3><p className="work-original">{work.title}</p><p className="work-note">{work.note}</p>
-              <div className="work-link"><Check size={15} /> 完整项目已完成</div>
-            </article>
+      <div className="repo-nav" id="top">
+        <div className="repo-nav-inner">
+          {navItems.map(({ label, href, icon: Icon }, index) => (
+            <a href={href} className={index === 1 ? 'active' : ''} key={label}>
+              <Icon size={16} /> {label}
+              {index === 1 && <span className="count">{translations.length}</span>}
+            </a>
           ))}
         </div>
-      </section>
+      </div>
 
-      <section className="section service-section" id="services">
-        <div className="section-heading compact"><div><span className="section-index">02 / WHAT I DO</span><h2>只做三件事，把它们做好</h2></div></div>
-        <div className="services-grid">
-          {services.map(({ icon: Icon, title, copy }, index) => (
-            <article className="service-card" key={title}><span className="service-index">0{index + 1}</span><Icon size={27} /><h3>{title}</h3><p>{copy}</p></article>
-          ))}
+      <div className="page-shell">
+        <aside className="profile-column">
+          <a href={profile?.html_url ?? githubUrl} target="_blank" rel="noreferrer">
+            <img className="avatar" src={profile?.avatar_url ?? `https://github.com/${githubUser}.png?size=220`} alt={`${githubUser} 的 GitHub 头像`} />
+          </a>
+          <h1>{profile?.name ?? 'xineng cao'}</h1>
+          <p className="username">{profile?.login ?? githubUser}</p>
+          <p className="profile-note">物理研究 · AI 工具 · 中文科学翻译</p>
+          <a className="profile-button" href={githubUrl} target="_blank" rel="noreferrer">
+            <GitBranch size={16} /> 查看 GitHub 主页
+          </a>
+          <div className="profile-stats">
+            <span><strong>{profile?.public_repos ?? '—'}</strong> 公开仓库</span>
+            <span className="live-dot"><i /> GitHub 已联动</span>
+          </div>
+          <div className="profile-links">
+            <a href="https://github.com/xixi-cc/physics_AI" target="_blank" rel="noreferrer"><FileCode2 size={15} /> physics_AI</a>
+            <a href="https://github.com/xixi-cc/article-share" target="_blank" rel="noreferrer"><FileText size={15} /> article-share</a>
+            <a href="https://github.com/xixi-cc/paper-collection" target="_blank" rel="noreferrer"><BookOpen size={15} /> paper-collection</a>
+          </div>
+        </aside>
+
+        <div className="content-column">
+          <section className="repo-heading">
+            <div className="repo-path"><Languages size={18} /><a href={githubUrl}>{githubUser}</a><span>/</span><strong>physics-translations</strong><span className="visibility">Public</span></div>
+            <a className="outline-button" href={githubUrl} target="_blank" rel="noreferrer"><GitBranch size={15} /> GitHub</a>
+          </section>
+
+          <section className="overview-grid" aria-label="资料概览">
+            <a href="#originals"><BookOpen size={20} /><span><strong>原著</strong><small>英文原版与来源信息</small></span><ChevronRight size={16} /></a>
+            <a href="#translations"><Languages size={20} /><span><strong>译本</strong><small>中文 PDF 与 LaTeX 工程</small></span><ChevronRight size={16} /></a>
+            <a href="#terms"><BookMarked size={20} /><span><strong>术语</strong><small>中英物理术语对照</small></span><ChevronRight size={16} /></a>
+            <a href="#guide"><FileText size={20} /><span><strong>指南</strong><small>翻译、审核与交付规范</small></span><ChevronRight size={16} /></a>
+          </section>
+
+          <section className="panel" id="translations">
+            <div className="panel-header">
+              <div><Languages size={18} /><strong>最新译本</strong></div>
+              <span>AI 初译 · 物理审核 · LaTeX 交付</span>
+            </div>
+            <div className="file-list">
+              {translations.map((item) => (
+                <article className="file-row" key={item.en}>
+                  <FileText className="file-icon" size={18} />
+                  <div className="file-main"><h2>{item.zh}</h2><p>{item.en}</p></div>
+                  <span className="field-label">{item.field}</span>
+                  <span className="status"><CheckCircle2 size={14} /> {item.status}</span>
+                  <span className="format">{item.format}</span>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="split-grid">
+            <div className="panel" id="originals">
+              <div className="panel-header"><div><BookOpen size={18} /><strong>原著</strong></div><span>Source</span></div>
+              <div className="compact-list">
+                {translations.slice(0, 3).map((item) => <div key={item.en}><FileText size={16} /><span>{item.en}</span><CircleDot size={13} /></div>)}
+              </div>
+            </div>
+            <div className="panel" id="guide">
+              <div className="panel-header"><div><GitPullRequest size={18} /><strong>制作指南</strong></div><span>Guide</span></div>
+              <ol className="guide-list">
+                <li><span>1</span>确认原文版本与翻译范围</li>
+                <li><span>2</span>建立术语表与符号约定</li>
+                <li><span>3</span>逐章翻译、编译与物理审核</li>
+                <li><span>4</span>交付 PDF、源码与问题记录</li>
+              </ol>
+            </div>
+          </section>
+
+          <section className="panel" id="terms">
+            <div className="panel-header"><div><BookMarked size={18} /><strong>常用术语</strong></div><span>Terms</span></div>
+            <div className="terms-table" role="table" aria-label="物理术语表">
+              <div className="terms-head" role="row"><span>English</span><span>中文</span><span>领域</span></div>
+              {terms.map(([en, zh, field]) => <div className="term-row" role="row" key={en}><code>{en}</code><strong>{zh}</strong><span>{field}</span></div>)}
+            </div>
+          </section>
+
+          <section className="readme-panel">
+            <div className="readme-title"><FileText size={17} /> README.md</div>
+            <div className="readme-body">
+              <h2><Sparkles size={20} /> 关于物译 AI</h2>
+              <p>个人维护的 AI 辅助物理翻译项目。译本以原文为内容依据，保留公式、符号、图表和参考文献结构，并通过物理语境审核与 LaTeX 编译检查。</p>
+              <p>本站只展示公开资料入口；项目源码、研究工具与更新记录通过 <a href={githubUrl} target="_blank" rel="noreferrer">GitHub @xixi-cc</a> 持续维护。</p>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
 
-      <section className="process-section" id="process">
-        <div className="process-intro"><span className="section-index">03 / PROCESS</span><h2>从原文到成稿，<br />每一步都可追溯。</h2><p>不把“AI 已翻译”当作完成。每个项目都经过结构提取、术语约定、物理复核与最终编译。</p></div>
-        <ol className="process-list">
-          <li><span>01</span><div><strong>接收原稿</strong><p>PDF、TeX 或 Word，确认范围与交付形式。</p></div><FileText /></li>
-          <li><span>02</span><div><strong>翻译与排版</strong><p>分段处理，保留公式、图表与文献结构。</p></div><Languages /></li>
-          <li><span>03</span><div><strong>物理审核</strong><p>检查术语、符号、逻辑与跨章节一致性。</p></div><ScanSearch /></li>
-          <li><span>04</span><div><strong>完整交付</strong><p>提供中文 PDF、LaTeX 源码与问题记录。</p></div><Check /></li>
-        </ol>
-      </section>
-
-      <section className="contact-section" id="contact">
-        <div><span className="section-index">START A PROJECT</span><h2>有一篇物理文章<br />想让更多中文读者看见？</h2></div>
-        <div className="contact-card"><Mail size={25} /><h3>发送原文与需求</h3><p>告诉我文章页数、领域、期望格式与时间。我会先确认是否适合翻译，再给出方案。</p><div className="contact-placeholder">联系邮箱 / 微信：上线前补充</div></div>
-      </section>
-
-      <footer>
-        <a className="brand footer-brand" href="#top"><img src="/gewu-logo.png" alt="" className="brand-mark" /><span><strong>格物译研</strong><small>PHYSICS IN CHINESE</small></span></a>
-        <p>AI 辅助 · 物理审核 · LaTeX 交付</p><p>© 2026 格物译研</p>
-      </footer>
+      <footer><span>物译 AI · PhysAI</span><a href={githubUrl} target="_blank" rel="noreferrer"><GitBranch size={15} /> xixi-cc</a><span>© 2026</span></footer>
     </main>
   );
 }
