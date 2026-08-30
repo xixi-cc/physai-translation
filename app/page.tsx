@@ -9,7 +9,7 @@ const books = [
   { zh:'集群运动的物理学', en:'The Physics of Flocking', field:'非平衡物理', original:'/pdfs/the-physics-of-flocking-original.pdf', translation:'/pdfs/the-physics-of-flocking-zh.pdf', os:'5.5 MB', ts:'2.4 MB' },
   { zh:'相变与临界现象基础', en:'Elements of Phase Transitions and Critical Phenomena', field:'相变与临界现象', original:'/pdfs/elements-phase-transitions-original.pdf', translation:'/pdfs/elements-phase-transitions-zh.pdf', os:'3.4 MB', ts:'3.6 MB' },
   { zh:'非平衡统计物理', en:'Nonequilibrium Statistical Physics', field:'统计物理', original:'/pdfs/nonequilibrium-statistical-physics-original.pdf', translation:'/pdfs/nonequilibrium-statistical-physics-zh.pdf', os:'18.2 MB', ts:'8.6 MB' },
-  { zh:'精确可解的统计力学模型', en:'Exactly Solved Models in Statistical Mechanics', field:'统计力学', original:'/pdfs/exactly-solved-models-original.pdf', translation:'/pdfs/exactly-solved-models-zh.pdf', os:'17.2 MB', ts:'2.7 MB' },
+  { zh:'精确可解的统计力学模型', en:'Exactly Solved Models in Statistical Mechanics', field:'统计力学', original:'https://physics.anu.edu.au/research/ftp/_files/Exactly.pdf', translation:'/pdfs/exactly-solved-models-zh.pdf', os:'ANU 官方 PDF', ts:'2.7 MB' },
   { zh:'非平衡相变：吸收态相变', en:'Non-Equilibrium Phase Transitions, Volume I', field:'非平衡相变', original:'/pdfs/non-equilibrium-phase-transitions-v1-original.pdf', translation:'/pdfs/non-equilibrium-phase-transitions-v1-zh.pdf', os:'6.1 MB', ts:'4.8 MB' },
 ];
 const terms = [['absorbing state','吸收态','非平衡相变'],['active matter','主动物质','软凝聚态'],['coarsening','粗化','相变动力学'],['flocking','集群运动','主动软物质'],['order parameter','序参量','统计物理'],['renormalization group','重整化群','场论'],['scaling function','标度函数','临界现象'],['universality class','普适类','相变']];
