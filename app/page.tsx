@@ -4,13 +4,14 @@ import { useEffect, useMemo, useState } from 'react';
 import { ArrowUpRight, BookOpen, Check, CircleHelp, Download, FileArchive, FileText, GitBranch, Languages, Menu, Moon, Search, Sun, X } from 'lucide-react';
 
 type Section = 'originals' | 'translations' | 'guide';
+const asset = (path:string) => `${import.meta.env.BASE_URL}${path.replace(/^\//,'')}`;
 const books = [
-  { zh:'场的统计物理', en:'Statistical Physics of Fields', field:'统计场论', cover:'/covers/statistical-physics-of-fields.jpg', original:'/pdfs/statistical-physics-of-fields-original.pdf', translation:'/pdfs/statistical-physics-of-fields-zh.pdf', os:'2.1 MB', ts:'2.6 MB' },
-  { zh:'集群运动的物理学', en:'The Physics of Flocking', field:'非平衡物理', cover:'/covers/the-physics-of-flocking.jpg', original:'/pdfs/the-physics-of-flocking-original.pdf', translation:'/pdfs/the-physics-of-flocking-zh.pdf', os:'5.5 MB', ts:'2.4 MB' },
-  { zh:'相变与临界现象基础', en:'Elements of Phase Transitions and Critical Phenomena', field:'相变与临界现象', cover:'/covers/elements-phase-transitions.jpg', original:'/pdfs/elements-phase-transitions-original.pdf', translation:'/pdfs/elements-phase-transitions-zh.pdf', os:'3.4 MB', ts:'3.6 MB' },
-  { zh:'非平衡统计物理', en:'Nonequilibrium Statistical Physics', field:'统计物理', cover:'/covers/nonequilibrium-statistical-physics.jpg', original:'/pdfs/nonequilibrium-statistical-physics-original.pdf', translation:'/pdfs/nonequilibrium-statistical-physics-zh.pdf', os:'18.2 MB', ts:'8.6 MB' },
-  { zh:'精确可解的统计力学模型', en:'Exactly Solved Models in Statistical Mechanics', field:'统计力学', cover:'/covers/exactly-solved-models.jpg', original:'https://physics.anu.edu.au/research/ftp/_files/Exactly.pdf', translation:'/pdfs/exactly-solved-models-zh.pdf', os:'ANU 官方 PDF', ts:'2.7 MB' },
-  { zh:'非平衡相变：吸收态相变', en:'Non-Equilibrium Phase Transitions, Volume I', field:'非平衡相变', cover:'/covers/non-equilibrium-phase-transitions-v1.jpg', original:'/pdfs/non-equilibrium-phase-transitions-v1-original.pdf', translation:'/pdfs/non-equilibrium-phase-transitions-v1-zh.pdf', os:'6.1 MB', ts:'4.8 MB' },
+  { zh:'场的统计物理', en:'Statistical Physics of Fields', field:'统计场论', cover:asset('/covers/statistical-physics-of-fields.jpg'), original:asset('/pdfs/statistical-physics-of-fields-original.pdf'), translation:asset('/pdfs/statistical-physics-of-fields-zh.pdf'), os:'2.1 MB', ts:'2.6 MB' },
+  { zh:'集群运动的物理学', en:'The Physics of Flocking', field:'非平衡物理', cover:asset('/covers/the-physics-of-flocking.jpg'), original:asset('/pdfs/the-physics-of-flocking-original.pdf'), translation:asset('/pdfs/the-physics-of-flocking-zh.pdf'), os:'5.5 MB', ts:'2.4 MB' },
+  { zh:'相变与临界现象基础', en:'Elements of Phase Transitions and Critical Phenomena', field:'相变与临界现象', cover:asset('/covers/elements-phase-transitions.jpg'), original:asset('/pdfs/elements-phase-transitions-original.pdf'), translation:asset('/pdfs/elements-phase-transitions-zh.pdf'), os:'3.4 MB', ts:'3.6 MB' },
+  { zh:'非平衡统计物理', en:'Nonequilibrium Statistical Physics', field:'统计物理', cover:asset('/covers/nonequilibrium-statistical-physics.jpg'), original:asset('/pdfs/nonequilibrium-statistical-physics-original.pdf'), translation:asset('/pdfs/nonequilibrium-statistical-physics-zh.pdf'), os:'18.2 MB', ts:'8.6 MB' },
+  { zh:'精确可解的统计力学模型', en:'Exactly Solved Models in Statistical Mechanics', field:'统计力学', cover:asset('/covers/exactly-solved-models.jpg'), original:'https://physics.anu.edu.au/research/ftp/_files/Exactly.pdf', translation:asset('/pdfs/exactly-solved-models-zh.pdf'), os:'ANU 官方 PDF', ts:'2.7 MB' },
+  { zh:'非平衡相变：吸收态相变', en:'Non-Equilibrium Phase Transitions, Volume I', field:'非平衡相变', cover:asset('/covers/non-equilibrium-phase-transitions-v1.jpg'), original:asset('/pdfs/non-equilibrium-phase-transitions-v1-original.pdf'), translation:asset('/pdfs/non-equilibrium-phase-transitions-v1-zh.pdf'), os:'6.1 MB', ts:'4.8 MB' },
 ];
 const navItems: { id:Section; label:string; en:string; icon:typeof BookOpen }[] = [
   { id:'originals', label:'原著', en:'Originals', icon:BookOpen }, { id:'translations', label:'译本', en:'Translations', icon:Languages },
@@ -29,17 +30,17 @@ export default function Home() {
   function toggleTheme(){const next=!dark;setDark(next);document.documentElement.dataset.theme=next?'dark':'light';localStorage.setItem('wuyi-theme',next?'dark':'light');}
   return <div className="site-frame">
     <header className="mobile-header">
-      <a className="brand" href="#" onClick={e=>{e.preventDefault();change('translations')}}><img src="/wuyi-logo.svg" alt="物译 Logo"/><span><strong>物译</strong><small>PhysAI Translation</small></span></a>
+      <a className="brand" href="#" onClick={e=>{e.preventDefault();change('translations')}}><img src={asset('/wuyi-logo.svg')} alt="物译 Logo"/><span><strong>物译</strong><small>PhysAI Translation</small></span></a>
       <button className="icon-button" onClick={toggleTheme} aria-label="切换明暗主题">{dark?<Sun/>:<Moon/>}</button><button className="icon-button" onClick={()=>setMenuOpen(!menuOpen)} aria-label="打开导航">{menuOpen?<X/>:<Menu/>}</button>
     </header>
     <div className={`mobile-nav ${menuOpen?'open':''}`}>{navItems.map(item=><button className={section===item.id?'active':''} onClick={()=>change(item.id)} key={item.id}>{item.label}<span>{item.en}</span></button>)}</div>
     <div className="content-layout">
       <aside className="sidebar">
-        <a className="brand desktop-brand" href="#" onClick={e=>{e.preventDefault();change('translations')}}><img src="/wuyi-logo.svg" alt="物译 Logo"/><span><strong>物译</strong><small>PhysAI Translation</small></span></a>
+        <a className="brand desktop-brand" href="#" onClick={e=>{e.preventDefault();change('translations')}}><img src={asset('/wuyi-logo.svg')} alt="物译 Logo"/><span><strong>物译</strong><small>PhysAI Translation</small></span></a>
         <label className="search-box"><Search size={16}/><input type="search" placeholder="搜索书名或领域" value={query} onChange={e=>setQuery(e.target.value)}/></label>
         <nav className="side-nav" aria-label="网站导航">{navItems.map(({id,label,en,icon:Icon})=><button className={section===id?'active':''} onClick={()=>change(id)} key={id}><Icon size={17}/><span><strong>{label}</strong><small>{en}</small></span>{(id==='translations'||id==='originals')&&<em>{books.length}</em>}</button>)}</nav>
         <section className="side-section"><h2>涉及领域</h2><div className="field-tags"><button onClick={()=>setQuery('统计物理')}>统计物理</button><button onClick={()=>setQuery('非平衡')}>非平衡物理</button><button onClick={()=>setQuery('相变')}>相变</button><button onClick={()=>setQuery('场论')}>场论</button></div></section>
-        <div className="sidebar-actions"><button onClick={toggleTheme}>{dark?<Sun size={15}/>:<Moon size={15}/>} {dark?'浅色模式':'深色模式'}</button><a href="https://github.com/xixi-cc" target="_blank" rel="noreferrer"><GitBranch size={15}/>GitHub<ArrowUpRight size={12}/></a></div>
+        <div className="sidebar-actions"><button onClick={toggleTheme}>{dark?<Sun size={15}/>:<Moon size={15}/>} {dark?'浅色模式':'深色模式'}</button><a href="https://github.com/xixi-cc/physai-translation" target="_blank" rel="noreferrer"><GitBranch size={15}/>GitHub 项目<ArrowUpRight size={12}/></a></div>
       </aside>
       <main className="main-content">
         <div className="content-header"><div><span>{active.en}</span><h1>{active.label}</h1></div>{(section==='translations'||section==='originals')&&<p>共 {filtered.length} 项</p>}</div>
@@ -48,21 +49,23 @@ export default function Home() {
         </article>):<div className="empty">没有找到匹配的译本。</div>}</div>}
         {section==='originals'&&<div className="simple-list">{filtered.map(item=><article key={item.en}><img className="original-cover" src={item.cover} alt=""/><div><h2>{item.en}</h2><p>{item.field} · English PDF · {item.os}</p></div><a href={item.original} target="_blank"><FileText size={14}/>打开 PDF</a></article>)}</div>}
         {section==='guide'&&<div className="guide-page">
-          <section className="guide-intro"><span>TRANSLATION WORKFLOW</span><h2>我们如何翻译一本物理原著</h2><p>AI 用来提高提取、初译和一致性检查的效率；原著 PDF 始终是内容依据，最终译文仍需逐章核对物理含义、公式、图表和中文表达。</p></section>
-          <div className="guide-principles"><article><strong>原著优先</strong><p>遇到歧义时回到 PDF 页码、上下文和作者采用的符号体系。</p></article><article><strong>可维护工程</strong><p>译文、图片、术语、问题记录和编译脚本都保留在 LaTeX 工程中。</p></article><article><strong>分层审核</strong><p>语言通顺不等于物理正确，忠实性、专业性和版面必须分别检查。</p></article></div>
+          <section className="guide-intro"><span>CODEX TRANSLATION WORKFLOW</span><h2>我们怎样用 Codex 翻译一本物理原著</h2><p>每本书使用一个独立 Codex 任务和一个独立目录。原著 PDF 是唯一内容依据；Codex 负责提取、初译、LaTeX 编排、编译和审计，人负责确定版本、处理物理歧义并批准最终交付。</p></section>
+          <div className="guide-principles"><article><strong>你负责决策</strong><p>选择原著与版本，确认版权边界，回答歧义问题并批准最终译文。</p></article><article><strong>Codex 负责执行</strong><p>读取 PDF、维护术语和进度、分章翻译、编译、审计并生成交付包。</p></article><article><strong>工具负责验证</strong><p>PDF 提取保证页码可追溯，XeLaTeX 生成成品，Git 和哈希保留版本证据。</p></article></div>
+          <section className="codex-start"><span>如何开始</span><h2>在一个新 Codex 任务中提交原著 PDF</h2><p>建议直接说明交付标准，而不只说“请翻译这本书”。可以使用下面这段开场请求：</p><blockquote>请在独立目录中完整翻译这本物理原著。以我提供的 PDF 为唯一内容依据，保留公式、图表、编号和引用；建立中文 LaTeX 工程、术语表、问题记录与进度文件；逐章翻译并编译，完成三轮审核后交付可重新编译的工程、中文 PDF、清单和文件哈希。</blockquote></section>
           <div className="guide-content">
-            <section><span>01</span><div><h2>选定原著与版本</h2><p>确认书名、作者、出版社、年份、版本、ISBN、总页数与获取来源。保存未经改动的原著 PDF，并记录文件哈希；同时确认版权状态与本站能够提供的阅读方式。</p></div></section>
-            <section><span>02</span><div><h2>拆解 PDF，建立 LaTeX 骨架</h2><p>提取目录、章节结构、正文、公式、脚注、参考文献和原始图片。先建立能够稳定编译的中文 LaTeX 工程，再按原著层级设置章、节、编号和交叉引用。</p></div></section>
-            <section><span>03</span><div><h2>固定术语、符号与排版约定</h2><p>翻译前建立术语表和符号表，记录同一概念在不同语境中的译法。公式本身不改写，变量、单位、上下标、粗斜体、定理环境和引用格式均与原著对应。</p></div></section>
-            <section><span>04</span><div><h2>按小节进行 AI 辅助初译</h2><p>以可核对的小段落为单位提交原文与上下文，要求保留公式、标签、引用和逻辑连接。AI 负责产生初稿、发现术语冲突和辅助重排，但不独立决定新的物理结论。</p></div></section>
-            <section><span>05</span><div><h2>三轮人工审核</h2><p><b>第一轮：忠实性</b>——逐段对照原文，检查漏译、误译与语气；<b>第二轮：物理性</b>——检查推导、定义、符号、量纲和因果关系；<b>第三轮：中文与一致性</b>——统一术语、标点、交叉引用和跨章节表述。</p></div></section>
-            <section><span>06</span><div><h2>编译与逐页视觉核对</h2><p>使用 XeLaTeX 完整编译，处理字体、公式溢出、浮动图表、目录、索引和参考文献。把中文 PDF 与原著逐页对照，确认章节覆盖完整，图片清晰且页码引用可追溯。</p></div></section>
-            <section><span>07</span><div><h2>交付、记录与持续修订</h2><p>发布中文 PDF 和可编辑 LaTeX 工程，并保留术语表、问题清单、审核记录、编译说明及文件哈希。读者反馈会进入问题记录，修订时更新版本日期而不覆盖历史依据。</p></div></section>
+            <section><span>01</span><div><h2>Codex 做只读预检</h2><p>先读取 PDF 元数据、页数、目录、文本层、图片与字体，计算原文件哈希并建立来源清单。此时不翻译，先确认版本、缺页、扫描质量、版权边界和交付范围。</p><small><b>产物：</b>来源清单、页码映射、风险与问题列表。</small></div></section>
+            <section><span>02</span><div><h2>Codex 建立可编译工程</h2><p>按原著目录建立 chapter 文件、图片目录、主 LaTeX 文件、术语表、问题记录、进度表和编译说明。先生成一个能够通过 XeLaTeX 的空骨架，再开始写译文。</p><small><b>产物：</b>可编译基线，而不是零散的聊天文本。</small></div></section>
+            <section><span>03</span><div><h2>Codex 固定翻译约定</h2><p>从前言和首章提取核心术语、符号、单位、人物名与书目格式，形成全书共享的约定。公式不改写，编号、标签、引用、粗斜体和定理环境与原著对应。</p><small><b>需要你确认：</b>有多种合理译法的核心术语和专名。</small></div></section>
+            <section><span>04</span><div><h2>Codex 按章、按小节翻译</h2><p>每次读取当前小节及必要的前后文，译入对应的 LaTeX 文件，并保留原著页码依据。图、表、脚注、引用和公式随正文一起处理；不把整本书一次性生成后再猜测缺失内容。</p><small><b>执行原则：</b>小批次、可编译、可回查、可继续。</small></div></section>
+            <section><span>05</span><div><h2>每完成一章立即编译</h2><p>Codex 运行 XeLaTeX，修复语法错误、缺图、断链引用、公式溢出和浮动体问题，同时更新进度表与遗留问题。编译成功只证明工程机械一致，并不等于翻译已经正确。</p><small><b>产物：</b>章节检查点 PDF 和可恢复的进度记录。</small></div></section>
+            <section><span>06</span><div><h2>Codex 执行三轮审核</h2><p><b>忠实性审核</b>逐段对照 PDF，检查漏译、增译与语气；<b>物理审核</b>检查定义、推导、符号、量纲和因果关系；<b>中文与版面审核</b>统一术语、标点、引用并检查逐页视觉结果。</p><small><b>需要你处理：</b>影响科学含义但原文仍有歧义的判断。</small></div></section>
+            <section><span>07</span><div><h2>Codex 做全书覆盖审计</h2><p>比较原著目录、页码范围与中文工程，检查每章、附录、索引、参考文献、图表和公式是否有对应内容；再从干净环境完整编译，避免只在开发目录中偶然成功。</p><small><b>完成条件：</b>覆盖完整、干净编译、PDF 逐页可读。</small></div></section>
+            <section><span>08</span><div><h2>Codex 打包并生成证据</h2><p>输出最终中文 PDF、可编辑 LaTeX、术语与问题记录、编译说明、文件清单和 SHA-256 哈希；随后解压交付包并重新编译一次，确认接收者能够复现成品。</p><small><b>最终批准：</b>由你查看 PDF 和审核记录后决定是否发布。</small></div></section>
           </div>
           <section className="delivery-check"><div><span>最终交付</span><h2>一份译本不仅是一份 PDF</h2></div><ul><li>中文译本 PDF</li><li>可重新编译的 LaTeX</li><li>原著版本与来源记录</li><li>术语和符号约定</li><li>审核与遗留问题</li><li>版本日期与文件哈希</li></ul></section>
         </div>}
       </main>
     </div>
-    <footer><span>物译 · PhysAI Translation</span><p>AI 辅助物理翻译资料库</p></footer>
+    <footer><span>物译 · PhysAI Translation</span><p>AI 辅助物理翻译资料库</p><a href="https://github.com/xixi-cc/physai-translation" target="_blank" rel="noreferrer">GitHub</a></footer>
   </div>;
 }

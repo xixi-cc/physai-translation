@@ -6,7 +6,7 @@ const sans = Noto_Sans_SC({ variable: '--font-sans-cn', subsets: ['latin'], weig
 const serif = Noto_Serif_SC({ variable: '--font-serif-cn', subsets: ['latin'], weight: ['500', '600', '700'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://gewu-physics-translation.lezontbukercfdvs4.chatgpt.site'),
+  metadataBase: new URL('https://xixi-cc.github.io/physai-translation/'),
   title: '物译｜PhysAI Translation',
   description: '独立维护的 AI 辅助物理文章、专著与讲义中文翻译资料库。',
   icons: { icon: '/wuyi-logo.svg' },
