@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">物译标志</title>
+  <path fill="#5B5BD6" d="M8 76c17 1 34 5 50 13v30c-16-8-33-12-50-13V76Z"/>
+  <path fill="#111827" d="M120 76c-17 1-34 5-50 13v30c16-8 33-12 50-13V76Z"/>
+  <path fill="#111827" fill-rule="evenodd" d="M58 10h12v12c22 3 38 17 38 35S92 89 70 92v24H58V92C36 89 20 75 20 57s16-32 38-35V10Zm0 24c-15 3-25 11-25 23s10 20 25 23V34Zm12 46c15-3 25-11 25-23S85 37 70 34v46Z"/>
+  <path fill="#fff" fill-opacity=".9" d="M61 91h6v28h-6z"/>
+</svg>

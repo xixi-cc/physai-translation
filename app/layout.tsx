@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://gewu-physics-translation.lezontbukercfdvs4.chatgpt.site'),
   title: '物译｜PhysAI Translation',
   description: '独立维护的 AI 辅助物理文章、专著与讲义中文翻译资料库。',
-  icons: { icon: '/wuyi-logo.png' },
-  openGraph: { title: '物译｜PhysAI Translation', description: '原著、译本、术语与制作指南。', url: '/', siteName: '物译', locale: 'zh_CN', type: 'website', images: [{ url: '/og.png', width: 1672, height: 941, alt: '物译' }] },
+  icons: { icon: '/wuyi-logo.svg' },
+  openGraph: { title: '物译｜PhysAI Translation', description: '原著、译本、术语与制作指南。', url: '/', siteName: '物译', locale: 'zh_CN', type: 'website', images: [{ url: '/og.png', width: 1734, height: 907, alt: '物译' }] },
   twitter: { card: 'summary_large_image', title: '物译｜PhysAI Translation', description: '原著、译本、术语与制作指南。', images: ['/og.png'] },
 };
 
