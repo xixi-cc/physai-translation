@@ -1,213 +1,153 @@
+'use client';
+
+import { useMemo, useState } from 'react';
 import {
-  BookMarked,
+  ArrowUpRight,
   BookOpen,
-  CheckCircle2,
-  ChevronRight,
-  CircleDot,
-  ExternalLink,
-  FileCode2,
+  Check,
+  CircleHelp,
+  FileArchive,
   FileText,
   GitBranch,
-  GitPullRequest,
   Languages,
+  Library,
+  Menu,
   Search,
-  Sparkles,
+  X,
 } from 'lucide-react';
 
-const githubUser = 'xixi-cc';
-const githubUrl = `https://github.com/${githubUser}`;
-
-type GithubProfile = {
-  login: string;
-  name: string | null;
-  avatar_url: string;
-  html_url: string;
-  public_repos: number;
-};
-
-async function getGithubProfile(): Promise<GithubProfile | null> {
-  try {
-    const response = await fetch(`https://api.github.com/users/${githubUser}`, {
-      headers: { Accept: 'application/vnd.github+json' },
-      next: { revalidate: 3600 },
-    });
-    if (!response.ok) return null;
-    return (await response.json()) as GithubProfile;
-  } catch {
-    return null;
-  }
-}
-
-const navItems = [
-  { label: '原著', href: '#originals', icon: BookOpen },
-  { label: '译本', href: '#translations', icon: Languages },
-  { label: '术语', href: '#terms', icon: BookMarked },
-  { label: '指南', href: '#guide', icon: FileText },
-];
+type Section = 'originals' | 'translations' | 'terms' | 'guide';
 
 const translations = [
-  {
-    zh: '场的统计物理',
-    en: 'Statistical Physics of Fields',
-    field: '统计场论',
-    status: '完整译本',
-    format: 'PDF · LaTeX',
-  },
-  {
-    zh: '集群运动的物理学',
-    en: 'The Physics of Flocking',
-    field: '非平衡物理',
-    status: '完整译本',
-    format: 'PDF · LaTeX',
-  },
-  {
-    zh: '相变与临界现象基础',
-    en: 'Elements of Phase Transitions and Critical Phenomena',
-    field: '相变与临界现象',
-    status: '完整译本',
-    format: 'PDF · LaTeX',
-  },
-  {
-    zh: '非平衡统计物理',
-    en: 'Nonequilibrium Statistical Physics',
-    field: '统计物理',
-    status: '完整译本',
-    format: 'PDF · LaTeX',
-  },
+  { zh: '场的统计物理', en: 'Statistical Physics of Fields', field: '统计场论', pages: '完整译本', format: 'PDF · LaTeX', updated: '2026-08' },
+  { zh: '集群运动的物理学', en: 'The Physics of Flocking', field: '非平衡物理', pages: '完整译本', format: 'PDF · LaTeX', updated: '2026-08' },
+  { zh: '相变与临界现象基础', en: 'Elements of Phase Transitions and Critical Phenomena', field: '相变与临界现象', pages: '完整译本', format: 'PDF · LaTeX', updated: '2026-08' },
+  { zh: '非平衡统计物理', en: 'Nonequilibrium Statistical Physics', field: '统计物理', pages: '完整译本', format: 'PDF · LaTeX', updated: '2026-08' },
+  { zh: '精确可解的统计力学模型', en: 'Exactly Solved Models in Statistical Mechanics', field: '统计力学', pages: '完整译本', format: 'PDF · LaTeX', updated: '2026-08' },
+  { zh: '非平衡相变：吸收态相变', en: 'Non-Equilibrium Phase Transitions, Volume I', field: '非平衡相变', pages: '完整译本', format: 'PDF · LaTeX', updated: '2026-08' },
 ];
+
+const originals = translations.map(({ en, field, updated }) => ({ title: en, field, source: 'English PDF', checked: updated }));
 
 const terms = [
-  ['absorbing state', '吸收态', '非平衡相变'],
-  ['coarsening', '粗化', '相变动力学'],
-  ['flocking', '集群运动', '主动软物质'],
-  ['order parameter', '序参量', '统计物理'],
+  ['absorbing state', '吸收态', '非平衡相变'], ['active matter', '主动物质', '软凝聚态'], ['coarsening', '粗化', '相变动力学'],
+  ['flocking', '集群运动', '主动软物质'], ['order parameter', '序参量', '统计物理'], ['renormalization group', '重整化群', '场论'],
+  ['scaling function', '标度函数', '临界现象'], ['universality class', '普适类', '相变'],
 ];
 
-export default async function Home() {
-  const profile = await getGithubProfile();
+const navItems: { id: Section; label: string; en: string; icon: typeof BookOpen }[] = [
+  { id: 'originals', label: '原著', en: 'Originals', icon: BookOpen },
+  { id: 'translations', label: '译本', en: 'Translations', icon: Languages },
+  { id: 'terms', label: '术语', en: 'Terms', icon: Library },
+  { id: 'guide', label: '指南', en: 'Guide', icon: CircleHelp },
+];
+
+export default function Home() {
+  const [section, setSection] = useState<Section>('translations');
+  const [query, setQuery] = useState('');
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const filteredTranslations = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return translations;
+    return translations.filter((item) => [item.zh, item.en, item.field].join(' ').toLowerCase().includes(q));
+  }, [query]);
+
+  const activeNav = navItems.find((item) => item.id === section)!;
+
+  function changeSection(next: Section) {
+    setSection(next);
+    setQuery('');
+    setMenuOpen(false);
+  }
 
   return (
-    <main>
-      <header className="topbar">
-        <div className="topbar-inner">
-          <a className="brand" href="#top" aria-label="物译 AI 首页">
-            <span className="brand-icon">φ<span>AI</span></span>
-            <strong>物译 AI</strong>
-            <small>PhysAI</small>
-          </a>
-          <div className="site-search" role="search">
-            <Search size={16} />
-            <span>搜索原著、译本或术语</span>
-            <kbd>/</kbd>
-          </div>
-          <a className="github-link" href={githubUrl} target="_blank" rel="noreferrer">
-            <GitBranch size={19} /><span>{githubUser}</span><ExternalLink size={13} />
-          </a>
-        </div>
+    <div className="site-frame">
+      <header className="site-header">
+        <a className="brand" href="#" onClick={(event) => { event.preventDefault(); changeSection('translations'); }}>
+          <img src="/wuyi-logo.png" alt="物译 Logo" />
+          <span><strong>物译</strong><small>PhysAI Translation</small></span>
+        </a>
+        <nav aria-label="网站导航">
+          {navItems.map((item) => <button className={section === item.id ? 'active' : ''} onClick={() => changeSection(item.id)} key={item.id}>{item.label}</button>)}
+        </nav>
+        <a className="github-entry" href="https://github.com/xixi-cc" target="_blank" rel="noreferrer"><GitBranch size={16} /> GitHub <ArrowUpRight size={13} /></a>
+        <button className="mobile-menu" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-label="打开导航">{menuOpen ? <X /> : <Menu />}</button>
       </header>
 
-      <div className="repo-nav" id="top">
-        <div className="repo-nav-inner">
-          {navItems.map(({ label, href, icon: Icon }, index) => (
-            <a href={href} className={index === 1 ? 'active' : ''} key={label}>
-              <Icon size={16} /> {label}
-              {index === 1 && <span className="count">{translations.length}</span>}
-            </a>
-          ))}
-        </div>
+      <div className={`mobile-nav ${menuOpen ? 'open' : ''}`}>
+        {navItems.map((item) => <button className={section === item.id ? 'active' : ''} onClick={() => changeSection(item.id)} key={item.id}>{item.label}<span>{item.en}</span></button>)}
       </div>
 
-      <div className="page-shell">
-        <aside className="profile-column">
-          <a href={profile?.html_url ?? githubUrl} target="_blank" rel="noreferrer">
-            <img className="avatar" src={profile?.avatar_url ?? `https://github.com/${githubUser}.png?size=220`} alt={`${githubUser} 的 GitHub 头像`} />
-          </a>
-          <h1>{profile?.name ?? 'xineng cao'}</h1>
-          <p className="username">{profile?.login ?? githubUser}</p>
-          <p className="profile-note">物理研究 · AI 工具 · 中文科学翻译</p>
-          <a className="profile-button" href={githubUrl} target="_blank" rel="noreferrer">
-            <GitBranch size={16} /> 查看 GitHub 主页
-          </a>
-          <div className="profile-stats">
-            <span><strong>{profile?.public_repos ?? '—'}</strong> 公开仓库</span>
-            <span className="live-dot"><i /> GitHub 已联动</span>
+      <div className="content-layout">
+        <aside className="sidebar">
+          <div className="side-title"><span>LIBRARY</span><h1>物理译作资料库</h1></div>
+          <label className="search-box">
+            <Search size={16} /><input type="search" placeholder="搜索书名、领域或术语" value={query} onChange={(event) => setQuery(event.target.value)} />
+          </label>
+          <div className="side-nav">
+            {navItems.map(({ id, label, en, icon: Icon }) => (
+              <button className={section === id ? 'active' : ''} onClick={() => changeSection(id)} key={id}>
+                <Icon size={17} /><span><strong>{label}</strong><small>{en}</small></span>
+                {id === 'translations' && <em>{translations.length}</em>}
+              </button>
+            ))}
           </div>
-          <div className="profile-links">
-            <a href="https://github.com/xixi-cc/physics_AI" target="_blank" rel="noreferrer"><FileCode2 size={15} /> physics_AI</a>
-            <a href="https://github.com/xixi-cc/article-share" target="_blank" rel="noreferrer"><FileText size={15} /> article-share</a>
-            <a href="https://github.com/xixi-cc/paper-collection" target="_blank" rel="noreferrer"><BookOpen size={15} /> paper-collection</a>
-          </div>
+          <section className="side-section">
+            <h2>涉及领域</h2>
+            <div className="field-tags"><button onClick={() => setQuery('统计物理')}>统计物理</button><button onClick={() => setQuery('非平衡')}>非平衡物理</button><button onClick={() => setQuery('相变')}>相变</button><button onClick={() => setQuery('场论')}>场论</button></div>
+          </section>
+          <section className="side-section about-side">
+            <h2>关于本站</h2>
+            <p>独立维护的 AI 辅助物理翻译资料库。GitHub 用于项目入口与更新记录。</p>
+            <a href="https://github.com/xixi-cc" target="_blank" rel="noreferrer">访问 xixi-cc <ArrowUpRight size={12} /></a>
+          </section>
         </aside>
 
-        <div className="content-column">
-          <section className="repo-heading">
-            <div className="repo-path"><Languages size={18} /><a href={githubUrl}>{githubUser}</a><span>/</span><strong>physics-translations</strong><span className="visibility">Public</span></div>
-            <a className="outline-button" href={githubUrl} target="_blank" rel="noreferrer"><GitBranch size={15} /> GitHub</a>
-          </section>
+        <main className="main-content">
+          <div className="content-header">
+            <div><span>{activeNav.en}</span><h2>{activeNav.label}</h2></div>
+            {section === 'translations' && <p>共 {filteredTranslations.length} 个译本</p>}
+          </div>
 
-          <section className="overview-grid" aria-label="资料概览">
-            <a href="#originals"><BookOpen size={20} /><span><strong>原著</strong><small>英文原版与来源信息</small></span><ChevronRight size={16} /></a>
-            <a href="#translations"><Languages size={20} /><span><strong>译本</strong><small>中文 PDF 与 LaTeX 工程</small></span><ChevronRight size={16} /></a>
-            <a href="#terms"><BookMarked size={20} /><span><strong>术语</strong><small>中英物理术语对照</small></span><ChevronRight size={16} /></a>
-            <a href="#guide"><FileText size={20} /><span><strong>指南</strong><small>翻译、审核与交付规范</small></span><ChevronRight size={16} /></a>
-          </section>
-
-          <section className="panel" id="translations">
-            <div className="panel-header">
-              <div><Languages size={18} /><strong>最新译本</strong></div>
-              <span>AI 初译 · 物理审核 · LaTeX 交付</span>
-            </div>
-            <div className="file-list">
-              {translations.map((item) => (
-                <article className="file-row" key={item.en}>
-                  <FileText className="file-icon" size={18} />
-                  <div className="file-main"><h2>{item.zh}</h2><p>{item.en}</p></div>
-                  <span className="field-label">{item.field}</span>
-                  <span className="status"><CheckCircle2 size={14} /> {item.status}</span>
-                  <span className="format">{item.format}</span>
+          {section === 'translations' && (
+            <div className="translation-list">
+              {filteredTranslations.length ? filteredTranslations.map((item, index) => (
+                <article className="translation-card" key={item.en}>
+                  <div className="cover-chip"><span>PHYS</span><strong>{String(index + 1).padStart(2, '0')}</strong></div>
+                  <div className="translation-copy"><span className="field">{item.field}</span><h3>{item.zh}</h3><p>{item.en}</p><div className="meta"><span><Check size={13} /> {item.pages}</span><span><FileArchive size={13} /> {item.format}</span><time>{item.updated}</time></div></div>
                 </article>
+              )) : <div className="empty">没有找到匹配的译本。</div>}
+            </div>
+          )}
+
+          {section === 'originals' && (
+            <div className="simple-list">
+              {originals.filter((item) => !query || [item.title, item.field].join(' ').toLowerCase().includes(query.toLowerCase())).map((item) => (
+                <article key={item.title}><BookOpen size={19} /><div><h3>{item.title}</h3><p>{item.field} · {item.source}</p></div><time>{item.checked}</time></article>
               ))}
             </div>
-          </section>
+          )}
 
-          <section className="split-grid">
-            <div className="panel" id="originals">
-              <div className="panel-header"><div><BookOpen size={18} /><strong>原著</strong></div><span>Source</span></div>
-              <div className="compact-list">
-                {translations.slice(0, 3).map((item) => <div key={item.en}><FileText size={16} /><span>{item.en}</span><CircleDot size={13} /></div>)}
-              </div>
+          {section === 'terms' && (
+            <div className="terms-card">
+              <div className="terms-head"><span>英文</span><span>推荐译法</span><span>领域</span></div>
+              {terms.filter((row) => !query || row.join(' ').toLowerCase().includes(query.toLowerCase())).map(([en, zh, field]) => <div className="term-row" key={en}><code>{en}</code><strong>{zh}</strong><span>{field}</span></div>)}
             </div>
-            <div className="panel" id="guide">
-              <div className="panel-header"><div><GitPullRequest size={18} /><strong>制作指南</strong></div><span>Guide</span></div>
-              <ol className="guide-list">
-                <li><span>1</span>确认原文版本与翻译范围</li>
-                <li><span>2</span>建立术语表与符号约定</li>
-                <li><span>3</span>逐章翻译、编译与物理审核</li>
-                <li><span>4</span>交付 PDF、源码与问题记录</li>
-              </ol>
-            </div>
-          </section>
+          )}
 
-          <section className="panel" id="terms">
-            <div className="panel-header"><div><BookMarked size={18} /><strong>常用术语</strong></div><span>Terms</span></div>
-            <div className="terms-table" role="table" aria-label="物理术语表">
-              <div className="terms-head" role="row"><span>English</span><span>中文</span><span>领域</span></div>
-              {terms.map(([en, zh, field]) => <div className="term-row" role="row" key={en}><code>{en}</code><strong>{zh}</strong><span>{field}</span></div>)}
+          {section === 'guide' && (
+            <div className="guide-content">
+              <section><span>01</span><div><h3>确认原文</h3><p>记录原著版本、来源、页数和版权状态，PDF 是内容核验依据。</p></div></section>
+              <section><span>02</span><div><h3>建立约定</h3><p>开始翻译前固定术语、符号、公式与 LaTeX 排版规范。</p></div></section>
+              <section><span>03</span><div><h3>翻译与审核</h3><p>AI 生成初稿，随后检查物理语境、逻辑关系和跨章节一致性。</p></div></section>
+              <section><span>04</span><div><h3>编译与交付</h3><p>交付中文 PDF、可编辑 LaTeX 工程、术语表和问题记录。</p></div></section>
             </div>
-          </section>
-
-          <section className="readme-panel">
-            <div className="readme-title"><FileText size={17} /> README.md</div>
-            <div className="readme-body">
-              <h2><Sparkles size={20} /> 关于物译 AI</h2>
-              <p>个人维护的 AI 辅助物理翻译项目。译本以原文为内容依据，保留公式、符号、图表和参考文献结构，并通过物理语境审核与 LaTeX 编译检查。</p>
-              <p>本站只展示公开资料入口；项目源码、研究工具与更新记录通过 <a href={githubUrl} target="_blank" rel="noreferrer">GitHub @xixi-cc</a> 持续维护。</p>
-            </div>
-          </section>
-        </div>
+          )}
+        </main>
       </div>
 
-      <footer><span>物译 AI · PhysAI</span><a href={githubUrl} target="_blank" rel="noreferrer"><GitBranch size={15} /> xixi-cc</a><span>© 2026</span></footer>
-    </main>
+      <footer><div><img src="/wuyi-logo.png" alt="" /><span><strong>物译</strong><small>PhysAI Translation</small></span></div><p>独立物理翻译资料库</p><a href="https://github.com/xixi-cc" target="_blank" rel="noreferrer"><GitBranch size={14} /> GitHub</a></footer>
+    </div>
   );
 }
