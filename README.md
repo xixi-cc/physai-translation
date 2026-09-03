@@ -3,6 +3,7 @@
 “物译”是一个独立维护的 AI 辅助物理文献中文翻译站。网站收录原著 PDF、中文译本 PDF，以及一套不依赖特定 AI 产品的翻译与审核流程。
 
 - 网站：<https://xixi-cc.github.io/physai-translation/>
+- 翻译工作流：<https://github.com/xixi-cc/mathtranslations-skill>
 - 内容：原著、译本、指南
 - 翻译方式：AI 辅助，人工确定范围、术语、审核与发布标准
 

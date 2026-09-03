@@ -43,7 +43,7 @@ export default function Home() {
         <label className="search-box"><Search size={16}/><input type="search" placeholder="搜索书名或领域" value={query} onChange={e=>setQuery(e.target.value)}/></label>
         <nav className="side-nav" aria-label="网站导航">{navItems.map(({id,label,en,icon:Icon})=><button className={section===id?'active':''} onClick={()=>change(id)} key={id}><Icon size={17}/><span><strong>{label}</strong><small>{en}</small></span>{(id==='translations'||id==='originals')&&<em>{books.length}</em>}</button>)}</nav>
         <section className="side-section"><h2>涉及领域</h2><div className="field-tags"><button onClick={()=>setQuery('统计物理')}>统计物理</button><button onClick={()=>setQuery('非平衡')}>非平衡物理</button><button onClick={()=>setQuery('相变')}>相变</button><button onClick={()=>setQuery('场论')}>场论</button></div></section>
-        <div className="sidebar-actions"><button onClick={toggleTheme}>{dark?<Sun size={15}/>:<Moon size={15}/>} {dark?'浅色模式':'深色模式'}</button><a href="https://github.com/xixi-cc/physai-translation" target="_blank" rel="noreferrer"><GitBranch size={15}/>GitHub 项目<ArrowUpRight size={12}/></a></div>
+        <div className="sidebar-actions"><button onClick={toggleTheme}>{dark?<Sun size={15}/>:<Moon size={15}/>} {dark?'浅色模式':'深色模式'}</button><a href="https://github.com/xixi-cc/physai-translation" target="_blank" rel="noreferrer"><GitBranch size={15}/>网站源码<ArrowUpRight size={12}/></a><a href="https://github.com/xixi-cc/mathtranslations-skill" target="_blank" rel="noreferrer"><GitBranch size={15}/>翻译工作流<ArrowUpRight size={12}/></a></div>
       </aside>
       <main className="main-content">
         <div className="content-header"><div><span>{active.en}</span><h1>{active.label}</h1></div>{(section==='translations'||section==='originals')&&<p>共 {filtered.length} 项</p>}</div>
@@ -69,6 +69,6 @@ export default function Home() {
         </div>}
       </main>
     </div>
-    <footer><span>物译 · PhysAI Translation</span><p>AI 辅助物理翻译资料库</p><a href="https://github.com/xixi-cc/physai-translation" target="_blank" rel="noreferrer">GitHub</a></footer>
+    <footer><span>物译 · PhysAI Translation</span><p>AI 辅助物理翻译资料库</p><div className="footer-links"><a href="https://github.com/xixi-cc/physai-translation" target="_blank" rel="noreferrer">网站源码</a><a href="https://github.com/xixi-cc/mathtranslations-skill" target="_blank" rel="noreferrer">翻译工作流</a></div></footer>
   </div>;
 }
