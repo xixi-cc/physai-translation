@@ -20,6 +20,8 @@ npm run build:pages
 npm run preview:pages
 ```
 
+`build:pages` 会把书目首屏预渲染进 `index.html`；JavaScript 尚未执行时，标题、导航和九本书的入口已经可见，加载后再接管搜索、主题和分区切换。
+
 推送到 `main` 分支后，GitHub Actions 会自动构建并发布 GitHub Pages。
 
 ## 资料说明

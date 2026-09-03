@@ -15,6 +15,7 @@
 /.next/
 /.vinext/
 /out/
+/github-pages-prerender/
 
 # misc
 .DS_Store

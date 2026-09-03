@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vinext dev",
     "build": "vinext build",
-    "build:pages": "vite build --config vite.github.config.ts",
+    "build:pages": "vite build --config vite.github.config.ts && vite build --config vite.github.ssr.config.ts && node scripts/prerender-github-pages.mjs",
     "preview:pages": "vite preview --config vite.github.config.ts",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
