@@ -7,6 +7,11 @@
 - 内容：原著、译本、指南
 - 翻译方式：AI 辅助，人工确定范围、术语、审核与发布标准
 
+## 书目封面
+
+书目卡片的封面选择、来源记录和替代条件由
+[BOOK_CARD_COVER_STANDARD.md](BOOK_CARD_COVER_STANDARD.md) 固定约束。
+
 ## 本地预览
 
 ```bash
@@ -21,7 +26,7 @@ npm run build:pages
 npm run preview:pages
 ```
 
-`build:pages` 会把书目首屏预渲染进 `index.html`；JavaScript 尚未执行时，标题、导航和九本书的入口已经可见，加载后再接管搜索、主题和分区切换。
+`build:pages` 会把书目首屏预渲染进 `index.html`；JavaScript 尚未执行时，标题、导航和全部书目的入口已经可见，加载后再接管搜索、主题和分区切换。
 
 推送到 `main` 分支后，GitHub Actions 会自动构建并发布 GitHub Pages。
 
