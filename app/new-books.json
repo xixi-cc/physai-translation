@@ -1,0 +1,385 @@
+[
+  {
+    "zh": "面向机器学习的物理学 TASI 讲义",
+    "en": "TASI Lectures on Physics for Machine Learning",
+    "field": "机器学习与物理",
+    "cover": "/covers/tasi-physics-machine-learning.jpg",
+    "original": "https://arxiv.org/abs/2408.00082",
+    "sourceLabel": "原文来源",
+    "os": "James Halverson",
+    "ts": "PDF",
+    "date": "2026-11",
+    "scope": "TASI 讲义 · arXiv v1",
+    "downloads": [
+      {
+        "label": "中文译本",
+        "url": "/pdfs/tasi-physics-machine-learning.pdf",
+        "size": "1.4 MB"
+      }
+    ]
+  },
+  {
+    "zh": "大宽度与无限宽度深度学习：Les Houches 讲义",
+    "en": "Les Houches Lectures on Deep Learning at Large and Infinite Width",
+    "field": "深度学习理论",
+    "cover": "/covers/les-houches-large-width.jpg",
+    "original": "https://arxiv.org/abs/2309.01592",
+    "sourceLabel": "原文来源",
+    "os": "Bahri, Hanin et al.",
+    "ts": "PDF",
+    "date": "2026-11",
+    "scope": "Les Houches 讲义 · arXiv v3",
+    "downloads": [
+      {
+        "label": "中文译本",
+        "url": "/pdfs/les-houches-large-width.pdf",
+        "size": "1.3 MB"
+      }
+    ]
+  },
+  {
+    "zh": "深度学习的物理学：Iliad 讲义与幻灯片",
+    "en": "Physics of Deep Learning (Iliad Intensive)",
+    "field": "深度学习理论",
+    "cover": "/covers/iliad-physics-deep-learning.jpg",
+    "original": "https://iliad-intensive.org/learning/qft/",
+    "sourceLabel": "原文来源",
+    "os": "Czejdo, Dimofte, Grado-White, Renshaw-Whitman",
+    "ts": "PDF",
+    "date": "2026-11",
+    "scope": "讲义与幻灯片",
+    "downloads": [
+      {
+        "label": "幻灯片",
+        "url": "/pdfs/iliad-physics-deep-learning-01.pdf",
+        "size": "1.4 MB"
+      },
+      {
+        "label": "讲义",
+        "url": "/pdfs/iliad-physics-deep-learning-02.pdf",
+        "size": "2.5 MB"
+      }
+    ]
+  },
+  {
+    "zh": "人工智能 Pre-Strings 讲义",
+    "en": "Pre-Strings Lectures on Artificial Intelligence",
+    "field": "人工智能与物理",
+    "cover": "/covers/prestrings-artificial-intelligence.jpg",
+    "original": "https://arxiv.org/abs/2607.02905",
+    "sourceLabel": "原文来源",
+    "os": "James Halverson",
+    "ts": "PDF",
+    "date": "2026-11",
+    "scope": "Pre-Strings 讲义",
+    "downloads": [
+      {
+        "label": "中文译本",
+        "url": "/pdfs/prestrings-artificial-intelligence.pdf",
+        "size": "1.9 MB"
+      }
+    ]
+  },
+  {
+    "zh": "优化与机器学习中的统计物理方法",
+    "en": "Statistical Physics Methods in Optimization and Machine Learning",
+    "field": "统计物理与机器学习",
+    "cover": "/covers/stat-physics-optimization.jpg",
+    "original": "https://idephics.github.io/EPFLDoctoralLecture2023/",
+    "sourceLabel": "原文来源",
+    "os": "Florent Krzakala and Lenka Zdeborova",
+    "ts": "PDF",
+    "date": "2026-11",
+    "scope": "2022、2024 讲义；部分末章缺正文",
+    "downloads": [
+      {
+        "label": "2024 版",
+        "url": "/pdfs/stat-physics-optimization-01.pdf",
+        "size": "3.4 MB"
+      },
+      {
+        "label": "2022 版",
+        "url": "/pdfs/stat-physics-optimization-02.pdf",
+        "size": "3.1 MB"
+      }
+    ]
+  },
+  {
+    "zh": "信息、物理与计算：作者章节草稿",
+    "en": "Information, Physics, and Computation (author chapter drafts)",
+    "field": "信息与统计物理",
+    "cover": "/covers/information-physics-computation.jpg",
+    "original": "https://web.stanford.edu/~montanar/RESEARCH/book.html",
+    "sourceLabel": "原文来源",
+    "os": "Marc Mezard and Andrea Montanari",
+    "ts": "PDF",
+    "date": "2026-11",
+    "scope": "作者草稿 Part A–F；非完整正式书",
+    "downloads": [
+      {
+        "label": "中文译本",
+        "url": "/pdfs/information-physics-computation.pdf",
+        "size": "7.4 MB"
+      }
+    ]
+  },
+  {
+    "zh": "现代机器学习的概率论：ORF 526",
+    "en": "Probability for Modern Machine Learning (ORF 526)",
+    "field": "概率与机器学习",
+    "cover": "/covers/orf526-probability.jpg",
+    "original": "https://boris-hanin.github.io/prob-ml/",
+    "sourceLabel": "原文来源",
+    "os": "Boris Hanin",
+    "ts": "PDF",
+    "date": "2026-11",
+    "scope": "11 份课程资料；非完整课程",
+    "downloads": [
+      {
+        "label": "第 2 讲笔记",
+        "url": "/pdfs/orf526-probability-01.pdf",
+        "size": "0.3 MB"
+      },
+      {
+        "label": "第 3 份解答",
+        "url": "/pdfs/orf526-probability-02.pdf",
+        "size": "0.3 MB"
+      },
+      {
+        "label": "第 4 份笔记",
+        "url": "/pdfs/orf526-probability-03.pdf",
+        "size": "0.4 MB"
+      },
+      {
+        "label": "第 5 份解答",
+        "url": "/pdfs/orf526-probability-04.pdf",
+        "size": "0.3 MB"
+      },
+      {
+        "label": "第 6 份笔记",
+        "url": "/pdfs/orf526-probability-05.pdf",
+        "size": "0.5 MB"
+      },
+      {
+        "label": "第 7 份解答",
+        "url": "/pdfs/orf526-probability-06.pdf",
+        "size": "0.2 MB"
+      },
+      {
+        "label": "第 8 份笔记",
+        "url": "/pdfs/orf526-probability-07.pdf",
+        "size": "0.3 MB"
+      },
+      {
+        "label": "第 9 份解答",
+        "url": "/pdfs/orf526-probability-08.pdf",
+        "size": "0.3 MB"
+      },
+      {
+        "label": "第 10 份解答",
+        "url": "/pdfs/orf526-probability-09.pdf",
+        "size": "0.2 MB"
+      },
+      {
+        "label": "第 11 份笔记",
+        "url": "/pdfs/orf526-probability-10.pdf",
+        "size": "0.4 MB"
+      },
+      {
+        "label": "手写笔记",
+        "url": "/pdfs/orf526-probability-11.pdf",
+        "size": "0.8 MB"
+      }
+    ]
+  },
+  {
+    "zh": "流匹配与扩散模型导论",
+    "en": "Introduction to Flow Matching and Diffusion Models (MIT 6.S184)",
+    "field": "生成模型",
+    "cover": "/covers/flow-matching-diffusion.jpg",
+    "original": "https://diffusion.csail.mit.edu/",
+    "sourceLabel": "原文来源",
+    "os": "Peter Holderrieth and Ezra Erives",
+    "ts": "PDF",
+    "date": "2026-11",
+    "scope": "MIT 课程讲义",
+    "downloads": [
+      {
+        "label": "中文译本",
+        "url": "/pdfs/flow-matching-diffusion.pdf",
+        "size": "5.1 MB"
+      }
+    ]
+  },
+  {
+    "zh": "扩散模型原理",
+    "en": "The Principles of Diffusion Models",
+    "field": "生成模型",
+    "cover": "/covers/principles-diffusion.jpg",
+    "original": "https://the-principles-of-diffusion-models.github.io/",
+    "sourceLabel": "原文来源",
+    "os": "Chieh-Hsin Lai, Yang Song, Dongjun Kim, Yuki Mitsufuji, Stefano Ermon",
+    "ts": "PDF",
+    "date": "2026-11",
+    "scope": "arXiv v3 版本",
+    "downloads": [
+      {
+        "label": "中文译本",
+        "url": "/pdfs/principles-diffusion.pdf",
+        "size": "9.6 MB"
+      }
+    ]
+  },
+  {
+    "zh": "物理学中的机器学习：Physics 361",
+    "en": "Physics 361: Machine Learning in Physics (Spring 2025)",
+    "field": "机器学习与物理",
+    "cover": "/covers/physics-361.jpg",
+    "original": "https://ai.physics.wisc.edu/teaching/",
+    "sourceLabel": "原文来源",
+    "os": "Moritz Munchmeyer",
+    "ts": "PDF",
+    "date": "2026-11",
+    "scope": "2025 年课件 1–25 讲；不含 26、27 讲与习题",
+    "downloads": [
+      {
+        "label": "25 讲译稿",
+        "url": "https://github.com/xixi-cc/physai-translation/releases/download/translations-2026-11-08/physics-361-zh.pdf",
+        "size": "167.3 MB"
+      }
+    ]
+  },
+  {
+    "zh": "基于物理的深度学习：生成式 AI 版",
+    "en": "Physics-based Deep Learning (GenAI edition)",
+    "field": "科学机器学习",
+    "cover": "/covers/physics-based-deep-learning-genai.jpg",
+    "original": "https://www.physicsbaseddeeplearning.org/",
+    "sourceLabel": "原文来源",
+    "os": "Nils Thuerey and collaborators",
+    "ts": "PDF",
+    "date": "2026-11",
+    "scope": "GenAI edition v0.3",
+    "downloads": [
+      {
+        "label": "中文译本",
+        "url": "/pdfs/physics-based-deep-learning-genai.pdf",
+        "size": "25.4 MB"
+      }
+    ]
+  },
+  {
+    "zh": "以神经物理构建世界模型",
+    "en": "Building World Models with Neural Physics (MIT PhD Thesis)",
+    "field": "物理与世界模型",
+    "cover": "/covers/neural-physics-world-models.jpg",
+    "original": "https://dspace.mit.edu/entities/publication/d3f48ce8-06a7-43e7-adb2-5b6397748ab2",
+    "sourceLabel": "原文来源",
+    "os": "Pingchuan Ma",
+    "ts": "PDF",
+    "date": "2026-11",
+    "scope": "MIT 博士论文 · 2025",
+    "downloads": [
+      {
+        "label": "中文译本",
+        "url": "/pdfs/neural-physics-world-models.pdf",
+        "size": "9.7 MB"
+      }
+    ]
+  },
+  {
+    "zh": "主动推断：心智、大脑与行为中的自由能原理",
+    "en": "Active Inference: The Free Energy Principle in Mind, Brain, and Behavior",
+    "field": "主动推断",
+    "cover": "/covers/active-inference.jpg",
+    "original": "https://mitpress.mit.edu/9780262362283/active-inference/",
+    "sourceLabel": "原文来源",
+    "os": "Thomas Parr, Giovanni Pezzulo and Karl Friston",
+    "ts": "PDF",
+    "date": "2026-11",
+    "scope": "MIT Press · 2022",
+    "downloads": [
+      {
+        "label": "中文译本",
+        "url": "/pdfs/active-inference.pdf",
+        "size": "4.1 MB"
+      }
+    ]
+  },
+  {
+    "zh": "几何深度学习：网格、群、图、测地线与规范",
+    "en": "Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges",
+    "field": "几何深度学习",
+    "cover": "/covers/geometric-deep-learning-proto.jpg",
+    "original": "https://geometricdeeplearning.com/book/",
+    "sourceLabel": "原文来源",
+    "os": "Michael Bronstein, Joan Bruna, Taco Cohen, Petar Velickovic",
+    "ts": "PDF",
+    "date": "2026-11",
+    "scope": "2021 proto-book；非后续版本",
+    "downloads": [
+      {
+        "label": "中文译本",
+        "url": "/pdfs/geometric-deep-learning-proto.pdf",
+        "size": "18.2 MB"
+      }
+    ]
+  },
+  {
+    "zh": "因果推断要素：基础与学习算法",
+    "en": "Elements of Causal Inference: Foundations and Learning Algorithms",
+    "field": "因果推断",
+    "cover": "/covers/elements-causal-inference.jpg",
+    "original": "https://mitpress.mit.edu/9780262037310/elements-of-causal-inference/",
+    "sourceLabel": "原文来源",
+    "os": "Jonas Peters, Dominik Janzing and Bernhard Scholkopf",
+    "ts": "PDF",
+    "date": "2026-11",
+    "scope": "MIT Press · 2017",
+    "downloads": [
+      {
+        "label": "中文译本",
+        "url": "/pdfs/elements-causal-inference.pdf",
+        "size": "2.8 MB"
+      }
+    ]
+  },
+  {
+    "zh": "从统计学习到因果学习",
+    "en": "From Statistical to Causal Learning (ICM book chapter)",
+    "field": "因果推断",
+    "cover": "/covers/statistical-causal-learning.jpg",
+    "original": "https://ems.press/books/standalone/279/5610",
+    "sourceLabel": "原文来源",
+    "os": "Bernhard Scholkopf and Julius von Kugelgen",
+    "ts": "PDF",
+    "date": "2026-11",
+    "scope": "ICM 2022 书籍章节",
+    "downloads": [
+      {
+        "label": "中文译本",
+        "url": "/pdfs/statistical-causal-learning.pdf",
+        "size": "1.5 MB"
+      }
+    ]
+  },
+  {
+    "zh": "世界模型：CS 6804 课程课件",
+    "en": "CS 6804: World Models (Virginia Tech Fall 2026)",
+    "field": "世界模型",
+    "cover": "/covers/cs6804-world-models.jpg",
+    "original": "https://people.cs.vt.edu/chris/cs6804_fall2026/",
+    "sourceLabel": "原文来源",
+    "os": "Chris Thomas",
+    "ts": "PDF",
+    "date": "2026-11",
+    "scope": "2026 年第 1–5 讲；非完整课程",
+    "downloads": [
+      {
+        "label": "中文译本",
+        "url": "/pdfs/cs6804-world-models.pdf",
+        "size": "25.7 MB"
+      }
+    ]
+  }
+]
