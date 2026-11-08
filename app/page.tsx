@@ -2,7 +2,8 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import newBooks from './new-books.json';
-import { ArrowUpRight, BookOpen, Check, CircleHelp, Download, FileArchive, FileText, GitBranch, Languages, Menu, Moon, Search, Sun, X } from 'lucide-react';
+import bookDetails from './book-details.json';
+import { ArrowLeft, ArrowUpRight, BookOpen, CircleHelp, Download, FileText, GitBranch, Languages, Menu, Moon, Search, Sun, X } from 'lucide-react';
 
 type Section = 'originals' | 'translations' | 'guide';
 type Category = '全部' | '物理' | 'AI';
@@ -44,6 +45,31 @@ const publishedMetadata: Record<string, {author:string; year:string; category:'�
   'Mathematical Theory of Deep Learning':{author:'Philipp Petersen, Jakob Zech',year:'2026',category:'AI'},
 };
 const books: Book[] = [...newBooks.map(item => ({...item, category:item.category as '物理'|'AI', cover:asset(item.cover), downloads:item.downloads.map(file => ({...file, url:file.url.startsWith('https://') ? file.url : asset(file.url)}))})), ...publishedBooks.map(item => ({...item, ...publishedMetadata[item.en]}))];
+type ContentsRow = { title:string; page:number|null; depth:number };
+type BookDetails = { summary:string; contents:ContentsRow[]; contentsFile:number };
+const details = bookDetails as Record<string, BookDetails>;
+const bookId = (book:Book) => book.cover.split('/').pop()!.replace(/\.jpg$/, '');
+const filesFor = (book:Book): DownloadItem[] => book.downloads ?? (book.translation ? [{label:'中文译本',url:book.translation,size:book.ts}] : []);
+
+function FileActions({book,detail=false}:{book:Book;detail?:boolean}) {
+  const files=filesFor(book);
+  return <div className="file-actions"><a href={book.original} target="_blank" rel="noreferrer"><FileText size={14}/>{detail ? '原文来源' : book.sourceLabel}</a>{files.map(file=><span className="pdf-actions" key={file.url}><a className="primary" href={file.url} target="_blank" rel="noreferrer">在线阅读{files.length>1 ? ` · ${file.label}` : ''}</a><a href={file.url} download><Download size={14}/>下载 PDF{files.length>1 ? ` · ${file.label}` : ''} <small>{file.size}</small></a></span>)}</div>;
+}
+
+function DetailPage({book}:{book:Book}) {
+  const detail=details[bookId(book)];
+  const file=filesFor(book)[detail.contentsFile];
+  return <div className="detail-page">
+    <a className="detail-back" href="#"><ArrowLeft size={15}/>返回书目</a>
+    <article className="detail-hero">
+      <img className="detail-cover" src={book.cover} alt={`${book.zh}封面`}/>
+      <div className="detail-copy"><span className="field">{book.category} · {book.field}</span><h1>{book.zh}</h1><p className="detail-english">{book.en}</p><p className="detail-author">{book.author} · {book.year}</p>{book.scope&&<p className="detail-scope">{book.scope}</p>}<FileActions book={book} detail/></div>
+    </article>
+    <section className="detail-section"><h2>简介</h2><p>{detail.summary}</p></section>
+    <section className="detail-section"><h2>目录</h2><p className="toc-note">{filesFor(book).length>1 ? `目录依据${file.label}；点击可跳转，页码为 PDF 物理页。` : '点击可跳转，页码为 PDF 物理页。'}</p><ol className="toc-list">{detail.contents.map((entry,i)=><li className={entry.depth ? 'toc-sub' : ''} key={`${i}-${entry.title}`}>{entry.page ? <a href={`${file.url}#page=${entry.page}`} target="_blank" rel="noreferrer"><span>{entry.title}</span><span className="toc-page">{entry.page}</span></a> : <span>{entry.title}</span>}</li>)}</ol></section>
+  </div>;
+}
+
 const navItems: { id:Section; label:string; en:string; icon:typeof BookOpen }[] = [
   { id:'originals', label:'原著', en:'Originals', icon:BookOpen }, { id:'translations', label:'译本', en:'Translations', icon:Languages },
   { id:'guide', label:'指南', en:'Guide', icon:CircleHelp },
@@ -55,10 +81,13 @@ export default function Home() {
   const [category,setCategory] = useState<Category>('全部');
   const [menuOpen,setMenuOpen] = useState(false);
   const [dark,setDark] = useState(false);
+  const [detailId,setDetailId] = useState<string|null>(null);
+  useEffect(() => { const sync=()=>{const match=window.location.hash.match(/^#book\/([a-z0-9-]+)$/);setDetailId(match ? match[1] : null)};sync();window.addEventListener('hashchange',sync);return ()=>window.removeEventListener('hashchange',sync); },[]);
   useEffect(() => { const saved=localStorage.getItem('wuyi-theme'); const value=saved?saved==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches; setDark(value); document.documentElement.dataset.theme=value?'dark':'light'; },[]);
   const filtered=useMemo(()=>{const q=query.trim().toLowerCase(); return books.filter(b=>(category==='全部'||b.category===category)&&(!q||[b.zh,b.en,b.field,b.author,b.year].join(' ').toLowerCase().includes(q)));},[query,category]);
   const active=navItems.find(item=>item.id===section)!;
-  function change(next:Section){setSection(next);setQuery('');setMenuOpen(false);}
+  const selectedBook=detailId ? books.find(book=>bookId(book)===detailId && details[detailId]) : undefined;
+  function change(next:Section){setSection(next);setQuery('');setMenuOpen(false);if(window.location.hash) history.replaceState(null,'',window.location.pathname+window.location.search);setDetailId(null);}
   function toggleTheme(){const next=!dark;setDark(next);document.documentElement.dataset.theme=next?'dark':'light';localStorage.setItem('wuyi-theme',next?'dark':'light');}
   return <div className="site-frame">
     <header className="mobile-header">
@@ -75,12 +104,13 @@ export default function Home() {
         <div className="sidebar-actions"><button onClick={toggleTheme}>{dark?<Sun size={15}/>:<Moon size={15}/>} {dark?'浅色模式':'深色模式'}</button><a href="https://github.com/xixi-cc/physai-translation" target="_blank" rel="noreferrer"><GitBranch size={15}/>网站源码<ArrowUpRight size={12}/></a><a href="https://github.com/xixi-cc/mathtranslations-skill" target="_blank" rel="noreferrer"><GitBranch size={15}/>翻译工作流<ArrowUpRight size={12}/></a></div>
       </aside>
       <main className="main-content">
+        {selectedBook ? <DetailPage book={selectedBook}/> : <>
         <div className="content-header"><div><span>{active.en}</span><h1>{active.label}</h1></div>{(section==='translations'||section==='originals')&&<p>共 {filtered.length} 项</p>}</div>
         {(section==='translations'||section==='originals')&&<div className="category-tabs" aria-label="书籍分类">{(['全部','物理','AI'] as Category[]).map(c=><button key={c} type="button" className={category===c?'active':''} aria-pressed={category===c} onClick={()=>setCategory(c)}>{c}</button>)}</div>}
         {section==='translations'&&<div className="translation-list">{filtered.length?filtered.map((item,index)=><article className="translation-card" key={item.en}>
-          <img className="book-cover" src={item.cover} alt={`${item.zh}封面`} loading={index===0?'eager':'lazy'} fetchPriority={index===0?'high':'auto'}/><div className="translation-copy"><span className="field">{item.category} · {item.field}</span><h2>{item.zh}</h2><p className="book-english">{item.en}</p><p className="book-author">{item.author} · {item.year}</p><div className="meta"><span><Check size={13}/>{item.scope ?? '完整译本'}</span><span><FileArchive size={13}/>PDF</span></div><div className="file-actions"><a href={item.original} target="_blank" rel="noreferrer"><FileText size={14}/>{item.sourceLabel}</a>{(item.downloads ?? (item.translation ? [{label:'中文译本',url:item.translation,size:item.ts}] : [])).map(file=><span className="pdf-actions" key={file.url}><a className="primary" href={file.url} target="_blank" rel="noreferrer">在线阅读{item.downloads && item.downloads.length>1 ? ` · ${file.label}` : ''}</a><a href={file.url} download><Download size={14}/>下载 PDF{item.downloads && item.downloads.length>1 ? ` · ${file.label}` : ''} <small>{file.size}</small></a></span>)}</div></div>
+          <a href={`#book/${bookId(item)}`} className="cover-link" aria-label={`查看${item.zh}详情`}><img className="book-cover" src={item.cover} alt={`${item.zh}封面`} loading={index===0?'eager':'lazy'} fetchPriority={index===0?'high':'auto'}/></a><div className="translation-copy"><span className="field">{item.category} · {item.field}</span><h2><a className="book-title-link" href={`#book/${bookId(item)}`}>{item.zh}</a></h2><p className="book-author">{item.author} · {item.year}</p><FileActions book={item}/></div>
         </article>):<div className="empty">没有找到匹配的译本。</div>}</div>}
-        {section==='originals'&&<div className="simple-list">{filtered.map(item=><article key={item.en}><img className="original-cover" src={item.cover} alt="" loading="lazy"/><div><h2>{item.en}</h2><p>{item.author} · {item.year} · {item.category}</p></div><a href={item.original} target="_blank" rel="noreferrer"><FileText size={14}/>{item.sourceLabel==='原著 PDF'?'打开 PDF':'查看原著'}</a></article>)}</div>}
+        {section==='originals'&&<div className="simple-list">{filtered.map(item=><article key={item.en}><img className="original-cover" src={item.cover} alt="" loading="lazy"/><div><h2><a className="book-title-link" href={`#book/${bookId(item)}`}>{item.zh}</a></h2><p>{item.author} · {item.year} · {item.category}</p></div><a href={item.original} target="_blank" rel="noreferrer"><FileText size={14}/>{item.sourceLabel==='原著 PDF'?'打开 PDF':'查看原著'}</a></article>)}</div>}
         {section==='guide'&&<div className="guide-page">
           <section className="guide-intro"><span>AI-ASSISTED TRANSLATION WORKFLOW</span><h2>怎样用 AI 辅助翻译一本物理原著</h2><p>每本书使用一个独立任务和一个独立目录。原著 PDF 是唯一内容依据；AI 工具协助提取、初译、LaTeX 编排与检查，人负责确定版本、处理物理歧义并批准最终交付。无论使用哪一种 AI 工具，都可以遵循下面的流程。</p></section>
           <div className="guide-principles"><article><strong>人负责决策</strong><p>选择原著与版本，确认版权边界，回答歧义问题并批准最终译文。</p></article><article><strong>AI 协助执行</strong><p>读取 PDF、维护术语和进度、分章翻译、整理 LaTeX，并协助检查问题。</p></article><article><strong>工具负责验证</strong><p>PDF 提取保证页码可追溯，XeLaTeX 生成成品，Git 和哈希保留版本证据。</p></article></div>
@@ -97,6 +127,7 @@ export default function Home() {
           </div>
           <section className="delivery-check"><div><span>最终交付</span><h2>一份译本不仅是一份 PDF</h2></div><ul><li>中文译本 PDF</li><li>可重新编译的 LaTeX</li><li>原著版本与来源记录</li><li>术语和符号约定</li><li>审核与遗留问题</li><li>版本日期与文件哈希</li></ul></section>
         </div>}
+        </>}
       </main>
     </div>
     <footer><span>物译 · PhysAI Translation</span><p>AI 辅助物理翻译资料库</p><div className="footer-links"><a href="https://github.com/xixi-cc/physai-translation" target="_blank" rel="noreferrer">网站源码</a><a href="https://github.com/xixi-cc/mathtranslations-skill" target="_blank" rel="noreferrer">翻译工作流</a></div></footer>

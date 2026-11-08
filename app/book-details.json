@@ -1,0 +1,3559 @@
+{
+  "tasi-physics-machine-learning": {
+    "summary": "本讲义从物理学视角讨论神经网络的表达能力、统计性质和训练动力学，并介绍神经网络与场论的联系。此处收录 TASI 2024 讲义的译本。",
+    "contents": [
+      {
+        "title": "引言",
+        "page": 4,
+        "depth": 0
+      },
+      {
+        "title": "神经网络的表达能力",
+        "page": 7,
+        "depth": 0
+      },
+      {
+        "title": "神经网络的统计性质",
+        "page": 10,
+        "depth": 0
+      },
+      {
+        "title": "神经网络的动力学",
+        "page": 16,
+        "depth": 0
+      },
+      {
+        "title": "神经网络与场论的对应",
+        "page": 22,
+        "depth": 0
+      },
+      {
+        "title": "回顾与展望",
+        "page": 25,
+        "depth": 0
+      },
+      {
+        "title": "中心极限定理",
+        "page": 28,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "les-houches-large-width": {
+    "summary": "Les Houches 系列讲义介绍深度神经网络的大宽度与无限宽度极限，讨论随机网络的统计性质、动力学和相关理论。",
+    "contents": [
+      {
+        "title": "第一讲：Yasaman Bahri",
+        "page": 5,
+        "depth": 0
+      },
+      {
+        "title": "第二讲",
+        "page": 13,
+        "depth": 0
+      },
+      {
+        "title": "第三讲",
+        "page": 23,
+        "depth": 0
+      },
+      {
+        "title": "第四讲：Boris Hanin",
+        "page": 29,
+        "depth": 0
+      },
+      {
+        "title": "第五讲",
+        "page": 40,
+        "depth": 0
+      },
+      {
+        "title": "译注：原文中的记号与推导疑点",
+        "page": 46,
+        "depth": 0
+      },
+      {
+        "title": "参考文献",
+        "page": 48,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "iliad-physics-deep-learning": {
+    "summary": "这组讲义与幻灯片从统计力学、场论和动力学角度介绍深度学习，包括宽网络、神经切线核、平均场方法和标度律。下列目录来自讲义译稿，幻灯片另有阅读入口。",
+    "contents": [
+      {
+        "title": "−1 预备知识",
+        "page": 5,
+        "depth": 0
+      },
+      {
+        "title": "一天的教学安排",
+        "page": 5,
+        "depth": 0
+      },
+      {
+        "title": "导读：学习力学",
+        "page": 6,
+        "depth": 0
+      },
+      {
+        "title": "学习的统计力学",
+        "page": 7,
+        "depth": 0
+      },
+      {
+        "title": "初始化时的大宽度：高斯过程极限",
+        "page": 20,
+        "depth": 0
+      },
+      {
+        "title": "训练期间的神经切线核与大宽度",
+        "page": 30,
+        "depth": 0
+      },
+      {
+        "title": "平均场标度",
+        "page": 39,
+        "depth": 0
+      },
+      {
+        "title": "非平衡物理、MSRJD 与 DMFT",
+        "page": 50,
+        "depth": 0
+      },
+      {
+        "title": "标度律",
+        "page": 58,
+        "depth": 0
+      },
+      {
+        "title": "副本方法",
+        "page": 69,
+        "depth": 0
+      },
+      {
+        "title": "从线性回归到核回归",
+        "page": 73,
+        "depth": 0
+      },
+      {
+        "title": "习题解答",
+        "page": 82,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 1
+  },
+  "prestrings-artificial-intelligence": {
+    "summary": "本讲义从神经网络基础出发，介绍网络的表达、统计和动力学，继而讨论神经网络场论以及人工智能在弦论中的应用。",
+    "contents": [
+      {
+        "title": "引言",
+        "page": 5,
+        "depth": 0
+      },
+      {
+        "title": "第一天：神经网络基础",
+        "page": 7,
+        "depth": 0
+      },
+      {
+        "title": "第二天：神经网络场论",
+        "page": 26,
+        "depth": 0
+      },
+      {
+        "title": "第三天：人工智能在弦论中的应用",
+        "page": 40,
+        "depth": 0
+      },
+      {
+        "title": "回顾与展望",
+        "page": 53,
+        "depth": 0
+      },
+      {
+        "title": "中心极限定理",
+        "page": 55,
+        "depth": 0
+      },
+      {
+        "title": "译注：原文中的约定与推导疑点",
+        "page": 56,
+        "depth": 0
+      },
+      {
+        "title": "参考文献",
+        "page": 58,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "stat-physics-optimization": {
+    "summary": "本讲义介绍复本、腔方法和消息传递等统计物理工具，并将其用于概率推断和相关优化问题。此处为 2024 年讲义；第 19 章源文件仅有标题。",
+    "contents": [
+      {
+        "title": "第一部分：技术与方法",
+        "page": 9,
+        "depth": 0
+      },
+      {
+        "title": "Curie 与 Weiss 的平均场铁磁体",
+        "page": 9,
+        "depth": 0
+      },
+      {
+        "title": "一个简单例子：随机场 Ising 模型",
+        "page": 35,
+        "depth": 0
+      },
+      {
+        "title": "第一个应用：随机矩阵的谱",
+        "page": 45,
+        "depth": 0
+      },
+      {
+        "title": "随机图上的随机场 Ising 模型",
+        "page": 52,
+        "depth": 0
+      },
+      {
+        "title": "稀疏图与局部树状图模型",
+        "page": 63,
+        "depth": 0
+      },
+      {
+        "title": "图着色的信念传播",
+        "page": 81,
+        "depth": 0
+      },
+      {
+        "title": "第二部分：概率推断",
+        "page": 94,
+        "depth": 0
+      },
+      {
+        "title": "去噪、估计与贝叶斯最优推断",
+        "page": 94,
+        "depth": 0
+      },
+      {
+        "title": "低秩矩阵分解：尖峰模型",
+        "page": 110,
+        "depth": 0
+      },
+      {
+        "title": "空腔法与近似消息传递",
+        "page": 126,
+        "depth": 0
+      },
+      {
+        "title": "随机块模型与社区发现",
+        "page": 131,
+        "depth": 0
+      },
+      {
+        "title": "从稀疏图到稠密图的自旋玻璃博弈",
+        "page": 142,
+        "depth": 0
+      },
+      {
+        "title": "近似消息传递与状态演化",
+        "page": 148,
+        "depth": 0
+      },
+      {
+        "title": "第三部分：随机约束满足问题",
+        "page": 167,
+        "depth": 0
+      },
+      {
+        "title": "图着色 II：从植入得到的启示",
+        "page": 167,
+        "depth": 0
+      },
+      {
+        "title": "图着色 III：可着色阈值与簇的性质",
+        "page": 172,
+        "depth": 0
+      },
+      {
+        "title": "副本对称性破缺：随机能量模型",
+        "page": 178,
+        "depth": 0
+      },
+      {
+        "title": "第四部分：统计学与机器学习",
+        "page": 189,
+        "depth": 0
+      },
+      {
+        "title": "线性估计与压缩感知",
+        "page": 189,
+        "depth": 0
+      },
+      {
+        "title": "感知机",
+        "page": 200,
+        "depth": 0
+      },
+      {
+        "title": "高维回归：精确渐近结果",
+        "page": 205,
+        "depth": 0
+      },
+      {
+        "title": "第五部分：附录",
+        "page": 209,
+        "depth": 0
+      },
+      {
+        "title": "一点概率论",
+        "page": 209,
+        "depth": 0
+      },
+      {
+        "title": "参考文献",
+        "page": 210,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "information-physics-computation": {
+    "summary": "这组作者章节草稿连接统计物理、概率、信息论与计算，涉及随机模型、图模型和推断方法。译本仅覆盖现有的 Part A–F 草稿，不能替代正式出版全书。",
+    "contents": [
+      {
+        "title": "译本说明",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "信息论导论",
+        "page": 14,
+        "depth": 0
+      },
+      {
+        "title": "统计物理与概率论",
+        "page": 30,
+        "depth": 0
+      },
+      {
+        "title": "组合优化导论",
+        "page": 50,
+        "depth": 0
+      },
+      {
+        "title": "概率工具箱",
+        "page": 64,
+        "depth": 0
+      },
+      {
+        "title": "随机能量模型",
+        "page": 86,
+        "depth": 0
+      },
+      {
+        "title": "随机码系综",
+        "page": 96,
+        "depth": 0
+      },
+      {
+        "title": "数字划分",
+        "page": 116,
+        "depth": 0
+      },
+      {
+        "title": "复本理论导论",
+        "page": 128,
+        "depth": 0
+      },
+      {
+        "title": "因子图与图系综",
+        "page": 148,
+        "depth": 0
+      },
+      {
+        "title": "可满足性",
+        "page": 166,
+        "depth": 0
+      },
+      {
+        "title": "低密度奇偶校验码",
+        "page": 184,
+        "depth": 0
+      },
+      {
+        "title": "自旋玻璃",
+        "page": 202,
+        "depth": 0
+      },
+      {
+        "title": "桥接",
+        "page": 220,
+        "depth": 0
+      },
+      {
+        "title": "信念传播",
+        "page": 236,
+        "depth": 0
+      },
+      {
+        "title": "用信念传播解码",
+        "page": 262,
+        "depth": 0
+      },
+      {
+        "title": "分配问题",
+        "page": 278,
+        "depth": 0
+      },
+      {
+        "title": "布尔变量线性方程",
+        "page": 294,
+        "depth": 0
+      },
+      {
+        "title": "一步复本对称性破缺腔方法",
+        "page": 314,
+        "depth": 0
+      },
+      {
+        "title": "随机 K-可满足性",
+        "page": 340,
+        "depth": 0
+      },
+      {
+        "title": "编码理论中的玻璃态",
+        "page": 356,
+        "depth": 0
+      },
+      {
+        "title": "仍在继续的故事",
+        "page": 370,
+        "depth": 0
+      },
+      {
+        "title": "符号与记号",
+        "page": 386,
+        "depth": 0
+      },
+      {
+        "title": "引文与书目差异说明",
+        "page": 392,
+        "depth": 0
+      },
+      {
+        "title": "参考文献",
+        "page": 394,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "orf526-probability": {
+    "summary": "这组课程资料围绕高斯分布、概率与现代机器学习中的相关问题展开，合订了现有笔记、解答及手写材料。它不是完整课程；目录中的页码对应合订译本。",
+    "contents": [
+      {
+        "title": "第 2 讲笔记",
+        "page": 1,
+        "depth": 0
+      },
+      {
+        "title": "第 3 份解答",
+        "page": 12,
+        "depth": 0
+      },
+      {
+        "title": "第 4 份笔记",
+        "page": 19,
+        "depth": 0
+      },
+      {
+        "title": "第 5 份解答",
+        "page": 37,
+        "depth": 0
+      },
+      {
+        "title": "第 6 份笔记",
+        "page": 46,
+        "depth": 0
+      },
+      {
+        "title": "第 7 份解答",
+        "page": 73,
+        "depth": 0
+      },
+      {
+        "title": "第 8 份笔记",
+        "page": 79,
+        "depth": 0
+      },
+      {
+        "title": "第 9 份解答",
+        "page": 90,
+        "depth": 0
+      },
+      {
+        "title": "第 10 份解答",
+        "page": 97,
+        "depth": 0
+      },
+      {
+        "title": "第 11 份笔记",
+        "page": 101,
+        "depth": 0
+      },
+      {
+        "title": "手写笔记",
+        "page": 120,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "flow-matching-diffusion": {
+    "summary": "MIT 课程讲义介绍流模型、扩散模型、流匹配与得分匹配，并讨论引导生成及图像、视频和离散数据的生成建模。",
+    "contents": [
+      {
+        "title": "引言",
+        "page": 4,
+        "depth": 0
+      },
+      {
+        "title": "流模型与扩散模型",
+        "page": 6,
+        "depth": 0
+      },
+      {
+        "title": "流匹配",
+        "page": 13,
+        "depth": 0
+      },
+      {
+        "title": "得分函数与得分匹配",
+        "page": 22,
+        "depth": 0
+      },
+      {
+        "title": "引导：如何以提示词为条件",
+        "page": 30,
+        "depth": 0
+      },
+      {
+        "title": "构建大型图像或视频生成器",
+        "page": 34,
+        "depth": 0
+      },
+      {
+        "title": "离散扩散模型：用扩散构建语言模型",
+        "page": 46,
+        "depth": 0
+      },
+      {
+        "title": "参考文献",
+        "page": 56,
+        "depth": 0
+      },
+      {
+        "title": "概率论回顾",
+        "page": 60,
+        "depth": 0
+      },
+      {
+        "title": "Fokker–Planck 方程的证明",
+        "page": 62,
+        "depth": 0
+      },
+      {
+        "title": "连续时间 Markov 链的存在性与唯一性",
+        "page": 64,
+        "depth": 0
+      },
+      {
+        "title": "关于 VAE 的其他视角",
+        "page": 65,
+        "depth": 0
+      },
+      {
+        "title": "扩散模型文献指南",
+        "page": 69,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "principles-diffusion": {
+    "summary": "本书以生成建模为背景，介绍扩散模型的变分、得分与流视角，以及采样、引导和快速生成方法。译本对应所选 arXiv v3。",
+    "contents": [
+      {
+        "title": "作者信息与摘要",
+        "page": 10,
+        "depth": 0
+      },
+      {
+        "title": "致谢",
+        "page": 12,
+        "depth": 0
+      },
+      {
+        "title": "序言与阅读路线",
+        "page": 14,
+        "depth": 0
+      },
+      {
+        "title": "记号",
+        "page": 20,
+        "depth": 0
+      },
+      {
+        "title": "第一部分 深度生成建模导论",
+        "page": 24,
+        "depth": 0
+      },
+      {
+        "title": "深度生成建模",
+        "page": 26,
+        "depth": 1
+      },
+      {
+        "title": "第二部分 扩散模型的基础与视角",
+        "page": 36,
+        "depth": 0
+      },
+      {
+        "title": "变分视角：从 VAE 到 DDPM",
+        "page": 44,
+        "depth": 1
+      },
+      {
+        "title": "得分视角：从 EBM 到 NCSN",
+        "page": 62,
+        "depth": 1
+      },
+      {
+        "title": "当代扩散模型：得分 SDE 框架",
+        "page": 82,
+        "depth": 1
+      },
+      {
+        "title": "流视角：从归一化流到流匹配",
+        "page": 106,
+        "depth": 1
+      },
+      {
+        "title": "统一而系统的扩散模型视角",
+        "page": 130,
+        "depth": 1
+      },
+      {
+        "title": "（可选）扩散模型与最优传输",
+        "page": 150,
+        "depth": 1
+      },
+      {
+        "title": "C部：扩散模型的采样",
+        "page": 172,
+        "depth": 0
+      },
+      {
+        "title": "引导与可控生成",
+        "page": 176,
+        "depth": 1
+      },
+      {
+        "title": "用于快速扩散采样的数值求解器",
+        "page": 194,
+        "depth": 1
+      },
+      {
+        "title": "D部：走向快速扩散生成器的学习",
+        "page": 226,
+        "depth": 0
+      },
+      {
+        "title": "用于快速采样的蒸馏方法",
+        "page": 228,
+        "depth": 1
+      },
+      {
+        "title": "从头学习快速生成器",
+        "page": 236,
+        "depth": 1
+      },
+      {
+        "title": "尾声与展望",
+        "page": 258,
+        "depth": 0
+      },
+      {
+        "title": "统一原理与未来之路",
+        "page": 260,
+        "depth": 1
+      },
+      {
+        "title": "附录",
+        "page": 276,
+        "depth": 0
+      },
+      {
+        "title": "微分方程速成",
+        "page": 278,
+        "depth": 1
+      },
+      {
+        "title": "密度演化：从变量变换到Fokker–Planck",
+        "page": 288,
+        "depth": 1
+      },
+      {
+        "title": "扩散模型的幕后：Itô微积分与Girsanov定理",
+        "page": 298,
+        "depth": 1
+      },
+      {
+        "title": "补充材料与证明",
+        "page": 306,
+        "depth": 1
+      },
+      {
+        "title": "参考文献",
+        "page": 320,
+        "depth": 1
+      }
+    ],
+    "contentsFile": 0
+  },
+  "physics-361": {
+    "summary": "Physics 361 课程课件介绍机器学习基础、神经网络、生成模型及其在物理问题中的应用。译本覆盖已取得的 2025 年第 1–25 讲，不包括第 26、27 讲和习题。",
+    "contents": [
+      {
+        "title": "第 1 讲：导论",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "第 2 讲：背景",
+        "page": 20,
+        "depth": 0
+      },
+      {
+        "title": "第 3 讲：背景",
+        "page": 25,
+        "depth": 0
+      },
+      {
+        "title": "第 4 讲：机器学习基础",
+        "page": 32,
+        "depth": 0
+      },
+      {
+        "title": "第 5 讲：机器学习基础",
+        "page": 41,
+        "depth": 0
+      },
+      {
+        "title": "第 6 讲：机器学习基础",
+        "page": 44,
+        "depth": 0
+      },
+      {
+        "title": "第 7 讲：决策树、随机森林与梯度提升树",
+        "page": 65,
+        "depth": 0
+      },
+      {
+        "title": "第 8 讲：无监督方法",
+        "page": 87,
+        "depth": 0
+      },
+      {
+        "title": "第 9 讲：卷积神经网络",
+        "page": 100,
+        "depth": 0
+      },
+      {
+        "title": "第 10 讲：卷积神经网络与场到场映射",
+        "page": 134,
+        "depth": 0
+      },
+      {
+        "title": "第11讲：学习概率密度函数",
+        "page": 156,
+        "depth": 0
+      },
+      {
+        "title": "第12讲：基于模拟的推断",
+        "page": 173,
+        "depth": 0
+      },
+      {
+        "title": "第13讲：基于模拟的推断（二）",
+        "page": 184,
+        "depth": 0
+      },
+      {
+        "title": "第14讲：图神经网络",
+        "page": 199,
+        "depth": 0
+      },
+      {
+        "title": "第15讲：Transformer",
+        "page": 215,
+        "depth": 0
+      },
+      {
+        "title": "第16讲：大语言模型",
+        "page": 229,
+        "depth": 0
+      },
+      {
+        "title": "第17讲：科学基础模型",
+        "page": 254,
+        "depth": 0
+      },
+      {
+        "title": "第18讲：强化学习",
+        "page": 279,
+        "depth": 0
+      },
+      {
+        "title": "第19讲：强化学习（二）",
+        "page": 297,
+        "depth": 0
+      },
+      {
+        "title": "第20讲：用大语言模型推理",
+        "page": 323,
+        "depth": 0
+      },
+      {
+        "title": "第21讲：自编码器与变分自编码器",
+        "page": 349,
+        "depth": 0
+      },
+      {
+        "title": "第22讲：扩散模型",
+        "page": 364,
+        "depth": 0
+      },
+      {
+        "title": "第23讲：更多生成模型",
+        "page": 389,
+        "depth": 0
+      },
+      {
+        "title": "第24讲：PDE求解、逆问题、异常检测",
+        "page": 413,
+        "depth": 0
+      },
+      {
+        "title": "第25讲：可解释性、符号回归、代理模型",
+        "page": 438,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "physics-based-deep-learning-genai": {
+    "summary": "本书介绍物理问题中的深度学习方法，包括神经代理模型、物理损失、可微物理、概率生成模型和强化学习。译本对应 v0.3 Generative AI 版本。",
+    "contents": [
+      {
+        "title": "第一部分 引言",
+        "page": 19,
+        "depth": 0
+      },
+      {
+        "title": "引导示例",
+        "page": 20,
+        "depth": 1
+      },
+      {
+        "title": "概率生成式 AI 方法",
+        "page": 26,
+        "depth": 1
+      },
+      {
+        "title": "概述",
+        "page": 32,
+        "depth": 1
+      },
+      {
+        "title": "第二部分 神经代理模型与算子",
+        "page": 57,
+        "depth": 0
+      },
+      {
+        "title": "监督训练",
+        "page": 58,
+        "depth": 1
+      },
+      {
+        "title": "神经网络架构",
+        "page": 60,
+        "depth": 1
+      },
+      {
+        "title": "翼型周围 RANS 流动的监督训练",
+        "page": 67,
+        "depth": 1
+      },
+      {
+        "title": "监督方法讨论",
+        "page": 80,
+        "depth": 1
+      },
+      {
+        "title": "第三部分 物理损失",
+        "page": 83,
+        "depth": 0
+      },
+      {
+        "title": "物理损失项",
+        "page": 84,
+        "depth": 1
+      },
+      {
+        "title": "学习 Helmholtz–Hodge 分解",
+        "page": 88,
+        "depth": 1
+      },
+      {
+        "title": "下一步",
+        "page": 101,
+        "depth": 1
+      },
+      {
+        "title": "使用 PINN 优化 Burgers 方程",
+        "page": 102,
+        "depth": 1
+      },
+      {
+        "title": "物理损失讨论",
+        "page": 114,
+        "depth": 1
+      },
+      {
+        "title": "第四部分 可微物理",
+        "page": 116,
+        "depth": 0
+      },
+      {
+        "title": "可微物理简介",
+        "page": 117,
+        "depth": 1
+      },
+      {
+        "title": "使用可微物理梯度优化 Burgers 方程",
+        "page": 124,
+        "depth": 1
+      },
+      {
+        "title": "目前进展顺利——初步讨论",
+        "page": 135,
+        "depth": 1
+      },
+      {
+        "title": "可微流体仿真",
+        "page": 137,
+        "depth": 1
+      },
+      {
+        "title": "将可微物理纳入神经网络训练",
+        "page": 147,
+        "depth": 1
+      },
+      {
+        "title": "用神经算子减少数值误差",
+        "page": 153,
+        "depth": 1
+      },
+      {
+        "title": "用神经网络求解逆问题",
+        "page": 172,
+        "depth": 1
+      },
+      {
+        "title": "可微物理讨论",
+        "page": 181,
+        "depth": 1
+      },
+      {
+        "title": "第五部分 概率学习",
+        "page": 183,
+        "depth": 0
+      },
+      {
+        "title": "概率学习导论",
+        "page": 184,
+        "depth": 1
+      },
+      {
+        "title": "学习概率分布",
+        "page": 188,
+        "depth": 1
+      },
+      {
+        "title": "得分匹配",
+        "page": 208,
+        "depth": 1
+      },
+      {
+        "title": "去噪",
+        "page": 224,
+        "depth": 1
+      },
+      {
+        "title": "流匹配",
+        "page": 236,
+        "depth": 1
+      },
+      {
+        "title": "并排比较去噪与流匹配",
+        "page": 245,
+        "depth": 1
+      },
+      {
+        "title": "纳入物理约束",
+        "page": 261,
+        "depth": 1
+      },
+      {
+        "title": "用可微仿真求解概率逆问题",
+        "page": 271,
+        "depth": 1
+      },
+      {
+        "title": "基于扩散的时间预测",
+        "page": 288,
+        "depth": 1
+      },
+      {
+        "title": "无条件稳定性",
+        "page": 311,
+        "depth": 1
+      },
+      {
+        "title": "基于图的扩散模型",
+        "page": 316,
+        "depth": 1
+      },
+      {
+        "title": "扩散图网络的分布精度",
+        "page": 322,
+        "depth": 1
+      },
+      {
+        "title": "概率学习讨论",
+        "page": 336,
+        "depth": 1
+      },
+      {
+        "title": "第六部分 强化学习",
+        "page": 337,
+        "depth": 0
+      },
+      {
+        "title": "强化学习导言",
+        "page": 338,
+        "depth": 1
+      },
+      {
+        "title": "用强化学习控制Burgers方程",
+        "page": 342,
+        "depth": 1
+      },
+      {
+        "title": "第七部分 改进梯度",
+        "page": 357,
+        "depth": 0
+      },
+      {
+        "title": "尺度不变性与求逆",
+        "page": 358,
+        "depth": 1
+      },
+      {
+        "title": "比较不同优化器的简单示例",
+        "page": 365,
+        "depth": 1
+      },
+      {
+        "title": "尺度不变的物理训练",
+        "page": 378,
+        "depth": 1
+      },
+      {
+        "title": "用尺度不变更新学习热传导求逆",
+        "page": 382,
+        "depth": 1
+      },
+      {
+        "title": "半逆梯度",
+        "page": 391,
+        "depth": 1
+      },
+      {
+        "title": "使用半逆梯度的耦合振子",
+        "page": 395,
+        "depth": 1
+      },
+      {
+        "title": "改进梯度的讨论",
+        "page": 406,
+        "depth": 1
+      },
+      {
+        "title": "第八部分 快速概览主题",
+        "page": 408,
+        "depth": 0
+      },
+      {
+        "title": "其他主题",
+        "page": 409,
+        "depth": 1
+      },
+      {
+        "title": "模型降阶与时间序列",
+        "page": 410,
+        "depth": 1
+      },
+      {
+        "title": "非结构网格与无网格方法",
+        "page": 413,
+        "depth": 1
+      },
+      {
+        "title": "生成对抗网络",
+        "page": 416,
+        "depth": 1
+      },
+      {
+        "title": "第九部分 书末资料",
+        "page": 420,
+        "depth": 0
+      },
+      {
+        "title": "展望",
+        "page": 421,
+        "depth": 1
+      },
+      {
+        "title": "记号与缩写",
+        "page": 422,
+        "depth": 1
+      },
+      {
+        "title": "参考文献",
+        "page": 424,
+        "depth": 1
+      }
+    ],
+    "contentsFile": 0
+  },
+  "neural-physics-world-models": {
+    "summary": "这篇 MIT 博士论文研究如何将物理仿真、可微建模和学习方法结合，用于从观测中建立物理世界模型及辅助物理科学发现。",
+    "contents": [
+      {
+        "title": "论文信息",
+        "page": 1,
+        "depth": 0
+      },
+      {
+        "title": "摘要",
+        "page": 1,
+        "depth": 0
+      },
+      {
+        "title": "先前发表的材料",
+        "page": 1,
+        "depth": 0
+      },
+      {
+        "title": "致谢",
+        "page": 1,
+        "depth": 0
+      },
+      {
+        "title": "1 引言",
+        "page": 16,
+        "depth": 0
+      },
+      {
+        "title": "2 RISP：利用可微仿真与渲染进行跨域参数估计的渲染不变状态预测器",
+        "page": 20,
+        "depth": 0
+      },
+      {
+        "title": "3 从运动观测中学习神经本构律以实现可泛化的偏微分方程动力学",
+        "page": 30,
+        "depth": 0
+      },
+      {
+        "title": "4 将大语言模型与仿真作为双层优化器：推进物理科学发现的新范式",
+        "page": 43,
+        "depth": 0
+      },
+      {
+        "title": "5 结论",
+        "page": 58,
+        "depth": 0
+      },
+      {
+        "title": "A RISP 附录：利用可微仿真与渲染进行跨域参数估计的渲染不变状态预测器",
+        "page": 60,
+        "depth": 0
+      },
+      {
+        "title": "B 从运动观测中学习神经本构律以实现可泛化 PDE 动力学：附录",
+        "page": 66,
+        "depth": 0
+      },
+      {
+        "title": "C LLM 与仿真作为双层优化器：物理科学发现新范式的附录",
+        "page": 78,
+        "depth": 0
+      },
+      {
+        "title": "参考文献",
+        "page": 89,
+        "depth": 0
+      },
+      {
+        "title": "术语索引",
+        "page": 110,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "active-inference": {
+    "summary": "本书介绍主动推断及自由能原理，讨论生成模型、消息传递和神经生物学，并通过离散与连续时间模型说明建模和数据分析方法。",
+    "contents": [
+      {
+        "title": "前言",
+        "page": 5,
+        "depth": 0
+      },
+      {
+        "title": "第一部分",
+        "page": 7,
+        "depth": 0
+      },
+      {
+        "title": "1 概览",
+        "page": 7,
+        "depth": 1
+      },
+      {
+        "title": "2 通向主动推断的低路径",
+        "page": 14,
+        "depth": 1
+      },
+      {
+        "title": "3 通向主动推断的高路径",
+        "page": 31,
+        "depth": 1
+      },
+      {
+        "title": "4 主动推断的生成模型",
+        "page": 44,
+        "depth": 1
+      },
+      {
+        "title": "5 消息传递与神经生物学",
+        "page": 60,
+        "depth": 1
+      },
+      {
+        "title": "第二部分",
+        "page": 74,
+        "depth": 0
+      },
+      {
+        "title": "6 设计主动推断模型的步骤",
+        "page": 75,
+        "depth": 1
+      },
+      {
+        "title": "7 离散时间中的主动推断",
+        "page": 87,
+        "depth": 1
+      },
+      {
+        "title": "8 连续时间中的主动推断",
+        "page": 108,
+        "depth": 1
+      },
+      {
+        "title": "9 基于模型的数据分析",
+        "page": 123,
+        "depth": 1
+      },
+      {
+        "title": "10 主动推断：有感知行为的统一理论",
+        "page": 134,
+        "depth": 1
+      },
+      {
+        "title": "A 数学背景",
+        "page": 150,
+        "depth": 1
+      },
+      {
+        "title": "B 主动推断的方程",
+        "page": 161,
+        "depth": 1
+      },
+      {
+        "title": "C Matlab代码的带注释示例",
+        "page": 171,
+        "depth": 1
+      },
+      {
+        "title": "注释",
+        "page": 177,
+        "depth": 1
+      },
+      {
+        "title": "参考文献",
+        "page": 181,
+        "depth": 1
+      },
+      {
+        "title": "原书索引",
+        "page": 202,
+        "depth": 1
+      },
+      {
+        "title": "术语索引",
+        "page": 205,
+        "depth": 1
+      }
+    ],
+    "contentsFile": 0
+  },
+  "geometric-deep-learning-proto": {
+    "summary": "2021 年 proto-book 从几何先验和对称性的角度组织深度学习方法，讨论图、群及其他几何定义域上的模型与应用。此译本不代表后续版本。",
+    "contents": [
+      {
+        "title": "译本说明",
+        "page": 3,
+        "depth": 0
+      },
+      {
+        "title": "前言",
+        "page": 7,
+        "depth": 0
+      },
+      {
+        "title": "符号表",
+        "page": 9,
+        "depth": 0
+      },
+      {
+        "title": "引言",
+        "page": 11,
+        "depth": 0
+      },
+      {
+        "title": "高维空间中的学习",
+        "page": 13,
+        "depth": 0
+      },
+      {
+        "title": "几何先验",
+        "page": 19,
+        "depth": 0
+      },
+      {
+        "title": "几何定义域：五个 G",
+        "page": 39,
+        "depth": 0
+      },
+      {
+        "title": "几何深度学习模型",
+        "page": 79,
+        "depth": 0
+      },
+      {
+        "title": "问题与应用",
+        "page": 113,
+        "depth": 0
+      },
+      {
+        "title": "历史视角",
+        "page": 127,
+        "depth": 0
+      },
+      {
+        "title": "致谢",
+        "page": 139,
+        "depth": 0
+      },
+      {
+        "title": "原文疑点与适用条件提示",
+        "page": 141,
+        "depth": 0
+      },
+      {
+        "title": "参考文献",
+        "page": 147,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "elements-causal-inference": {
+    "summary": "本书介绍统计模型与因果模型、因果推断所需假设、因果发现及其与机器学习的联系，并讨论从成对变量到多变量的建模方法。",
+    "contents": [
+      {
+        "title": "前言",
+        "page": 8,
+        "depth": 0
+      },
+      {
+        "title": "记号与术语",
+        "page": 11,
+        "depth": 0
+      },
+      {
+        "title": "1 统计模型与因果模型",
+        "page": 12,
+        "depth": 0
+      },
+      {
+        "title": "2 因果推断的假设",
+        "page": 20,
+        "depth": 0
+      },
+      {
+        "title": "3 因果对模型",
+        "page": 32,
+        "depth": 0
+      },
+      {
+        "title": "4 学习因果对模型",
+        "page": 38,
+        "depth": 0
+      },
+      {
+        "title": "5 与机器学习的联系，I",
+        "page": 59,
+        "depth": 0
+      },
+      {
+        "title": "6 多变量因果模型",
+        "page": 67,
+        "depth": 0
+      },
+      {
+        "title": "7 学习多变量因果模型",
+        "page": 103,
+        "depth": 0
+      },
+      {
+        "title": "8 与机器学习的联系，II",
+        "page": 117,
+        "depth": 0
+      },
+      {
+        "title": "9 隐藏变量",
+        "page": 127,
+        "depth": 0
+      },
+      {
+        "title": "10 时间序列",
+        "page": 145,
+        "depth": 0
+      },
+      {
+        "title": "A 概率与统计补充",
+        "page": 156,
+        "depth": 0
+      },
+      {
+        "title": "B 因果顺序与邻接矩阵",
+        "page": 162,
+        "depth": 0
+      },
+      {
+        "title": "C 证明",
+        "page": 164,
+        "depth": 0
+      },
+      {
+        "title": "参考文献",
+        "page": 171,
+        "depth": 0
+      },
+      {
+        "title": "原书索引",
+        "page": 198,
+        "depth": 0
+      },
+      {
+        "title": "原书丛书书目",
+        "page": 203,
+        "depth": 0
+      },
+      {
+        "title": "术语索引",
+        "page": 205,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "statistical-causal-learning": {
+    "summary": "这一 ICM 书籍章节讨论从统计学习走向因果建模的问题，包括独立因果机制、因果发现以及因果推理对机器学习的启示。",
+    "contents": [
+      {
+        "title": "引言",
+        "page": 3,
+        "depth": 0
+      },
+      {
+        "title": "统计学习理论",
+        "page": 4,
+        "depth": 0
+      },
+      {
+        "title": "从统计模型到因果模型",
+        "page": 8,
+        "depth": 0
+      },
+      {
+        "title": "因果建模框架",
+        "page": 10,
+        "depth": 0
+      },
+      {
+        "title": "独立因果机制",
+        "page": 16,
+        "depth": 0
+      },
+      {
+        "title": "因果建模的层次",
+        "page": 18,
+        "depth": 0
+      },
+      {
+        "title": "因果发现",
+        "page": 19,
+        "depth": 0
+      },
+      {
+        "title": "对机器学习的启示",
+        "page": 22,
+        "depth": 0
+      },
+      {
+        "title": "因果推理",
+        "page": 23,
+        "depth": 0
+      },
+      {
+        "title": "当前研究与开放问题",
+        "page": 30,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "cs6804-world-models": {
+    "summary": "这组 CS 6804 课程课件介绍世界模型及相关机器学习方法，包括 Transformer、强化学习、价值函数和生成模型。译本只覆盖已取得的前五份课件。",
+    "contents": [
+      {
+        "title": "第 1 份课件：课程介绍",
+        "page": 3,
+        "depth": 0
+      },
+      {
+        "title": "第 2 份课件：世界模型组件与后续主题",
+        "page": 18,
+        "depth": 0
+      },
+      {
+        "title": "第 3 份课件：Transformer、无标签学习与强化学习",
+        "page": 69,
+        "depth": 0
+      },
+      {
+        "title": "第 4 份课件：价值函数与深度 Q 学习",
+        "page": 108,
+        "depth": 0
+      },
+      {
+        "title": "第 5 份课件：策略梯度、基于模型的强化学习与生成模型",
+        "page": 123,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "statistical-physics-of-fields": {
+    "summary": "本书从统计场的角度研究集体行为、涨落和临界现象，介绍尺度不变性、重整化群及相关统计物理方法。",
+    "contents": [
+      {
+        "title": "本书简介",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "推荐语",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "原版出版信息与版权声明",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "译本说明",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "前言",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "1 从粒子到场的集体行为",
+        "page": 10,
+        "depth": 0
+      },
+      {
+        "title": "2 统计场",
+        "page": 26,
+        "depth": 0
+      },
+      {
+        "title": "3 涨落",
+        "page": 40,
+        "depth": 0
+      },
+      {
+        "title": "4 标度假设",
+        "page": 56,
+        "depth": 0
+      },
+      {
+        "title": "5 微扰重整化群",
+        "page": 72,
+        "depth": 0
+      },
+      {
+        "title": "6 格点系统",
+        "page": 92,
+        "depth": 0
+      },
+      {
+        "title": "7 级数展开",
+        "page": 113,
+        "depth": 0
+      },
+      {
+        "title": "8 超越自旋波",
+        "page": 140,
+        "depth": 0
+      },
+      {
+        "title": "9 耗散动力学",
+        "page": 167,
+        "depth": 0
+      },
+      {
+        "title": "10 随机介质中的有向路径",
+        "page": 185,
+        "depth": 0
+      },
+      {
+        "title": "11 部分习题解答",
+        "page": 218,
+        "depth": 0
+      },
+      {
+        "title": "原书主题索引",
+        "page": 298,
+        "depth": 0
+      },
+      {
+        "title": "术语索引",
+        "page": 307,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "the-physics-of-flocking": {
+    "summary": "本书讨论鸟群等集群运动的统计物理，介绍活性流体的流体动力学描述与动力学重整化群方法。",
+    "contents": [
+      {
+        "title": "译本说明",
+        "page": 4,
+        "depth": 0
+      },
+      {
+        "title": "前言",
+        "page": 8,
+        "depth": 0
+      },
+      {
+        "title": "致谢",
+        "page": 11,
+        "depth": 0
+      },
+      {
+        "title": "1 引言与动机：鸟比书呆子更聪明吗？",
+        "page": 12,
+        "depth": 0
+      },
+      {
+        "title": "2 Mermin–Wagner–Hohenberg 定理的动力学推导（以及一种更常规的推导）；或曰，我们为何不能全都指向同一方向",
+        "page": 18,
+        "depth": 0
+      },
+      {
+        "title": "3 动力学重整化群；或曰，我们为什么能做物理——以 KPZ 方程为例",
+        "page": 38,
+        "depth": 0
+      },
+      {
+        "title": "4 集群运动流体动力学模型的构建",
+        "page": 83,
+        "depth": 0
+      },
+      {
+        "title": "5 动力学重整化群在集群问题中的应用",
+        "page": 104,
+        "depth": 0
+      },
+      {
+        "title": "6 空间维数 d > 2 时运动相中的不可压缩极性活性流体：``正则''指数",
+        "page": 107,
+        "depth": 0
+      },
+      {
+        "title": "7 正则指数的启发式论证（``20-20 事后明见式手挥论证''）",
+        "page": 117,
+        "depth": 0
+      },
+      {
+        "title": "8 空间维数 d = 2 的不可压缩集群：映射到 KPZ 方程",
+        "page": 121,
+        "depth": 0
+      },
+      {
+        "title": "9 “Malthusian”集群（具有出生和死亡的集群）",
+        "page": 139,
+        "depth": 0
+      },
+      {
+        "title": "参考文献",
+        "page": 194,
+        "depth": 0
+      },
+      {
+        "title": "原书索引",
+        "page": 194,
+        "depth": 0
+      },
+      {
+        "title": "术语索引",
+        "page": 207,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "elements-phase-transitions": {
+    "summary": "本书介绍相变和临界现象的主要理论工具，包括平均场理论、重整化群、统计场论以及若干具体模型。",
+    "contents": [
+      {
+        "title": "译本说明",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "前言",
+        "page": 3,
+        "depth": 0
+      },
+      {
+        "title": "1 相变与临界现象",
+        "page": 13,
+        "depth": 0
+      },
+      {
+        "title": "2 平均场理论",
+        "page": 26,
+        "depth": 0
+      },
+      {
+        "title": "3 重整化群与标度",
+        "page": 57,
+        "depth": 0
+      },
+      {
+        "title": "4 重整化群的实现",
+        "page": 83,
+        "depth": 0
+      },
+      {
+        "title": "5 统计场论",
+        "page": 102,
+        "depth": 0
+      },
+      {
+        "title": "6 共形场论",
+        "page": 120,
+        "depth": 0
+      },
+      {
+        "title": "7 Kosterlitz–Thouless 相变",
+        "page": 141,
+        "depth": 0
+      },
+      {
+        "title": "8 随机系统",
+        "page": 163,
+        "depth": 0
+      },
+      {
+        "title": "9 精确解及相关专题",
+        "page": 185,
+        "depth": 0
+      },
+      {
+        "title": "10 对偶性",
+        "page": 214,
+        "depth": 0
+      },
+      {
+        "title": "11 数值方法",
+        "page": 235,
+        "depth": 0
+      },
+      {
+        "title": "延伸阅读",
+        "page": 240,
+        "depth": 0
+      },
+      {
+        "title": "A",
+        "page": 245,
+        "depth": 0
+      },
+      {
+        "title": "B",
+        "page": 298,
+        "depth": 0
+      },
+      {
+        "title": "原书主题索引",
+        "page": 326,
+        "depth": 0
+      },
+      {
+        "title": "术语索引",
+        "page": 340,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "nonequilibrium-statistical-physics": {
+    "summary": "本书介绍非平衡统计物理中的随机运动、响应理论、临界现象及相关模型，从基础概念延伸至多个应用主题。",
+    "contents": [
+      {
+        "title": "原书简介",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "原书书目信息与版权说明",
+        "page": 4,
+        "depth": 0
+      },
+      {
+        "title": "前言",
+        "page": 6,
+        "depth": 0
+      },
+      {
+        "title": "致谢",
+        "page": 7,
+        "depth": 0
+      },
+      {
+        "title": "符号与缩写",
+        "page": 8,
+        "depth": 0
+      },
+      {
+        "title": "1 布朗运动、朗之万方程与福克–普朗克方程",
+        "page": 16,
+        "depth": 0
+      },
+      {
+        "title": "2 线性响应理论与输运现象",
+        "page": 70,
+        "depth": 0
+      },
+      {
+        "title": "3 从平衡到非平衡相变",
+        "page": 112,
+        "depth": 0
+      },
+      {
+        "title": "4 非平衡临界现象",
+        "page": 150,
+        "depth": 0
+      },
+      {
+        "title": "5 表面与界面的随机动力学",
+        "page": 170,
+        "depth": 0
+      },
+      {
+        "title": "6 相序动力学",
+        "page": 203,
+        "depth": 0
+      },
+      {
+        "title": "7 图样形成要点",
+        "page": 242,
+        "depth": 0
+      },
+      {
+        "title": "A 中心极限定理及其局限",
+        "page": 272,
+        "depth": 0
+      },
+      {
+        "title": "B 随机矩阵的谱性质",
+        "page": 274,
+        "depth": 0
+      },
+      {
+        "title": "C 马尔可夫链中的可逆性与遍历性",
+        "page": 275,
+        "depth": 0
+      },
+      {
+        "title": "D 扩散方程与随机游走",
+        "page": 277,
+        "depth": 0
+      },
+      {
+        "title": "E 克拉默斯–莫亚尔展开",
+        "page": 284,
+        "depth": 0
+      },
+      {
+        "title": "F 响应函数的数学性质",
+        "page": 286,
+        "depth": 0
+      },
+      {
+        "title": "G van der Waals 方程",
+        "page": 289,
+        "depth": 0
+      },
+      {
+        "title": "H Ising 模型",
+        "page": 292,
+        "depth": 0
+      },
+      {
+        "title": "I Ginzburg–Landau 自由能的推导",
+        "page": 298,
+        "depth": 0
+      },
+      {
+        "title": "J 动力学蒙特卡洛",
+        "page": 301,
+        "depth": 0
+      },
+      {
+        "title": "K 桥模型的平均场相图",
+        "page": 302,
+        "depth": 0
+      },
+      {
+        "title": "L 确定性 KPZ 方程与 Burgers 方程",
+        "page": 305,
+        "depth": 0
+      },
+      {
+        "title": "M KPZ 的微扰重整化群：若干细节",
+        "page": 309,
+        "depth": 0
+      },
+      {
+        "title": "N Gibbs–Thomson 关系",
+        "page": 311,
+        "depth": 0
+      },
+      {
+        "title": "O Allen–Cahn 方程",
+        "page": 312,
+        "depth": 0
+      },
+      {
+        "title": "P Rayleigh–Bénard 不稳定性",
+        "page": 314,
+        "depth": 0
+      },
+      {
+        "title": "Q Turing 不稳定性的一般条件",
+        "page": 318,
+        "depth": 0
+      },
+      {
+        "title": "R 一维 TDGL 方程的稳态",
+        "page": 319,
+        "depth": 0
+      },
+      {
+        "title": "S 多尺度分析",
+        "page": 320,
+        "depth": 0
+      },
+      {
+        "title": "原书索引",
+        "page": 322,
+        "depth": 0
+      },
+      {
+        "title": "术语索引",
+        "page": 330,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "exactly-solved-models": {
+    "summary": "本书围绕统计力学中的精确可解模型，介绍 Ising 模型、晶格模型及其相关求解方法。",
+    "contents": [
+      {
+        "title": "原版出版信息",
+        "page": 1,
+        "depth": 0
+      },
+      {
+        "title": "前言",
+        "page": 1,
+        "depth": 0
+      },
+      {
+        "title": "1 基础统计力学",
+        "page": 12,
+        "depth": 0
+      },
+      {
+        "title": "2 一维 Ising 模型",
+        "page": 30,
+        "depth": 0
+      },
+      {
+        "title": "3 平均场模型",
+        "page": 35,
+        "depth": 0
+      },
+      {
+        "title": "4 贝特晶格上的伊辛模型",
+        "page": 40,
+        "depth": 0
+      },
+      {
+        "title": "5 球模型",
+        "page": 49,
+        "depth": 0
+      },
+      {
+        "title": "6 平面 Ising 模型的对偶与星—三角变换",
+        "page": 57,
+        "depth": 0
+      },
+      {
+        "title": "7 方格 Ising 模型",
+        "page": 68,
+        "depth": 0
+      },
+      {
+        "title": "8 冰型模型",
+        "page": 92,
+        "depth": 0
+      },
+      {
+        "title": "9 求解冰型模型的另一种方法",
+        "page": 126,
+        "depth": 0
+      },
+      {
+        "title": "10 方格晶格八顶点模型",
+        "page": 138,
+        "depth": 0
+      },
+      {
+        "title": "11 Kagomé 晶格八顶点模型",
+        "page": 175,
+        "depth": 0
+      },
+      {
+        "title": "12 Potts 与 Ashkin–Teller 模型",
+        "page": 206,
+        "depth": 0
+      },
+      {
+        "title": "13 角转移矩阵",
+        "page": 232,
+        "depth": 0
+      },
+      {
+        "title": "14 硬六角模型及相关模型",
+        "page": 259,
+        "depth": 0
+      },
+      {
+        "title": "15 椭圆函数",
+        "page": 297,
+        "depth": 0
+      },
+      {
+        "title": "参考文献",
+        "page": 312,
+        "depth": 0
+      },
+      {
+        "title": "索引",
+        "page": 312,
+        "depth": 0
+      },
+      {
+        "title": "术语索引",
+        "page": 328,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "non-equilibrium-phase-transitions-v1": {
+    "summary": "本书讨论吸收态相变和相关非平衡临界现象，介绍有向渗流、标度性质以及分析与数值方法。",
+    "contents": [
+      {
+        "title": "理论与数学物理丛书",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "原版出版信息",
+        "page": 3,
+        "depth": 0
+      },
+      {
+        "title": "译本说明",
+        "page": 4,
+        "depth": 0
+      },
+      {
+        "title": "前言",
+        "page": 5,
+        "depth": 0
+      },
+      {
+        "title": "1 导论",
+        "page": 12,
+        "depth": 0
+      },
+      {
+        "title": "2 平衡临界现象概述",
+        "page": 16,
+        "depth": 0
+      },
+      {
+        "title": "3 有向渗流",
+        "page": 55,
+        "depth": 0
+      },
+      {
+        "title": "4 吸收态相变的标度性质",
+        "page": 86,
+        "depth": 0
+      },
+      {
+        "title": "5 分析方法",
+        "page": 117,
+        "depth": 0
+      },
+      {
+        "title": "6 其他临界性质",
+        "page": 146,
+        "depth": 0
+      },
+      {
+        "title": "7 不同于有向渗流的普适类",
+        "page": 160,
+        "depth": 0
+      },
+      {
+        "title": "8 淬火无序",
+        "page": 202,
+        "depth": 0
+      },
+      {
+        "title": "9 分类尝试",
+        "page": 204,
+        "depth": 0
+      },
+      {
+        "title": "10 若干开放问题",
+        "page": 207,
+        "depth": 0
+      },
+      {
+        "title": "11 附录 A：平衡模型",
+        "page": 209,
+        "depth": 0
+      },
+      {
+        "title": "12 附录 B：吸收态相变的标度律",
+        "page": 215,
+        "depth": 0
+      },
+      {
+        "title": "13 附录 C：时间演化算符的对角化",
+        "page": 217,
+        "depth": 0
+      },
+      {
+        "title": "14 附录 D：Langevin 方程与路径积分",
+        "page": 220,
+        "depth": 0
+      },
+      {
+        "title": "15 附录 E：平均场近似",
+        "page": 222,
+        "depth": 0
+      },
+      {
+        "title": "16 附录 F：有限尺寸标度技术",
+        "page": 226,
+        "depth": 0
+      },
+      {
+        "title": "17 附录 G：数值方法",
+        "page": 232,
+        "depth": 0
+      },
+      {
+        "title": "18 附录 H：分形维数",
+        "page": 241,
+        "depth": 0
+      },
+      {
+        "title": "19 习题解答",
+        "page": 243,
+        "depth": 0
+      },
+      {
+        "title": "20 常用符号表",
+        "page": 278,
+        "depth": 0
+      },
+      {
+        "title": "21 常用缩略语表",
+        "page": 280,
+        "depth": 0
+      },
+      {
+        "title": "22 参考文献",
+        "page": 281,
+        "depth": 0
+      },
+      {
+        "title": "23 英文主题索引（保留原书页码）",
+        "page": 337,
+        "depth": 0
+      },
+      {
+        "title": "24 原书出版目录（影印保留）",
+        "page": 345,
+        "depth": 0
+      },
+      {
+        "title": "术语索引",
+        "page": 348,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "statistical-mechanics-of-neural-networks": {
+    "summary": "本书介绍神经网络与统计力学的联系，包括自旋玻璃、平均场、消息传递和 Monte Carlo 等方法。",
+    "contents": [
+      {
+        "title": "出版与版权信息",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "译本说明",
+        "page": 4,
+        "depth": 0
+      },
+      {
+        "title": "前言",
+        "page": 5,
+        "depth": 0
+      },
+      {
+        "title": "作者简介",
+        "page": 7,
+        "depth": 0
+      },
+      {
+        "title": "缩略语",
+        "page": 8,
+        "depth": 0
+      },
+      {
+        "title": "1 引言",
+        "page": 13,
+        "depth": 0
+      },
+      {
+        "title": "2 自旋玻璃模型与腔方法",
+        "page": 17,
+        "depth": 0
+      },
+      {
+        "title": "3 变分平均场理论与置信传播",
+        "page": 25,
+        "depth": 0
+      },
+      {
+        "title": "4 Monte Carlo 模拟方法",
+        "page": 36,
+        "depth": 0
+      },
+      {
+        "title": "5 高温展开",
+        "page": 43,
+        "depth": 0
+      },
+      {
+        "title": "6 Nishimori 线",
+        "page": 50,
+        "depth": 0
+      },
+      {
+        "title": "7 随机能量模型",
+        "page": 53,
+        "depth": 0
+      },
+      {
+        "title": "8 Hopfield 模型的统计力学理论",
+        "page": 56,
+        "depth": 0
+      },
+      {
+        "title": "9 复制对称与复制对称破缺",
+        "page": 80,
+        "depth": 0
+      },
+      {
+        "title": "10 受限 Boltzmann 机的统计力学",
+        "page": 88,
+        "depth": 0
+      },
+      {
+        "title": "11 二元突触无监督学习的最简模型",
+        "page": 104,
+        "depth": 0
+      },
+      {
+        "title": "12 无监督学习中的内禀对称破缺",
+        "page": 117,
+        "depth": 0
+      },
+      {
+        "title": "13 Ising 感知机的平均场理论",
+        "page": 144,
+        "depth": 0
+      },
+      {
+        "title": "14 多层感知机的平均场模型",
+        "page": 156,
+        "depth": 0
+      },
+      {
+        "title": "15 降维的平均场理论",
+        "page": 166,
+        "depth": 0
+      },
+      {
+        "title": "16 随机循环神经网络的混沌理论",
+        "page": 180,
+        "depth": 0
+      },
+      {
+        "title": "17 随机矩阵的统计力学",
+        "page": 194,
+        "depth": 0
+      },
+      {
+        "title": "18 展望",
+        "page": 205,
+        "depth": 0
+      },
+      {
+        "title": "术语索引",
+        "page": 210,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "a-kinetic-view-of-statistical-physics": {
+    "summary": "本书从动力学和随机过程角度讨论统计物理，涵盖扩散、碰撞及相关多粒子问题。",
+    "contents": [
+      {
+        "title": "译本说明",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "原书简介",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "版权与出版信息",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "题献",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "前言",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "约定",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "1 开胃小品",
+        "page": 14,
+        "depth": 0
+      },
+      {
+        "title": "2 扩散",
+        "page": 22,
+        "depth": 0
+      },
+      {
+        "title": "3 碰撞",
+        "page": 61,
+        "depth": 0
+      },
+      {
+        "title": "4 排斥",
+        "page": 82,
+        "depth": 0
+      },
+      {
+        "title": "5 聚集",
+        "page": 109,
+        "depth": 0
+      },
+      {
+        "title": "6 破碎",
+        "page": 139,
+        "depth": 0
+      },
+      {
+        "title": "7 吸附",
+        "page": 158,
+        "depth": 0
+      },
+      {
+        "title": "8 自旋动力学",
+        "page": 185,
+        "depth": 0
+      },
+      {
+        "title": "9 粗化",
+        "page": 218,
+        "depth": 0
+      },
+      {
+        "title": "10 无序",
+        "page": 254,
+        "depth": 0
+      },
+      {
+        "title": "11 磁滞",
+        "page": 273,
+        "depth": 0
+      },
+      {
+        "title": "12 种群动力学",
+        "page": 290,
+        "depth": 0
+      },
+      {
+        "title": "13 扩散反应",
+        "page": 315,
+        "depth": 0
+      },
+      {
+        "title": "14 复杂网络",
+        "page": 344,
+        "depth": 0
+      },
+      {
+        "title": "参考文献",
+        "page": 367,
+        "depth": 0
+      },
+      {
+        "title": "索引",
+        "page": 383,
+        "depth": 0
+      },
+      {
+        "title": "术语索引",
+        "page": 390,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "statistical-field-theory-for-neural-networks": {
+    "summary": "本书介绍用统计场论分析神经网络的工具，从概率、累积量和微扰展开出发，讨论网络动力学及其统计性质。",
+    "contents": [
+      {
+        "title": "译本说明",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "丛书与出版信息",
+        "page": 3,
+        "depth": 0
+      },
+      {
+        "title": "前言",
+        "page": 5,
+        "depth": 0
+      },
+      {
+        "title": "致谢",
+        "page": 6,
+        "depth": 0
+      },
+      {
+        "title": "1 引言",
+        "page": 11,
+        "depth": 0
+      },
+      {
+        "title": "2 概率、矩与累积量",
+        "page": 14,
+        "depth": 0
+      },
+      {
+        "title": "3 高斯分布与 Wick 定理",
+        "page": 21,
+        "depth": 0
+      },
+      {
+        "title": "4 微扰展开",
+        "page": 25,
+        "depth": 0
+      },
+      {
+        "title": "5 连通簇定理",
+        "page": 38,
+        "depth": 0
+      },
+      {
+        "title": "6 泛函预备知识",
+        "page": 46,
+        "depth": 0
+      },
+      {
+        "title": "7 随机微分方程的泛函表述",
+        "page": 49,
+        "depth": 0
+      },
+      {
+        "title": "8 Ornstein–Uhlenbeck 过程：自由高斯理论",
+        "page": 56,
+        "depth": 0
+      },
+      {
+        "title": "9 随机微分方程的微扰理论",
+        "page": 61,
+        "depth": 0
+      },
+      {
+        "title": "10 随机网络的动态平均场理论",
+        "page": 69,
+        "depth": 0
+      },
+      {
+        "title": "11 顶点生成函数",
+        "page": 88,
+        "depth": 0
+      },
+      {
+        "title": "12 将累积量展开为顶点函数的树图",
+        "page": 109,
+        "depth": 0
+      },
+      {
+        "title": "13 有效作用量的逐圈展开",
+        "page": 113,
+        "depth": 0
+      },
+      {
+        "title": "14 MSRDJ 形式体系中的逐圈展开",
+        "page": 130,
+        "depth": 0
+      },
+      {
+        "title": "命名法",
+        "page": 140,
+        "depth": 0
+      },
+      {
+        "title": "作者简介",
+        "page": 141,
+        "depth": 0
+      },
+      {
+        "title": "中英术语索引",
+        "page": 142,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "principles-deep-learning-theory": {
+    "summary": "本书以有效理论方法研究深度神经网络，讨论初始化、训练、相关函数及网络宽度对理论描述的影响。此译本依据 arXiv v2。",
+    "contents": [
+      {
+        "title": "1 序言",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "0 初始化",
+        "page": 11,
+        "depth": 0
+      },
+      {
+        "title": "0.1 有效理论方法",
+        "page": 12,
+        "depth": 0
+      },
+      {
+        "title": "0.2 理论最低限度",
+        "page": 13,
+        "depth": 0
+      },
+      {
+        "title": "1 预训练",
+        "page": 19,
+        "depth": 0
+      },
+      {
+        "title": "1.1 高斯积分",
+        "page": 20,
+        "depth": 0
+      },
+      {
+        "title": "1.2 概率、相关与统计，以及诸如此类的一切",
+        "page": 27,
+        "depth": 0
+      },
+      {
+        "title": "1.3 近高斯分布",
+        "page": 31,
+        "depth": 0
+      },
+      {
+        "title": "2 神经网络",
+        "page": 39,
+        "depth": 0
+      },
+      {
+        "title": "2.1 函数逼近",
+        "page": 39,
+        "depth": 0
+      },
+      {
+        "title": "2.2 激活函数",
+        "page": 44,
+        "depth": 0
+      },
+      {
+        "title": "2.3 系综",
+        "page": 47,
+        "depth": 0
+      },
+      {
+        "title": "3 初始化时深度线性网络的有效理论",
+        "page": 52,
+        "depth": 0
+      },
+      {
+        "title": "3.1 深度线性网络",
+        "page": 53,
+        "depth": 0
+      },
+      {
+        "title": "3.2 临界性",
+        "page": 54,
+        "depth": 0
+      },
+      {
+        "title": "3.3 涨落",
+        "page": 56,
+        "depth": 0
+      },
+      {
+        "title": "3.4 混沌",
+        "page": 61,
+        "depth": 0
+      },
+      {
+        "title": "4 预激活量的表征群流",
+        "page": 66,
+        "depth": 0
+      },
+      {
+        "title": "4.1 第一层：经典高斯",
+        "page": 67,
+        "depth": 0
+      },
+      {
+        "title": "4.2 第二层：非高斯性的诞生",
+        "page": 72,
+        "depth": 0
+      },
+      {
+        "title": "4.3 更深层：非高斯性的累积",
+        "page": 81,
+        "depth": 0
+      },
+      {
+        "title": "4.4 边缘化规则",
+        "page": 86,
+        "depth": 0
+      },
+      {
+        "title": "4.5 次领先修正",
+        "page": 90,
+        "depth": 0
+      },
+      {
+        "title": "4.6 RG 流与 RG 流",
+        "page": 92,
+        "depth": 0
+      },
+      {
+        "title": "5 初始化时预激活量的有效理论",
+        "page": 97,
+        "depth": 0
+      },
+      {
+        "title": "5.1 核的临界性分析",
+        "page": 98,
+        "depth": 0
+      },
+      {
+        "title": "5.2 尺度不变激活函数的临界性",
+        "page": 108,
+        "depth": 0
+      },
+      {
+        "title": "5.3 超越尺度不变激活函数的普适性",
+        "page": 109,
+        "depth": 0
+      },
+      {
+        "title": "5.4 涨落",
+        "page": 119,
+        "depth": 0
+      },
+      {
+        "title": "5.5 尺度不变普适类的有限夹角分析",
+        "page": 126,
+        "depth": 0
+      },
+      {
+        "title": "6 贝叶斯学习",
+        "page": 132,
+        "depth": 0
+      },
+      {
+        "title": "6.1 贝叶斯概率",
+        "page": 133,
+        "depth": 0
+      },
+      {
+        "title": "6.2 贝叶斯推断与神经网络",
+        "page": 135,
+        "depth": 0
+      },
+      {
+        "title": "6.3 无限宽下的贝叶斯推断",
+        "page": 143,
+        "depth": 0
+      },
+      {
+        "title": "6.4 有限宽下的贝叶斯推断",
+        "page": 151,
+        "depth": 0
+      },
+      {
+        "title": "7 基于梯度的学习",
+        "page": 160,
+        "depth": 0
+      },
+      {
+        "title": "7.1 监督学习",
+        "page": 161,
+        "depth": 0
+      },
+      {
+        "title": "7.2 梯度下降与函数逼近",
+        "page": 162,
+        "depth": 0
+      },
+      {
+        "title": "8 神经正切核的表征群流",
+        "page": 166,
+        "depth": 0
+      },
+      {
+        "title": "8.0 NTK 的前向方程",
+        "page": 167,
+        "depth": 0
+      },
+      {
+        "title": "8.1 第一层：确定性 NTK",
+        "page": 171,
+        "depth": 0
+      },
+      {
+        "title": "8.2 第二层：涨落的 NTK",
+        "page": 172,
+        "depth": 0
+      },
+      {
+        "title": "8.3 更深层：NTK 涨落的累积",
+        "page": 175,
+        "depth": 0
+      },
+      {
+        "title": "9 初始化时 NTK 的有效理论",
+        "page": 189,
+        "depth": 0
+      },
+      {
+        "title": "9.1 NTK 的临界性分析",
+        "page": 189,
+        "depth": 0
+      },
+      {
+        "title": "9.2 尺度不变普适类",
+        "page": 194,
+        "depth": 0
+      },
+      {
+        "title": "9.3 K=0 普适类",
+        "page": 197,
+        "depth": 0
+      },
+      {
+        "title": "9.4 临界性、爆炸与消失问题，以及这些问题的消失",
+        "page": 201,
+        "depth": 0
+      },
+      {
+        "title": "10 核学习",
+        "page": 205,
+        "depth": 0
+      },
+      {
+        "title": "10.1 一小步",
+        "page": 206,
+        "depth": 0
+      },
+      {
+        "title": "10.2 巨大飞跃",
+        "page": 209,
+        "depth": 0
+      },
+      {
+        "title": "10.3 泛化",
+        "page": 219,
+        "depth": 0
+      },
+      {
+        "title": "10.4 线性模型与核方法",
+        "page": 232,
+        "depth": 0
+      },
+      {
+        "title": "11 表征学习",
+        "page": 239,
+        "depth": 0
+      },
+      {
+        "title": "11.1 神经正切核的微分",
+        "page": 240,
+        "depth": 0
+      },
+      {
+        "title": "11.2 dNTK 的 RG 流",
+        "page": 243,
+        "depth": 0
+      },
+      {
+        "title": "11.3 初始化时 dNTK 的有效理论",
+        "page": 255,
+        "depth": 0
+      },
+      {
+        "title": "11.4 非线性模型与近核方法",
+        "page": 261,
+        "depth": 0
+      },
+      {
+        "title": "Infinity 训练的终点",
+        "page": 274,
+        "depth": 0
+      },
+      {
+        "title": "Infinity.1 另外两个微分",
+        "page": 275,
+        "depth": 0
+      },
+      {
+        "title": "Infinity.2 有限宽度下的训练",
+        "page": 283,
+        "depth": 0
+      },
+      {
+        "title": "Infinity.3 ddNTK 的 RG 流：完整表达式",
+        "page": 315,
+        "depth": 0
+      },
+      {
+        "title": "宏观视角下的模型复杂度",
+        "page": 319,
+        "depth": 0
+      },
+      {
+        "title": "A 深度学习中的信息",
+        "page": 326,
+        "depth": 0
+      },
+      {
+        "title": "A.1 熵与互信息",
+        "page": 20,
+        "depth": 0
+      },
+      {
+        "title": "A.2 无限宽下的信息：临界性",
+        "page": 27,
+        "depth": 0
+      },
+      {
+        "title": "A.3 有限宽下的信息：最优深宽比",
+        "page": 31,
+        "depth": 0
+      },
+      {
+        "title": "B 残差学习",
+        "page": 345,
+        "depth": 0
+      },
+      {
+        "title": "B.1 残差多层感知机",
+        "page": 39,
+        "depth": 0
+      },
+      {
+        "title": "B.2 残差无限宽：临界性分析",
+        "page": 44,
+        "depth": 0
+      },
+      {
+        "title": "B.3 残差有限宽：最优深宽比",
+        "page": 47,
+        "depth": 0
+      },
+      {
+        "title": "B.4 残差构件",
+        "page": 354,
+        "depth": 0
+      },
+      {
+        "title": "索引",
+        "page": 366,
+        "depth": 0
+      },
+      {
+        "title": "术语索引",
+        "page": 386,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "deep-learning-classical-quantum-physics": {
+    "summary": "本讲义介绍深度学习基础与无监督学习，并讨论量子力学及量子科学中使用深度学习的若干方法。译本对应 arXiv v1。",
+    "contents": [
+      {
+        "title": "译本说明",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "前言",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "致谢",
+        "page": 3,
+        "depth": 0
+      },
+      {
+        "title": "1 引言",
+        "page": 7,
+        "depth": 0
+      },
+      {
+        "title": "2 深度学习基础",
+        "page": 17,
+        "depth": 0
+      },
+      {
+        "title": "3 无监督学习",
+        "page": 58,
+        "depth": 0
+      },
+      {
+        "title": "4 量子力学基础",
+        "page": 86,
+        "depth": 0
+      },
+      {
+        "title": "5 量子科学中的深度学习技术",
+        "page": 109,
+        "depth": 0
+      },
+      {
+        "title": "6 结论与展望",
+        "page": 153,
+        "depth": 0
+      },
+      {
+        "title": "参考文献",
+        "page": 156,
+        "depth": 0
+      },
+      {
+        "title": "术语索引",
+        "page": 165,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "understanding-deep-learning": {
+    "summary": "本书系统介绍现代深度学习的基本概念、网络架构、训练方法及应用，并讨论多种生成模型与相关技术。",
+    "contents": [
+      {
+        "title": "译本说明",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "献词",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "前言",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "致谢",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "1 引言",
+        "page": 19,
+        "depth": 0
+      },
+      {
+        "title": "2 监督学习",
+        "page": 33,
+        "depth": 0
+      },
+      {
+        "title": "3 浅层神经网络",
+        "page": 41,
+        "depth": 0
+      },
+      {
+        "title": "4 深度神经网络",
+        "page": 58,
+        "depth": 0
+      },
+      {
+        "title": "5 损失函数",
+        "page": 72,
+        "depth": 0
+      },
+      {
+        "title": "6 模型拟合",
+        "page": 97,
+        "depth": 0
+      },
+      {
+        "title": "7 梯度与参数初始化",
+        "page": 117,
+        "depth": 0
+      },
+      {
+        "title": "8 性能度量",
+        "page": 139,
+        "depth": 0
+      },
+      {
+        "title": "9 正则化",
+        "page": 160,
+        "depth": 0
+      },
+      {
+        "title": "10 卷积网络",
+        "page": 184,
+        "depth": 0
+      },
+      {
+        "title": "11 残差网络",
+        "page": 208,
+        "depth": 0
+      },
+      {
+        "title": "12 Transformer",
+        "page": 228,
+        "depth": 0
+      },
+      {
+        "title": "13 图神经网络",
+        "page": 262,
+        "depth": 0
+      },
+      {
+        "title": "14 无监督学习",
+        "page": 289,
+        "depth": 0
+      },
+      {
+        "title": "15 生成对抗网络",
+        "page": 297,
+        "depth": 0
+      },
+      {
+        "title": "16 标准化流",
+        "page": 327,
+        "depth": 0
+      },
+      {
+        "title": "17 变分自编码器",
+        "page": 349,
+        "depth": 0
+      },
+      {
+        "title": "18 扩散模型",
+        "page": 372,
+        "depth": 0
+      },
+      {
+        "title": "19 强化学习",
+        "page": 396,
+        "depth": 0
+      },
+      {
+        "title": "20 深度学习为何有效？",
+        "page": 426,
+        "depth": 0
+      },
+      {
+        "title": "21 深度学习与伦理",
+        "page": 448,
+        "depth": 0
+      },
+      {
+        "title": "A 符号约定",
+        "page": 465,
+        "depth": 0
+      },
+      {
+        "title": "B 数学基础",
+        "page": 468,
+        "depth": 0
+      },
+      {
+        "title": "C 概率论",
+        "page": 476,
+        "depth": 0
+      },
+      {
+        "title": "参考文献",
+        "page": 489,
+        "depth": 0
+      },
+      {
+        "title": "术语索引",
+        "page": 594,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "machine-learning-quantum-sciences": {
+    "summary": "本书综述机器学习在量子科学中的应用，包括相分类、高斯过程、神经网络量子态和其他相关方法。译本对应所列 arXiv 版本。",
+    "contents": [
+      {
+        "title": "原著信息",
+        "page": 1,
+        "depth": 0
+      },
+      {
+        "title": "译本说明",
+        "page": 3,
+        "depth": 0
+      },
+      {
+        "title": "献词",
+        "page": 3,
+        "depth": 0
+      },
+      {
+        "title": "前言",
+        "page": 3,
+        "depth": 0
+      },
+      {
+        "title": "1 引言",
+        "page": 10,
+        "depth": 0
+      },
+      {
+        "title": "2 机器学习基础",
+        "page": 21,
+        "depth": 0
+      },
+      {
+        "title": "3 相分类",
+        "page": 48,
+        "depth": 0
+      },
+      {
+        "title": "4 高斯过程与其他核方法",
+        "page": 71,
+        "depth": 0
+      },
+      {
+        "title": "5 神经网络量子态",
+        "page": 100,
+        "depth": 0
+      },
+      {
+        "title": "6 强化学习",
+        "page": 128,
+        "depth": 0
+      },
+      {
+        "title": "7 量子科学中的深度学习专题",
+        "page": 162,
+        "depth": 0
+      },
+      {
+        "title": "8 用于深度学习的物理学",
+        "page": 193,
+        "depth": 0
+      },
+      {
+        "title": "9 结论与展望",
+        "page": 220,
+        "depth": 0
+      },
+      {
+        "title": "致谢",
+        "page": 223,
+        "depth": 0
+      },
+      {
+        "title": "A 主成分分析的数学细节",
+        "page": 225,
+        "depth": 0
+      },
+      {
+        "title": "B 核技巧的推导",
+        "page": 227,
+        "depth": 0
+      },
+      {
+        "title": "C 将核矩阵选作高斯过程的协方差矩阵",
+        "page": 230,
+        "depth": 0
+      },
+      {
+        "title": "参考文献",
+        "page": 232,
+        "depth": 0
+      },
+      {
+        "title": "图清单",
+        "page": 295,
+        "depth": 0
+      },
+      {
+        "title": "算法清单",
+        "page": 297,
+        "depth": 0
+      },
+      {
+        "title": "缩略语清单",
+        "page": 298,
+        "depth": 0
+      },
+      {
+        "title": "主题索引",
+        "page": 298,
+        "depth": 0
+      },
+      {
+        "title": "术语索引",
+        "page": 303,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "deep-learning-computational-physics": {
+    "summary": "本讲义介绍深度神经网络、残差网络、卷积网络和算子网络，并讨论它们在计算物理与偏微分方程问题中的使用。",
+    "contents": [
+      {
+        "title": "译本说明",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "前言",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "1 引言",
+        "page": 6,
+        "depth": 0
+      },
+      {
+        "title": "2 深度神经网络导论",
+        "page": 11,
+        "depth": 0
+      },
+      {
+        "title": "3 残差神经网络",
+        "page": 29,
+        "depth": 0
+      },
+      {
+        "title": "4 用 MLP 求解 PDE",
+        "page": 35,
+        "depth": 0
+      },
+      {
+        "title": "5 卷积神经网络",
+        "page": 46,
+        "depth": 0
+      },
+      {
+        "title": "6 算子网络",
+        "page": 58,
+        "depth": 0
+      },
+      {
+        "title": "7 概率深度学习",
+        "page": 69,
+        "depth": 0
+      },
+      {
+        "title": "参考文献",
+        "page": 84,
+        "depth": 0
+      },
+      {
+        "title": "术语索引",
+        "page": 87,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  },
+  "mathematical-theory-deep-learning": {
+    "summary": "本书从数学角度介绍前馈与 ReLU 神经网络、逼近、样条及相关理论。此译本对应 arXiv v4。",
+    "contents": [
+      {
+        "title": "译本说明",
+        "page": 2,
+        "depth": 0
+      },
+      {
+        "title": "前言",
+        "page": 8,
+        "depth": 0
+      },
+      {
+        "title": "记号",
+        "page": 9,
+        "depth": 0
+      },
+      {
+        "title": "1 导论",
+        "page": 12,
+        "depth": 0
+      },
+      {
+        "title": "2 前馈神经网络",
+        "page": 20,
+        "depth": 0
+      },
+      {
+        "title": "3 万能逼近",
+        "page": 26,
+        "depth": 0
+      },
+      {
+        "title": "4 样条",
+        "page": 40,
+        "depth": 0
+      },
+      {
+        "title": "5 ReLU 神经网络",
+        "page": 47,
+        "depth": 0
+      },
+      {
+        "title": "6 ReLU 神经网络的仿射片",
+        "page": 66,
+        "depth": 0
+      },
+      {
+        "title": "7 深层 ReLU 神经网络",
+        "page": 76,
+        "depth": 0
+      },
+      {
+        "title": "8 高维逼近",
+        "page": 90,
+        "depth": 0
+      },
+      {
+        "title": "9 插值",
+        "page": 110,
+        "depth": 0
+      },
+      {
+        "title": "10 神经网络训练",
+        "page": 120,
+        "depth": 0
+      },
+      {
+        "title": "11 宽神经网络与神经切线核",
+        "page": 145,
+        "depth": 0
+      },
+      {
+        "title": "12 损失景观分析",
+        "page": 177,
+        "depth": 0
+      },
+      {
+        "title": "13 神经网络空间的形状",
+        "page": 186,
+        "depth": 0
+      },
+      {
+        "title": "14 深度神经网络的泛化性质",
+        "page": 198,
+        "depth": 0
+      },
+      {
+        "title": "15 过参数化机制下的泛化",
+        "page": 218,
+        "depth": 0
+      },
+      {
+        "title": "16 鲁棒性与对抗样本",
+        "page": 227,
+        "depth": 0
+      },
+      {
+        "title": "17 现代架构",
+        "page": 240,
+        "depth": 0
+      },
+      {
+        "title": "A 概率论",
+        "page": 264,
+        "depth": 0
+      },
+      {
+        "title": "B 线性代数与泛函分析",
+        "page": 273,
+        "depth": 0
+      },
+      {
+        "title": "参考文献",
+        "page": 281,
+        "depth": 0
+      },
+      {
+        "title": "术语索引",
+        "page": 308,
+        "depth": 0
+      }
+    ],
+    "contentsFile": 0
+  }
+}
