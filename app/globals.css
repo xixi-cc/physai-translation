@@ -26,3 +26,5 @@ footer{min-height:64px;padding:0 max(24px,calc((100% - 1320px)/2));display:flex;
 @media(max-width:480px){.detail-hero{grid-template-columns:1fr}.detail-cover{width:112px;height:158px}}
 
 .toc-list li.toc-depth-1>a{padding-left:20px}.toc-list li.toc-depth-2>a{padding-left:40px}.toc-list li.toc-depth-3>a{padding-left:60px}.toc-list li.toc-depth-4>a{padding-left:80px}.toc-list li>a>span:first-child{min-width:0;overflow-wrap:anywhere}@media(max-width:680px){.toc-list li.toc-depth-1>a{padding-left:12px}.toc-list li.toc-depth-2>a{padding-left:24px}.toc-list li.toc-depth-3>a{padding-left:36px}.toc-list li.toc-depth-4>a{padding-left:48px}}
+
+.detail-section>p:not(.toc-note){white-space:pre-line}
