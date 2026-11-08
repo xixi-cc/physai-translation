@@ -45,8 +45,8 @@ const publishedMetadata: Record<string, {author:string; year:string; category:'�
   'Mathematical Theory of Deep Learning':{author:'Philipp Petersen, Jakob Zech',year:'2026',category:'AI'},
 };
 const books: Book[] = [...newBooks.map(item => ({...item, category:item.category as '物理'|'AI', cover:asset(item.cover), downloads:item.downloads.map(file => ({...file, url:file.url.startsWith('https://') ? file.url : asset(file.url)}))})), ...publishedBooks.map(item => ({...item, ...publishedMetadata[item.en]}))];
-type ContentsRow = { title:string; page:number|null; depth:number };
-type BookDetails = { summary:string; contents:ContentsRow[]; contentsFile:number };
+type ContentsRow = { title:string; page:number|null; depth:number; printedPage?:string };
+type BookDetails = { summary:string; contents:ContentsRow[]; contentsFile:number; contentsNote?:string };
 const details = bookDetails as Record<string, BookDetails>;
 const bookId = (book:Book) => book.cover.split('/').pop()!.replace(/\.jpg$/, '');
 const filesFor = (book:Book): DownloadItem[] => book.downloads ?? (book.translation ? [{label:'中文译本',url:book.translation,size:book.ts}] : []);
@@ -66,7 +66,7 @@ function DetailPage({book}:{book:Book}) {
       <div className="detail-copy"><span className="field">{book.category} · {book.field}</span><h1>{book.zh}</h1><p className="detail-english">{book.en}</p><p className="detail-author">{book.author} · {book.year}</p>{book.scope&&<p className="detail-scope">{book.scope}</p>}<FileActions book={book} detail/></div>
     </article>
     <section className="detail-section"><h2>简介</h2><p>{detail.summary}</p></section>
-    <section className="detail-section"><h2>目录</h2><p className="toc-note">{filesFor(book).length>1 ? `目录依据${file.label}；点击可跳转，页码为 PDF 物理页。` : '点击可跳转，页码为 PDF 物理页。'}</p><ol className="toc-list">{detail.contents.map((entry,i)=><li className={entry.depth ? 'toc-sub' : ''} key={`${i}-${entry.title}`}>{entry.page ? <a href={`${file.url}#page=${entry.page}`} target="_blank" rel="noreferrer"><span>{entry.title}</span><span className="toc-page">{entry.page}</span></a> : <span>{entry.title}</span>}</li>)}</ol></section>
+    <section className="detail-section"><h2>目录</h2><p className="toc-note">{filesFor(book).length>1 ? `目录依据${file.label}。` : ''}{detail.contentsNote}</p><ol className="toc-list">{detail.contents.map((entry,i)=><li className={`toc-depth-${Math.min(entry.depth, 4)}`} key={`${i}-${entry.title}`}>{entry.page ? <a href={`${file.url}#page=${entry.page}`} target="_blank" rel="noreferrer"><span>{entry.title}</span><span className="toc-page">{entry.printedPage ?? entry.page}</span></a> : <span>{entry.title}</span>}</li>)}</ol></section>
   </div>;
 }
 
