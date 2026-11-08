@@ -5,9 +5,10 @@ import newBooks from './new-books.json';
 import { ArrowUpRight, BookOpen, Check, CircleHelp, Download, FileArchive, FileText, GitBranch, Languages, Menu, Moon, Search, Sun, X } from 'lucide-react';
 
 type Section = 'originals' | 'translations' | 'guide';
+type Category = '全部' | '物理' | 'AI';
 const asset = (path:string) => `${import.meta.env.BASE_URL}${path.replace(/^\//,'')}`;
 type DownloadItem = { label:string; url:string; size:string };
-type Book = { zh:string; en:string; field:string; cover:string; original:string; sourceLabel:string; os:string; ts:string; date?:string; scope?:string; translation?:string; downloads?:DownloadItem[] };
+type Book = { zh:string; en:string; field:string; cover:string; original:string; sourceLabel:string; os:string; ts:string; date?:string; scope?:string; translation?:string; downloads?:DownloadItem[]; author?:string; year?:string; category?:'物理'|'AI' };
 const publishedBooks: Book[] = [
   { zh:'场的统计物理', en:'Statistical Physics of Fields', field:'统计场论', cover:asset('/covers/statistical-physics-of-fields.jpg'), original:asset('/pdfs/statistical-physics-of-fields-original.pdf'), sourceLabel:'原著 PDF', translation:asset('/pdfs/statistical-physics-of-fields-zh.pdf'), os:'2.1 MB', ts:'2.7 MB' },
   { zh:'集群运动的物理学', en:'The Physics of Flocking', field:'非平衡物理', cover:asset('/covers/the-physics-of-flocking.jpg'), original:asset('/pdfs/the-physics-of-flocking-original.pdf'), sourceLabel:'原著 PDF', translation:asset('/pdfs/the-physics-of-flocking-zh.pdf'), os:'2.5 MB', ts:'2.4 MB' },
@@ -25,7 +26,24 @@ const publishedBooks: Book[] = [
   { zh:'深度学习与计算物理', en:'Deep Learning and Computational Physics', field:'科学机器学习', cover:asset('/covers/deep-learning-computational-physics.jpg'), original:'https://arxiv.org/abs/2301.00942', sourceLabel:'arXiv 原著', translation:asset('/pdfs/Deep_Learning_and_Computational_Physics_zh.pdf'), os:'arXiv:2301.00942v1', ts:'7.2 MB', date:'2026-08' },
   { zh:'深度学习的数学理论', en:'Mathematical Theory of Deep Learning', field:'深度学习理论', cover:asset('/covers/mathematical-theory-deep-learning.jpg'), original:'https://arxiv.org/abs/2407.18384', sourceLabel:'arXiv 原著', translation:asset('/pdfs/Mathematical_theory_of_deep_learning_zh.pdf'), os:'arXiv:2407.18384v4', ts:'17.4 MB', date:'2026-09' },
 ];
-const books: Book[] = [...newBooks.map(item => ({...item, cover:asset(item.cover), downloads:item.downloads.map(file => ({...file, url:file.url.startsWith('https://') ? file.url : asset(file.url)}))})), ...publishedBooks];
+const publishedMetadata: Record<string, {author:string; year:string; category:'物理'|'AI'}> = {
+  'Statistical Physics of Fields':{author:'Mehran Kardar',year:'2007',category:'物理'},
+  'The Physics of Flocking':{author:'John Toner',year:'2024',category:'物理'},
+  'Elements of Phase Transitions and Critical Phenomena':{author:'Hidetoshi Nishimori, Gerardo Ortiz',year:'2011',category:'物理'},
+  'Nonequilibrium Statistical Physics':{author:'Roberto Livi, Paolo Politi',year:'2017',category:'物理'},
+  'Exactly Solved Models in Statistical Mechanics':{author:'Rodney J. Baxter',year:'1982',category:'物理'},
+  'Non-Equilibrium Phase Transitions, Volume I':{author:'Malte Henkel, Haye Hinrichsen, Sven Lübeck',year:'2008',category:'物理'},
+  'Statistical Mechanics of Neural Networks':{author:'Haiping Huang',year:'2021',category:'AI'},
+  'A Kinetic View of Statistical Physics':{author:'Pavel L. Krapivsky, Sidney Redner, Eli Ben-Naim',year:'2010',category:'物理'},
+  'Statistical Field Theory for Neural Networks':{author:'Moritz Helias, David Dahmen',year:'2020',category:'AI'},
+  'The Principles of Deep Learning Theory':{author:'Daniel A. Roberts, Sho Yaida',year:'2021',category:'AI'},
+  'Deep Learning in Classical and Quantum Physics':{author:'Timothy Heightman, Marcin Płodzień',year:'2025',category:'AI'},
+  'Understanding Deep Learning':{author:'Simon J. D. Prince',year:'2023',category:'AI'},
+  'Modern Applications of Machine Learning in Quantum Sciences':{author:'Anna Dawid 等',year:'2025',category:'AI'},
+  'Deep Learning and Computational Physics':{author:'Deep Ray, Orazio Pinti, Assad A. Oberai',year:'2023',category:'AI'},
+  'Mathematical Theory of Deep Learning':{author:'Philipp Petersen, Jakob Zech',year:'2026',category:'AI'},
+};
+const books: Book[] = [...newBooks.map(item => ({...item, category:item.category as '物理'|'AI', cover:asset(item.cover), downloads:item.downloads.map(file => ({...file, url:file.url.startsWith('https://') ? file.url : asset(file.url)}))})), ...publishedBooks.map(item => ({...item, ...publishedMetadata[item.en]}))];
 const navItems: { id:Section; label:string; en:string; icon:typeof BookOpen }[] = [
   { id:'originals', label:'原著', en:'Originals', icon:BookOpen }, { id:'translations', label:'译本', en:'Translations', icon:Languages },
   { id:'guide', label:'指南', en:'Guide', icon:CircleHelp },
@@ -34,10 +52,11 @@ const navItems: { id:Section; label:string; en:string; icon:typeof BookOpen }[] 
 export default function Home() {
   const [section,setSection] = useState<Section>('translations');
   const [query,setQuery] = useState('');
+  const [category,setCategory] = useState<Category>('全部');
   const [menuOpen,setMenuOpen] = useState(false);
   const [dark,setDark] = useState(false);
   useEffect(() => { const saved=localStorage.getItem('wuyi-theme'); const value=saved?saved==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches; setDark(value); document.documentElement.dataset.theme=value?'dark':'light'; },[]);
-  const filtered=useMemo(()=>{const q=query.trim().toLowerCase(); return q?books.filter(b=>[b.zh,b.en,b.field].join(' ').toLowerCase().includes(q)):books;},[query]);
+  const filtered=useMemo(()=>{const q=query.trim().toLowerCase(); return books.filter(b=>(category==='全部'||b.category===category)&&(!q||[b.zh,b.en,b.field,b.author,b.year].join(' ').toLowerCase().includes(q)));},[query,category]);
   const active=navItems.find(item=>item.id===section)!;
   function change(next:Section){setSection(next);setQuery('');setMenuOpen(false);}
   function toggleTheme(){const next=!dark;setDark(next);document.documentElement.dataset.theme=next?'dark':'light';localStorage.setItem('wuyi-theme',next?'dark':'light');}
@@ -51,16 +70,17 @@ export default function Home() {
       <aside className="sidebar">
         <a className="brand desktop-brand" href="#" onClick={e=>{e.preventDefault();change('translations')}}><img src={asset('/wuyi-logo.svg')} alt="物译 Logo"/><span><strong>物译</strong><small>PhysAI Translation</small></span></a>
         <label className="search-box"><Search size={16}/><input type="search" placeholder="搜索书名或领域" value={query} onChange={e=>setQuery(e.target.value)}/></label>
-        <nav className="side-nav" aria-label="网站导航">{navItems.map(({id,label,en,icon:Icon})=><button className={section===id?'active':''} onClick={()=>change(id)} key={id}><Icon size={17}/><span><strong>{label}</strong><small>{en}</small></span>{(id==='translations'||id==='originals')&&<em>{books.length}</em>}</button>)}</nav>
-        <section className="side-section"><h2>涉及领域</h2><div className="field-tags"><button onClick={()=>setQuery('统计物理')}>统计物理</button><button onClick={()=>setQuery('非平衡')}>非平衡物理</button><button onClick={()=>setQuery('相变')}>相变</button><button onClick={()=>setQuery('场论')}>场论</button></div></section>
+        <nav className="side-nav" aria-label="网站导航">{navItems.map(({id,label,en,icon:Icon})=><button className={section===id?'active':''} onClick={()=>change(id)} key={id}><Icon size={17}/><span><strong>{label}</strong><small>{en}</small></span></button>)}</nav>
+
         <div className="sidebar-actions"><button onClick={toggleTheme}>{dark?<Sun size={15}/>:<Moon size={15}/>} {dark?'浅色模式':'深色模式'}</button><a href="https://github.com/xixi-cc/physai-translation" target="_blank" rel="noreferrer"><GitBranch size={15}/>网站源码<ArrowUpRight size={12}/></a><a href="https://github.com/xixi-cc/mathtranslations-skill" target="_blank" rel="noreferrer"><GitBranch size={15}/>翻译工作流<ArrowUpRight size={12}/></a></div>
       </aside>
       <main className="main-content">
         <div className="content-header"><div><span>{active.en}</span><h1>{active.label}</h1></div>{(section==='translations'||section==='originals')&&<p>共 {filtered.length} 项</p>}</div>
+        {(section==='translations'||section==='originals')&&<div className="category-tabs" aria-label="书籍分类">{(['全部','物理','AI'] as Category[]).map(c=><button key={c} type="button" className={category===c?'active':''} aria-pressed={category===c} onClick={()=>setCategory(c)}>{c}</button>)}</div>}
         {section==='translations'&&<div className="translation-list">{filtered.length?filtered.map((item,index)=><article className="translation-card" key={item.en}>
-          <img className="book-cover" src={item.cover} alt={`${item.zh}封面`} loading={index===0?'eager':'lazy'} fetchPriority={index===0?'high':'auto'}/><div className="translation-copy"><span className="field">{item.field}</span><h2>{item.zh}</h2><p>{item.en}</p><div className="meta"><span><Check size={13}/>{item.scope ?? '完整译本'}</span><span><FileArchive size={13}/>PDF</span><time>{item.date ?? '2026-08'}</time></div><div className="file-actions"><a href={item.original} target="_blank" rel="noreferrer"><FileText size={14}/>{item.sourceLabel} <small>{item.os}</small></a>{item.downloads ? item.downloads.length>3 ? <details className="download-group"><summary>中文译本 · {item.downloads.length} 份 PDF</summary><div>{item.downloads.map(file=><a className="primary" href={file.url} target="_blank" rel="noreferrer" key={file.url}><Download size={14}/>{file.label} <small>{file.size}</small></a>)}</div></details> : item.downloads.map(file=><a className="primary" href={file.url} target="_blank" rel="noreferrer" key={file.url}><Download size={14}/>{file.label} <small>{file.size}</small></a>) : <a className="primary" href={item.translation} target="_blank" rel="noreferrer"><Download size={14}/>中文译本 <small>{item.ts}</small></a>}</div></div>
+          <img className="book-cover" src={item.cover} alt={`${item.zh}封面`} loading={index===0?'eager':'lazy'} fetchPriority={index===0?'high':'auto'}/><div className="translation-copy"><span className="field">{item.category} · {item.field}</span><h2>{item.zh}</h2><p className="book-english">{item.en}</p><p className="book-author">{item.author} · {item.year}</p><div className="meta"><span><Check size={13}/>{item.scope ?? '完整译本'}</span><span><FileArchive size={13}/>PDF</span></div><div className="file-actions"><a href={item.original} target="_blank" rel="noreferrer"><FileText size={14}/>{item.sourceLabel}</a>{(item.downloads ?? (item.translation ? [{label:'中文译本',url:item.translation,size:item.ts}] : [])).map(file=><span className="pdf-actions" key={file.url}><a className="primary" href={file.url} target="_blank" rel="noreferrer">在线阅读{item.downloads && item.downloads.length>1 ? ` · ${file.label}` : ''}</a><a href={file.url} download><Download size={14}/>下载 PDF{item.downloads && item.downloads.length>1 ? ` · ${file.label}` : ''} <small>{file.size}</small></a></span>)}</div></div>
         </article>):<div className="empty">没有找到匹配的译本。</div>}</div>}
-        {section==='originals'&&<div className="simple-list">{filtered.map(item=><article key={item.en}><img className="original-cover" src={item.cover} alt="" loading="lazy"/><div><h2>{item.en}</h2><p>{item.field} · {item.sourceLabel} · {item.os}</p></div><a href={item.original} target="_blank" rel="noreferrer"><FileText size={14}/>{item.sourceLabel==='原著 PDF'?'打开 PDF':'查看原著'}</a></article>)}</div>}
+        {section==='originals'&&<div className="simple-list">{filtered.map(item=><article key={item.en}><img className="original-cover" src={item.cover} alt="" loading="lazy"/><div><h2>{item.en}</h2><p>{item.author} · {item.year} · {item.category}</p></div><a href={item.original} target="_blank" rel="noreferrer"><FileText size={14}/>{item.sourceLabel==='原著 PDF'?'打开 PDF':'查看原著'}</a></article>)}</div>}
         {section==='guide'&&<div className="guide-page">
           <section className="guide-intro"><span>AI-ASSISTED TRANSLATION WORKFLOW</span><h2>怎样用 AI 辅助翻译一本物理原著</h2><p>每本书使用一个独立任务和一个独立目录。原著 PDF 是唯一内容依据；AI 工具协助提取、初译、LaTeX 编排与检查，人负责确定版本、处理物理歧义并批准最终交付。无论使用哪一种 AI 工具，都可以遵循下面的流程。</p></section>
           <div className="guide-principles"><article><strong>人负责决策</strong><p>选择原著与版本，确认版权边界，回答歧义问题并批准最终译文。</p></article><article><strong>AI 协助执行</strong><p>读取 PDF、维护术语和进度、分章翻译、整理 LaTeX，并协助检查问题。</p></article><article><strong>工具负责验证</strong><p>PDF 提取保证页码可追溯，XeLaTeX 生成成品，Git 和哈希保留版本证据。</p></article></div>

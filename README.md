@@ -19,7 +19,13 @@ npm install
 npm run dev
 ```
 
-GitHub Pages 版本使用同一套页面和资料：
+GitHub Pages 版本使用同一套页面和资料。Physics 361 的大文件从本仓库 Release 获取，不写入 Git；首次本地构建前执行：
+
+```bash
+curl --fail --location -o public/pdfs/physics-361.pdf https://github.com/xixi-cc/physai-translation/releases/download/translations-2026-11-08/physics-361-zh.pdf
+```
+
+构建时会核对 SHA-256，Actions 会自动执行下载：
 
 ```bash
 npm run build:pages

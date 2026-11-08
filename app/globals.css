@@ -18,3 +18,5 @@ footer{min-height:64px;padding:0 max(24px,calc((100% - 1320px)/2));display:flex;
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 
 .download-group{width:100%}.download-group summary{width:max-content;cursor:pointer;padding:9px 12px;border:1px solid var(--accent);border-radius:8px;background:var(--accent);color:#fff;font-size:11px}.download-group>div{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+
+.category-tabs{display:flex;gap:8px;margin-top:18px}.category-tabs button{padding:7px 15px;border:1px solid var(--border);border-radius:20px;background:var(--surface);color:var(--muted);font-size:12px;cursor:pointer}.category-tabs button.active{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}.translation-copy>p.book-english{white-space:normal;overflow:visible}.translation-copy>p.book-author{margin-top:6px;white-space:normal;overflow:visible;font:12px/1.6 var(--font-sans-cn),sans-serif;color:var(--text)}.pdf-actions{display:inline-flex;flex-wrap:wrap;gap:8px}@media(max-width:680px){.pdf-actions{display:flex;flex-wrap:wrap}.pdf-actions a{flex:1 1 auto}}

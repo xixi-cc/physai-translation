@@ -1,7 +1,7 @@
 [
   {
-    "zh": "面向机器学习的物理学 TASI 讲义",
-    "en": "TASI Lectures on Physics for Machine Learning",
+    "zh": "面向机器学习的物理学",
+    "en": "Physics for Machine Learning",
     "field": "机器学习与物理",
     "cover": "/covers/tasi-physics-machine-learning.jpg",
     "original": "https://arxiv.org/abs/2408.00082",
@@ -16,11 +16,14 @@
         "url": "/pdfs/tasi-physics-machine-learning.pdf",
         "size": "1.4 MB"
       }
-    ]
+    ],
+    "author": "James Halverson",
+    "year": "2024",
+    "category": "AI"
   },
   {
-    "zh": "大宽度与无限宽度深度学习：Les Houches 讲义",
-    "en": "Les Houches Lectures on Deep Learning at Large and Infinite Width",
+    "zh": "大宽度与无限宽度深度学习",
+    "en": "Deep Learning at Large and Infinite Width",
     "field": "深度学习理论",
     "cover": "/covers/les-houches-large-width.jpg",
     "original": "https://arxiv.org/abs/2309.01592",
@@ -35,7 +38,10 @@
         "url": "/pdfs/les-houches-large-width.pdf",
         "size": "1.3 MB"
       }
-    ]
+    ],
+    "author": "Yasaman Bahri, Boris Hanin, Antonin Brossollet, Vittorio Erba, Christian Keup, Rosalba Pacelli, James B. Simon",
+    "year": "2024",
+    "category": "AI"
   },
   {
     "zh": "深度学习的物理学：Iliad 讲义与幻灯片",
@@ -59,7 +65,10 @@
         "url": "/pdfs/iliad-physics-deep-learning-02.pdf",
         "size": "2.5 MB"
       }
-    ]
+    ],
+    "author": "Aleksander Czejdo, Tudor Dimofte, Brianna Grado-White, Charles Renshaw-Whitman",
+    "year": "2026",
+    "category": "AI"
   },
   {
     "zh": "人工智能 Pre-Strings 讲义",
@@ -78,7 +87,10 @@
         "url": "/pdfs/prestrings-artificial-intelligence.pdf",
         "size": "1.9 MB"
       }
-    ]
+    ],
+    "author": "James Halverson",
+    "year": "2026",
+    "category": "AI"
   },
   {
     "zh": "优化与机器学习中的统计物理方法",
@@ -90,23 +102,21 @@
     "os": "Florent Krzakala and Lenka Zdeborova",
     "ts": "PDF",
     "date": "2026-11",
-    "scope": "2022、2024 讲义；部分末章缺正文",
+    "scope": "2024 讲义；第 19 章仅有标题",
     "downloads": [
       {
         "label": "2024 版",
         "url": "/pdfs/stat-physics-optimization-01.pdf",
         "size": "3.4 MB"
-      },
-      {
-        "label": "2022 版",
-        "url": "/pdfs/stat-physics-optimization-02.pdf",
-        "size": "3.1 MB"
       }
-    ]
+    ],
+    "author": "Florent Krzakala, Lenka Zdeborová",
+    "year": "2024",
+    "category": "AI"
   },
   {
-    "zh": "信息、物理与计算：作者章节草稿",
-    "en": "Information, Physics, and Computation (author chapter drafts)",
+    "zh": "信息、物理与计算（部分章节）",
+    "en": "Information, Physics, and Computation (Selected Chapters)",
     "field": "信息与统计物理",
     "cover": "/covers/information-physics-computation.jpg",
     "original": "https://web.stanford.edu/~montanar/RESEARCH/book.html",
@@ -121,11 +131,14 @@
         "url": "/pdfs/information-physics-computation.pdf",
         "size": "7.4 MB"
       }
-    ]
+    ],
+    "author": "Marc Mézard, Andrea Montanari",
+    "year": "2009（原书）",
+    "category": "AI"
   },
   {
-    "zh": "现代机器学习的概率论：ORF 526",
-    "en": "Probability for Modern Machine Learning (ORF 526)",
+    "zh": "现代机器学习的概率论",
+    "en": "Probability for Modern Machine Learning",
     "field": "概率与机器学习",
     "cover": "/covers/orf526-probability.jpg",
     "original": "https://boris-hanin.github.io/prob-ml/",
@@ -133,64 +146,17 @@
     "os": "Boris Hanin",
     "ts": "PDF",
     "date": "2026-11",
-    "scope": "11 份课程资料；非完整课程",
+    "scope": "11 份课程资料合订；非完整课程",
     "downloads": [
       {
-        "label": "第 2 讲笔记",
-        "url": "/pdfs/orf526-probability-01.pdf",
-        "size": "0.3 MB"
-      },
-      {
-        "label": "第 3 份解答",
-        "url": "/pdfs/orf526-probability-02.pdf",
-        "size": "0.3 MB"
-      },
-      {
-        "label": "第 4 份笔记",
-        "url": "/pdfs/orf526-probability-03.pdf",
-        "size": "0.4 MB"
-      },
-      {
-        "label": "第 5 份解答",
-        "url": "/pdfs/orf526-probability-04.pdf",
-        "size": "0.3 MB"
-      },
-      {
-        "label": "第 6 份笔记",
-        "url": "/pdfs/orf526-probability-05.pdf",
-        "size": "0.5 MB"
-      },
-      {
-        "label": "第 7 份解答",
-        "url": "/pdfs/orf526-probability-06.pdf",
-        "size": "0.2 MB"
-      },
-      {
-        "label": "第 8 份笔记",
-        "url": "/pdfs/orf526-probability-07.pdf",
-        "size": "0.3 MB"
-      },
-      {
-        "label": "第 9 份解答",
-        "url": "/pdfs/orf526-probability-08.pdf",
-        "size": "0.3 MB"
-      },
-      {
-        "label": "第 10 份解答",
-        "url": "/pdfs/orf526-probability-09.pdf",
-        "size": "0.2 MB"
-      },
-      {
-        "label": "第 11 份笔记",
-        "url": "/pdfs/orf526-probability-10.pdf",
-        "size": "0.4 MB"
-      },
-      {
-        "label": "手写笔记",
-        "url": "/pdfs/orf526-probability-11.pdf",
-        "size": "0.8 MB"
+        "label": "中文译本",
+        "url": "/pdfs/orf526-probability-combined.pdf",
+        "size": "4.5 MB"
       }
-    ]
+    ],
+    "author": "Boris Hanin",
+    "year": "2026",
+    "category": "AI"
   },
   {
     "zh": "流匹配与扩散模型导论",
@@ -209,7 +175,10 @@
         "url": "/pdfs/flow-matching-diffusion.pdf",
         "size": "5.1 MB"
       }
-    ]
+    ],
+    "author": "Peter Holderrieth, Ezra Erives",
+    "year": "2026",
+    "category": "AI"
   },
   {
     "zh": "扩散模型原理",
@@ -228,11 +197,14 @@
         "url": "/pdfs/principles-diffusion.pdf",
         "size": "9.6 MB"
       }
-    ]
+    ],
+    "author": "Chieh-Hsin Lai, Yang Song, Dongjun Kim, Yuki Mitsufuji, Stefano Ermon",
+    "year": "2026",
+    "category": "AI"
   },
   {
-    "zh": "物理学中的机器学习：Physics 361",
-    "en": "Physics 361: Machine Learning in Physics (Spring 2025)",
+    "zh": "物理学中的机器学习",
+    "en": "Machine Learning in Physics",
     "field": "机器学习与物理",
     "cover": "/covers/physics-361.jpg",
     "original": "https://ai.physics.wisc.edu/teaching/",
@@ -244,10 +216,13 @@
     "downloads": [
       {
         "label": "25 讲译稿",
-        "url": "https://github.com/xixi-cc/physai-translation/releases/download/translations-2026-11-08/physics-361-zh.pdf",
+        "url": "/pdfs/physics-361.pdf",
         "size": "167.3 MB"
       }
-    ]
+    ],
+    "author": "Moritz Münchmeyer",
+    "year": "2025",
+    "category": "AI"
   },
   {
     "zh": "基于物理的深度学习：生成式 AI 版",
@@ -266,7 +241,10 @@
         "url": "/pdfs/physics-based-deep-learning-genai.pdf",
         "size": "25.4 MB"
       }
-    ]
+    ],
+    "author": "N. Thuerey, B. Holzschuh, P. Holl, G. Kohl, M. Lino, Q. Liu, P. Schnell, F. Trost",
+    "year": "年份未注明",
+    "category": "AI"
   },
   {
     "zh": "以神经物理构建世界模型",
@@ -285,7 +263,10 @@
         "url": "/pdfs/neural-physics-world-models.pdf",
         "size": "9.7 MB"
       }
-    ]
+    ],
+    "author": "Pingchuan Ma",
+    "year": "2025",
+    "category": "AI"
   },
   {
     "zh": "主动推断：心智、大脑与行为中的自由能原理",
@@ -304,7 +285,10 @@
         "url": "/pdfs/active-inference.pdf",
         "size": "4.1 MB"
       }
-    ]
+    ],
+    "author": "Thomas Parr, Giovanni Pezzulo, Karl J. Friston",
+    "year": "2022",
+    "category": "AI"
   },
   {
     "zh": "几何深度学习：网格、群、图、测地线与规范",
@@ -323,7 +307,10 @@
         "url": "/pdfs/geometric-deep-learning-proto.pdf",
         "size": "18.2 MB"
       }
-    ]
+    ],
+    "author": "Michael M. Bronstein, Joan Bruna, Taco Cohen, Petar Veličković",
+    "year": "2021",
+    "category": "AI"
   },
   {
     "zh": "因果推断要素：基础与学习算法",
@@ -342,7 +329,10 @@
         "url": "/pdfs/elements-causal-inference.pdf",
         "size": "2.8 MB"
       }
-    ]
+    ],
+    "author": "Jonas Peters, Dominik Janzing, Bernhard Schölkopf",
+    "year": "2017",
+    "category": "AI"
   },
   {
     "zh": "从统计学习到因果学习",
@@ -361,11 +351,14 @@
         "url": "/pdfs/statistical-causal-learning.pdf",
         "size": "1.5 MB"
       }
-    ]
+    ],
+    "author": "Bernhard Schölkopf, Julius von Kügelgen",
+    "year": "2022",
+    "category": "AI"
   },
   {
-    "zh": "世界模型：CS 6804 课程课件",
-    "en": "CS 6804: World Models (Virginia Tech Fall 2026)",
+    "zh": "世界模型",
+    "en": "World Models",
     "field": "世界模型",
     "cover": "/covers/cs6804-world-models.jpg",
     "original": "https://people.cs.vt.edu/chris/cs6804_fall2026/",
@@ -380,6 +373,9 @@
         "url": "/pdfs/cs6804-world-models.pdf",
         "size": "25.7 MB"
       }
-    ]
+    ],
+    "author": "Chris Thomas",
+    "year": "2026",
+    "category": "AI"
   }
 ]

@@ -27,6 +27,8 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      - name: Fetch verified Physics 361 PDF
+        run: curl --fail --location --silent --show-error --max-time 600 -o public/pdfs/physics-361.pdf https://github.com/xixi-cc/physai-translation/releases/download/translations-2026-11-08/physics-361-zh.pdf
       - run: npm run build:pages
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

@@ -38,3 +38,6 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# Large release asset, fetched and hash-verified before Pages builds
+/public/pdfs/physics-361.pdf
