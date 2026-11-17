@@ -291,16 +291,16 @@
     "category": "AI"
   },
   {
-    "zh": "几何深度学习：网格、群、图、测地线与规范（2026在线草稿）",
+    "zh": "几何深度学习：网格、群、图、测地线与规范",
     "en": "Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges",
     "field": "几何深度学习",
     "cover": "/covers/geometric-deep-learning-2026.jpg",
     "original": "https://geometricdeeplearning.com/book/",
     "sourceLabel": "原文来源",
-    "os": "2026年在线草稿",
+    "os": "作者官网",
     "ts": "PDF",
     "date": "2026-11-17",
-    "scope": "2026在线草稿完整译本 · 九章、习题与注释 · 365页",
+    "scope": "完整译本 · 九章、习题与注释 · 365页",
     "downloads": [
       {
         "label": "中文译本",
@@ -310,28 +310,6 @@
     ],
     "author": "Michael M. Bronstein, Joan Bruna, Taco Cohen, Petar Veličković",
     "year": "2026",
-    "category": "AI"
-  },
-  {
-    "zh": "几何深度学习：网格、群、图、测地线与规范",
-    "en": "Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges",
-    "field": "几何深度学习",
-    "cover": "/covers/geometric-deep-learning-proto.jpg",
-    "original": "https://geometricdeeplearning.com/book/",
-    "sourceLabel": "原文来源",
-    "os": "Michael Bronstein, Joan Bruna, Taco Cohen, Petar Velickovic",
-    "ts": "PDF",
-    "date": "2026-11",
-    "scope": "2021 proto-book；非后续版本",
-    "downloads": [
-      {
-        "label": "中文译本",
-        "url": "/pdfs/geometric-deep-learning-proto.pdf",
-        "size": "18.2 MB"
-      }
-    ],
-    "author": "Michael M. Bronstein, Joan Bruna, Taco Cohen, Petar Veličković",
-    "year": "2021",
     "category": "AI"
   },
   {
