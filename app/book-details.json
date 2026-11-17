@@ -31368,5 +31368,1326 @@
     ],
     "contentsFile": 0,
     "contentsNote": "页码与译本目录一致；点击标题可跳转。"
+  },
+  "geometric-deep-learning-2026": {
+    "summary": "几何深度学习如何把卷积网络、图神经网络、循环网络和其他架构放进同一个框架？本书从对称性、不变性与等变性出发，连接监督学习基础、群作用与表示、几何先验以及具体网络设计，帮助读者理解模型为什么适合某种数据结构。\n全书分为三个部分、九章：先介绍几何与代数基础，再讨论图、网格、群和几何图上的学习，最后延伸到范畴论等更一般的结构；案例包括 LSTM、足球战术分析与 AlphaFold 2。适合具备线性代数、微积分和基本机器学习知识，希望系统理解几何深度学习的读者。\n本译本依据2026年在线草稿，完整收录前置材料、九章正文、原有习题、注释和408条参考文献，共365页。原文中的数学与书目疑点、个别源图遮挡均以译注保留；与本站2021年 proto-book 译本为不同版本。",
+    "contents": [
+      {
+        "title": "译本说明",
+        "page": 3,
+        "depth": 0,
+        "printedPage": "i"
+      },
+      {
+        "title": "致谢",
+        "page": 11,
+        "depth": 0,
+        "printedPage": "ix"
+      },
+      {
+        "title": "前言",
+        "page": 13,
+        "depth": 0,
+        "printedPage": "xi"
+      },
+      {
+        "title": "符号表",
+        "page": 17,
+        "depth": 0,
+        "printedPage": "xv"
+      },
+      {
+        "title": "第一部分 深度学习的几何基础",
+        "page": 19,
+        "depth": 0,
+        "printedPage": "1"
+      },
+      {
+        "title": "第一章 引言",
+        "page": 21,
+        "depth": 1,
+        "printedPage": "3"
+      },
+      {
+        "title": "1.1 站在巨人的肩膀上",
+        "page": 22,
+        "depth": 2,
+        "printedPage": "4"
+      },
+      {
+        "title": "1.1.1 从无中创造一个奇异的新宇宙",
+        "page": 23,
+        "depth": 3,
+        "printedPage": "5"
+      },
+      {
+        "title": "1.1.2 万物理论",
+        "page": 28,
+        "depth": 3,
+        "printedPage": "10"
+      },
+      {
+        "title": "1.2 迈向几何深度学习",
+        "page": 29,
+        "depth": 2,
+        "printedPage": "11"
+      },
+      {
+        "title": "1.2.1 早期神经网络与人工智能寒冬",
+        "page": 29,
+        "depth": 3,
+        "printedPage": "11"
+      },
+      {
+        "title": "1.2.2 通用逼近与维数灾难",
+        "page": 32,
+        "depth": 3,
+        "printedPage": "14"
+      },
+      {
+        "title": "1.2.3 视觉皮层的秘密与新认知机",
+        "page": 35,
+        "depth": 3,
+        "printedPage": "17"
+      },
+      {
+        "title": "1.2.4 卷积神经网络",
+        "page": 36,
+        "depth": 3,
+        "printedPage": "18"
+      },
+      {
+        "title": "1.2.5 循环神经网络、梯度消失与 LSTM",
+        "page": 37,
+        "depth": 3,
+        "printedPage": "19"
+      },
+      {
+        "title": "1.2.6 门控机制与时间规整",
+        "page": 40,
+        "depth": 3,
+        "printedPage": "22"
+      },
+      {
+        "title": "1.2.7 深度学习的胜利",
+        "page": 40,
+        "depth": 3,
+        "printedPage": "22"
+      },
+      {
+        "title": "1.2.8 图神经网络及其化学领域的先驱",
+        "page": 43,
+        "depth": 3,
+        "printedPage": "25"
+      },
+      {
+        "title": "1.2.9 回到起源",
+        "page": 46,
+        "depth": 3,
+        "printedPage": "28"
+      },
+      {
+        "title": "1.3 深度学习的“埃尔朗根纲领”",
+        "page": 49,
+        "depth": 2,
+        "printedPage": "31"
+      },
+      {
+        "title": "第二章 监督学习基础",
+        "page": 57,
+        "depth": 1,
+        "printedPage": "39"
+      },
+      {
+        "title": "2.1 监督学习的主要组成要素",
+        "page": 57,
+        "depth": 2,
+        "printedPage": "39"
+      },
+      {
+        "title": "数据分布",
+        "page": 58,
+        "depth": 4,
+        "printedPage": "40"
+      },
+      {
+        "title": "损失函数",
+        "page": 58,
+        "depth": 4,
+        "printedPage": "40"
+      },
+      {
+        "title": "模型类",
+        "page": 60,
+        "depth": 4,
+        "printedPage": "42"
+      },
+      {
+        "title": "经验风险",
+        "page": 60,
+        "depth": 4,
+        "printedPage": "42"
+      },
+      {
+        "title": "经验风险最小化",
+        "page": 61,
+        "depth": 4,
+        "printedPage": "43"
+      },
+      {
+        "title": "正则化",
+        "page": 62,
+        "depth": 4,
+        "printedPage": "44"
+      },
+      {
+        "title": "例：单变量数据的多项式回归",
+        "page": 62,
+        "depth": 4,
+        "printedPage": "44"
+      },
+      {
+        "title": "2.2 风险分解",
+        "page": 63,
+        "depth": 2,
+        "printedPage": "45"
+      },
+      {
+        "title": "2.3 过参数化区间",
+        "page": 66,
+        "depth": 2,
+        "printedPage": "48"
+      },
+      {
+        "title": "2.4 高维学习中的维数灾难",
+        "page": 68,
+        "depth": 2,
+        "printedPage": "50"
+      },
+      {
+        "title": "2.5 使用正定核的线性逼近",
+        "page": 70,
+        "depth": 2,
+        "printedPage": "52"
+      },
+      {
+        "title": "2.6 从线性逼近到非线性逼近",
+        "page": 72,
+        "depth": 2,
+        "printedPage": "54"
+      },
+      {
+        "title": "2.7 浅层网络逼近及其推广",
+        "page": 72,
+        "depth": 2,
+        "printedPage": "54"
+      },
+      {
+        "title": "神经网络逼近理论。",
+        "page": 74,
+        "depth": 4,
+        "printedPage": "56"
+      },
+      {
+        "title": "核与神经网络。",
+        "page": 74,
+        "depth": 4,
+        "printedPage": "56"
+      },
+      {
+        "title": "习题",
+        "page": 75,
+        "depth": 2,
+        "printedPage": "57"
+      },
+      {
+        "title": "第三章 等变深度学习基础",
+        "page": 83,
+        "depth": 1,
+        "printedPage": "65"
+      },
+      {
+        "title": "3.1 对称变换",
+        "page": 84,
+        "depth": 2,
+        "printedPage": "66"
+      },
+      {
+        "title": "3.2 学习问题的对称性",
+        "page": 86,
+        "depth": 2,
+        "printedPage": "68"
+      },
+      {
+        "title": "3.2.1 不变性",
+        "page": 86,
+        "depth": 3,
+        "printedPage": "68"
+      },
+      {
+        "title": "3.2.2 等变性",
+        "page": 87,
+        "depth": 3,
+        "printedPage": "69"
+      },
+      {
+        "title": "3.2.2.1 等变性与数据效率",
+        "page": 89,
+        "depth": 4,
+        "printedPage": "71"
+      },
+      {
+        "title": "3.2.3 参数化的对称性",
+        "page": 90,
+        "depth": 3,
+        "printedPage": "72"
+      },
+      {
+        "title": "3.3 对称群",
+        "page": 91,
+        "depth": 2,
+        "printedPage": "73"
+      },
+      {
+        "title": "3.3.1 子群",
+        "page": 92,
+        "depth": 3,
+        "printedPage": "74"
+      },
+      {
+        "title": "3.3.2 *群之间的映射：同态与同构",
+        "page": 93,
+        "depth": 3,
+        "printedPage": "75"
+      },
+      {
+        "title": "3.3.3 群的例子",
+        "page": 94,
+        "depth": 3,
+        "printedPage": "76"
+      },
+      {
+        "title": "3.3.3.1 有限群",
+        "page": 94,
+        "depth": 4,
+        "printedPage": "76"
+      },
+      {
+        "title": "3.3.3.2 无限离散群",
+        "page": 96,
+        "depth": 4,
+        "printedPage": "78"
+      },
+      {
+        "title": "3.3.3.3 经典矩阵群",
+        "page": 96,
+        "depth": 4,
+        "printedPage": "78"
+      },
+      {
+        "title": "3.3.3.4 运动群",
+        "page": 97,
+        "depth": 4,
+        "printedPage": "79"
+      },
+      {
+        "title": "3.4 群作用与表示",
+        "page": 99,
+        "depth": 2,
+        "printedPage": "81"
+      },
+      {
+        "title": "3.4.1 表示的例子",
+        "page": 103,
+        "depth": 3,
+        "printedPage": "85"
+      },
+      {
+        "title": "3.5 等变映射与等变网络",
+        "page": 105,
+        "depth": 2,
+        "printedPage": "87"
+      },
+      {
+        "title": "3.6 等变性操作手册",
+        "page": 107,
+        "depth": 2,
+        "printedPage": "89"
+      },
+      {
+        "title": "3.6.1 拼接、直和与几何特征通道",
+        "page": 108,
+        "depth": 3,
+        "printedPage": "90"
+      },
+      {
+        "title": "3.6.2 向量加法、标量乘法与线性组合",
+        "page": 109,
+        "depth": 3,
+        "printedPage": "91"
+      },
+      {
+        "title": "3.6.3 换基",
+        "page": 109,
+        "depth": 3,
+        "printedPage": "91"
+      },
+      {
+        "title": "3.6.4 置换表示与逐点非线性",
+        "page": 109,
+        "depth": 3,
+        "printedPage": "91"
+      },
+      {
+        "title": "3.6.5 门控与注意力",
+        "page": 110,
+        "depth": 3,
+        "printedPage": "92"
+      },
+      {
+        "title": "3.6.6 张量积非线性",
+        "page": 112,
+        "depth": 3,
+        "printedPage": "94"
+      },
+      {
+        "title": "3.6.7 等变归一化层",
+        "page": 113,
+        "depth": 3,
+        "printedPage": "95"
+      },
+      {
+        "title": "3.6.8 等变线性映射",
+        "page": 114,
+        "depth": 3,
+        "printedPage": "96"
+      },
+      {
+        "title": "3.6.9 *不可约表示",
+        "page": 116,
+        "depth": 3,
+        "printedPage": "98"
+      },
+      {
+        "title": "3.6.10 *Schur 引理",
+        "page": 118,
+        "depth": 3,
+        "printedPage": "100"
+      },
+      {
+        "title": "习题",
+        "page": 119,
+        "depth": 2,
+        "printedPage": "101"
+      },
+      {
+        "title": "第四章 几何深度学习基础",
+        "page": 123,
+        "depth": 1,
+        "printedPage": "105"
+      },
+      {
+        "title": "4.1 几何定义域",
+        "page": 123,
+        "depth": 2,
+        "printedPage": "105"
+      },
+      {
+        "title": "4.1.1 物理定义域",
+        "page": 124,
+        "depth": 3,
+        "printedPage": "106"
+      },
+      {
+        "title": "4.1.2 定义域上的信号空间",
+        "page": 124,
+        "depth": 3,
+        "printedPage": "106"
+      },
+      {
+        "title": "信号如何变换：正则表示和诱导表示",
+        "page": 125,
+        "depth": 4,
+        "printedPage": "107"
+      },
+      {
+        "title": "4.1.3 固定定义域问题与定义域对称性",
+        "page": 127,
+        "depth": 3,
+        "printedPage": "109"
+      },
+      {
+        "title": "4.1.4 可变定义域问题与定义域同构",
+        "page": 128,
+        "depth": 3,
+        "printedPage": "110"
+      },
+      {
+        "title": "4.2 不变函数类",
+        "page": 128,
+        "depth": 2,
+        "printedPage": "110"
+      },
+      {
+        "title": "4.3 形变稳定性",
+        "page": 132,
+        "depth": 2,
+        "printedPage": "114"
+      },
+      {
+        "title": "4.3.1 对信号形变的稳定性",
+        "page": 132,
+        "depth": 3,
+        "printedPage": "114"
+      },
+      {
+        "title": "4.3.2 对定义域形变的稳定性",
+        "page": 133,
+        "depth": 3,
+        "printedPage": "115"
+      },
+      {
+        "title": "4.4 尺度分离",
+        "page": 135,
+        "depth": 2,
+        "printedPage": "117"
+      },
+      {
+        "title": "4.4.1 Fourier 变换与全局不变量",
+        "page": 136,
+        "depth": 3,
+        "printedPage": "118"
+      },
+      {
+        "title": "4.4.2 多尺度表示",
+        "page": 138,
+        "depth": 3,
+        "printedPage": "120"
+      },
+      {
+        "title": "4.4.3 多尺度表示的形变稳定性",
+        "page": 138,
+        "depth": 3,
+        "printedPage": "120"
+      },
+      {
+        "title": "4.4.4 尺度分离先验",
+        "page": 140,
+        "depth": 3,
+        "printedPage": "122"
+      },
+      {
+        "title": "4.5 几何深度学习蓝图",
+        "page": 141,
+        "depth": 2,
+        "printedPage": "123"
+      },
+      {
+        "title": "4.5.1 不变层与等变层",
+        "page": 142,
+        "depth": 3,
+        "printedPage": "124"
+      },
+      {
+        "title": "4.5.2 几何深度学习的不同设定",
+        "page": 144,
+        "depth": 3,
+        "printedPage": "126"
+      },
+      {
+        "title": "4.6 小结",
+        "page": 145,
+        "depth": 2,
+        "printedPage": "127"
+      },
+      {
+        "title": "习题",
+        "page": 145,
+        "depth": 2,
+        "printedPage": "127"
+      },
+      {
+        "title": "第二部分 几何定义域上的学习",
+        "page": 147,
+        "depth": 0,
+        "printedPage": "129"
+      },
+      {
+        "title": "第五章 图",
+        "page": 149,
+        "depth": 1,
+        "printedPage": "131"
+      },
+      {
+        "title": "5.1 定义域",
+        "page": 150,
+        "depth": 2,
+        "printedPage": "132"
+      },
+      {
+        "title": "5.1.1 集合",
+        "page": 151,
+        "depth": 3,
+        "printedPage": "133"
+      },
+      {
+        "title": "5.1.2 从集合到图",
+        "page": 152,
+        "depth": 3,
+        "printedPage": "134"
+      },
+      {
+        "title": "5.2 模型",
+        "page": 154,
+        "depth": 2,
+        "printedPage": "136"
+      },
+      {
+        "title": "5.2.1 GNN 的三种类型",
+        "page": 154,
+        "depth": 3,
+        "printedPage": "136"
+      },
+      {
+        "title": "5.2.2 表达能力最强的 GNN：Graph Network 模型",
+        "page": 156,
+        "depth": 3,
+        "printedPage": "138"
+      },
+      {
+        "title": "5.2.3 Deep Sets、Transformer 与图重连",
+        "page": 158,
+        "depth": 3,
+        "printedPage": "140"
+      },
+      {
+        "title": "5.2.3.1 空边集",
+        "page": 159,
+        "depth": 4,
+        "printedPage": "141"
+      },
+      {
+        "title": "5.2.3.2 完全边集",
+        "page": 159,
+        "depth": 4,
+        "printedPage": "141"
+      },
+      {
+        "title": "5.2.3.3 推断边集",
+        "page": 161,
+        "depth": 4,
+        "printedPage": "143"
+      },
+      {
+        "title": "5.2.4 GNN 的表达能力与 Weisfeiler--Lehman 测试",
+        "page": 161,
+        "depth": 3,
+        "printedPage": "143"
+      },
+      {
+        "title": "5.2.5 *表达能力更强的 GNN",
+        "page": 163,
+        "depth": 3,
+        "printedPage": "145"
+      },
+      {
+        "title": "5.2.5.1 特征增强",
+        "page": 163,
+        "depth": 4,
+        "printedPage": "145"
+      },
+      {
+        "title": "5.2.5.2 消息传递调制",
+        "page": 164,
+        "depth": 4,
+        "printedPage": "146"
+      },
+      {
+        "title": "5.2.5.3 计算图设计",
+        "page": 164,
+        "depth": 4,
+        "printedPage": "146"
+      },
+      {
+        "title": "5.2.5.4 同步与“时钟”",
+        "page": 165,
+        "depth": 4,
+        "printedPage": "147"
+      },
+      {
+        "title": "5.2.5.5 连续节点特征",
+        "page": 167,
+        "depth": 4,
+        "printedPage": "149"
+      },
+      {
+        "title": "5.2.6 消息传递之外还有什么？",
+        "page": 169,
+        "depth": 3,
+        "printedPage": "151"
+      },
+      {
+        "title": "5.3 案例研究：推荐系统与社交网络",
+        "page": 171,
+        "depth": 2,
+        "printedPage": "153"
+      },
+      {
+        "title": "5.4 案例研究：大语言模型",
+        "page": 174,
+        "depth": 2,
+        "printedPage": "156"
+      },
+      {
+        "title": "5.4.1 点积自注意力",
+        "page": 175,
+        "depth": 3,
+        "printedPage": "157"
+      },
+      {
+        "title": "为什么采用注意力？",
+        "page": 178,
+        "depth": 4,
+        "printedPage": "160"
+      },
+      {
+        "title": "5.4.2 因果掩码",
+        "page": 178,
+        "depth": 3,
+        "printedPage": "160"
+      },
+      {
+        "title": "5.4.3 分析 LLM 的图数据流",
+        "page": 179,
+        "depth": 3,
+        "printedPage": "161"
+      },
+      {
+        "title": "习题",
+        "page": 181,
+        "depth": 2,
+        "printedPage": "163"
+      },
+      {
+        "title": "第六章 网格",
+        "page": 187,
+        "depth": 1,
+        "printedPage": "169"
+      },
+      {
+        "title": "6.1 定义域",
+        "page": 188,
+        "depth": 2,
+        "printedPage": "170"
+      },
+      {
+        "title": "循环矩阵与卷积",
+        "page": 188,
+        "depth": 4,
+        "printedPage": "170"
+      },
+      {
+        "title": "离散 Fourier 变换的推导",
+        "page": 190,
+        "depth": 4,
+        "printedPage": "172"
+      },
+      {
+        "title": "连续 Fourier 变换的推导",
+        "page": 191,
+        "depth": 4,
+        "printedPage": "173"
+      },
+      {
+        "title": "6.2 模型",
+        "page": 192,
+        "depth": 2,
+        "printedPage": "174"
+      },
+      {
+        "title": "6.2.1 卷积神经网络",
+        "page": 192,
+        "depth": 3,
+        "printedPage": "174"
+      },
+      {
+        "title": "高效多尺度计算",
+        "page": 194,
+        "depth": 4,
+        "printedPage": "176"
+      },
+      {
+        "title": "深层网络与残差网络",
+        "page": 195,
+        "depth": 4,
+        "printedPage": "177"
+      },
+      {
+        "title": "归一化",
+        "page": 197,
+        "depth": 4,
+        "printedPage": "179"
+      },
+      {
+        "title": "数据增强",
+        "page": 197,
+        "depth": 4,
+        "printedPage": "179"
+      },
+      {
+        "title": "6.2.2 循环神经网络",
+        "page": 197,
+        "depth": 3,
+        "printedPage": "179"
+      },
+      {
+        "title": "SimpleRNN",
+        "page": 198,
+        "depth": 4,
+        "printedPage": "180"
+      },
+      {
+        "title": "RNN 中的平移等变性",
+        "page": 200,
+        "depth": 4,
+        "printedPage": "182"
+      },
+      {
+        "title": "RNN 的深度",
+        "page": 201,
+        "depth": 4,
+        "printedPage": "183"
+      },
+      {
+        "title": "6.3 案例研究：长短期记忆",
+        "page": 202,
+        "depth": 2,
+        "printedPage": "184"
+      },
+      {
+        "title": "门控 RNN 的时间扭曲不变性",
+        "page": 204,
+        "depth": 4,
+        "printedPage": "186"
+      },
+      {
+        "title": "习题",
+        "page": 208,
+        "depth": 2,
+        "printedPage": "190"
+      },
+      {
+        "title": "第七章 齐性空间上的群卷积",
+        "page": 213,
+        "depth": 1,
+        "printedPage": "195"
+      },
+      {
+        "title": "7.1 定义域",
+        "page": 214,
+        "depth": 2,
+        "printedPage": "196"
+      },
+      {
+        "title": "7.1.1 网格卷积",
+        "page": 215,
+        "depth": 3,
+        "printedPage": "197"
+      },
+      {
+        "title": "7.1.2 球面卷积",
+        "page": 215,
+        "depth": 3,
+        "printedPage": "197"
+      },
+      {
+        "title": "7.1.3 局限性",
+        "page": 216,
+        "depth": 3,
+        "printedPage": "198"
+      },
+      {
+        "title": "7.2 模型",
+        "page": 218,
+        "depth": 2,
+        "printedPage": "200"
+      },
+      {
+        "title": "7.2.1 离散群卷积",
+        "page": 218,
+        "depth": 3,
+        "printedPage": "200"
+      },
+      {
+        "title": "7.2.2 变换加卷积方法",
+        "page": 221,
+        "depth": 3,
+        "printedPage": "203"
+      },
+      {
+        "title": "7.2.3 通过 Fourier 域实现球面 CNN",
+        "page": 222,
+        "depth": 3,
+        "printedPage": "204"
+      },
+      {
+        "title": "7.3 案例研究：TacticAI",
+        "page": 222,
+        "depth": 2,
+        "printedPage": "204"
+      },
+      {
+        "title": "问题设定",
+        "page": 222,
+        "depth": 4,
+        "printedPage": "204"
+      },
+      {
+        "title": "意想不到的对称性",
+        "page": 224,
+        "depth": 4,
+        "printedPage": "206"
+      },
+      {
+        "title": "构造 D₂ 等变 GNN",
+        "page": 225,
+        "depth": 4,
+        "printedPage": "207"
+      },
+      {
+        "title": "习题",
+        "page": 227,
+        "depth": 2,
+        "printedPage": "209"
+      },
+      {
+        "title": "第八章 几何图",
+        "page": 231,
+        "depth": 1,
+        "printedPage": "213"
+      },
+      {
+        "title": "8.1 定义域",
+        "page": 232,
+        "depth": 2,
+        "printedPage": "214"
+      },
+      {
+        "title": "8.1.1 不变几何 GNN：SchNet 和 DimeNet",
+        "page": 233,
+        "depth": 3,
+        "printedPage": "215"
+      },
+      {
+        "title": "8.1.2 迈向 E(d) 等变性",
+        "page": 234,
+        "depth": 3,
+        "printedPage": "216"
+      },
+      {
+        "title": "8.2 模型",
+        "page": 236,
+        "depth": 2,
+        "printedPage": "218"
+      },
+      {
+        "title": "8.2.1 E(d) 等变 GNN",
+        "page": 237,
+        "depth": 3,
+        "printedPage": "219"
+      },
+      {
+        "title": "8.2.2 向量结构特征与“升阶张量化”",
+        "page": 239,
+        "depth": 3,
+        "printedPage": "221"
+      },
+      {
+        "title": "8.2.3 *不可约表示：张量场网络和 SE(3)-Transformer",
+        "page": 240,
+        "depth": 3,
+        "printedPage": "222"
+      },
+      {
+        "title": "8.2.3.1 类型 ℓ 向量",
+        "page": 241,
+        "depth": 4,
+        "printedPage": "223"
+      },
+      {
+        "title": "8.2.3.2 旋转的不可约表示",
+        "page": 242,
+        "depth": 4,
+        "printedPage": "224"
+      },
+      {
+        "title": "8.2.3.3 利用球谐函数构造等变滤波器",
+        "page": 243,
+        "depth": 4,
+        "printedPage": "225"
+      },
+      {
+        "title": "8.2.3.4 通过 Clebsch–Gordan 系数实现特征与滤波器的交互",
+        "page": 245,
+        "depth": 4,
+        "printedPage": "227"
+      },
+      {
+        "title": "8.2.3.5 张量场网络",
+        "page": 247,
+        "depth": 4,
+        "printedPage": "229"
+      },
+      {
+        "title": "8.2.3.6 SE(3)-Transformer",
+        "page": 250,
+        "depth": 4,
+        "printedPage": "232"
+      },
+      {
+        "title": "8.3 案例研究：流形与网格 CNN",
+        "page": 252,
+        "depth": 2,
+        "printedPage": "234"
+      },
+      {
+        "title": "8.3.1 黎曼流形",
+        "page": 253,
+        "depth": 3,
+        "printedPage": "235"
+      },
+      {
+        "title": "8.3.2 测地线",
+        "page": 254,
+        "depth": 3,
+        "printedPage": "236"
+      },
+      {
+        "title": "平行移动",
+        "page": 255,
+        "depth": 4,
+        "printedPage": "237"
+      },
+      {
+        "title": "指数映射",
+        "page": 256,
+        "depth": 4,
+        "printedPage": "238"
+      },
+      {
+        "title": "测地距离",
+        "page": 257,
+        "depth": 4,
+        "printedPage": "239"
+      },
+      {
+        "title": "8.3.3 空间流形卷积",
+        "page": 257,
+        "depth": 3,
+        "printedPage": "239"
+      },
+      {
+        "title": "8.3.4 测地 CNN",
+        "page": 258,
+        "depth": 3,
+        "printedPage": "240"
+      },
+      {
+        "title": "测地邻域块",
+        "page": 258,
+        "depth": 4,
+        "printedPage": "240"
+      },
+      {
+        "title": "规范不变滤波",
+        "page": 258,
+        "depth": 4,
+        "printedPage": "240"
+      },
+      {
+        "title": "回到网格",
+        "page": 259,
+        "depth": 4,
+        "printedPage": "241"
+      },
+      {
+        "title": "8.3.5 从规范不变性到规范等变性",
+        "page": 260,
+        "depth": 3,
+        "printedPage": "242"
+      },
+      {
+        "title": "规范对称性",
+        "page": 261,
+        "depth": 4,
+        "printedPage": "243"
+      },
+      {
+        "title": "逐点变换",
+        "page": 262,
+        "depth": 4,
+        "printedPage": "244"
+      },
+      {
+        "title": "交互式变换",
+        "page": 264,
+        "depth": 4,
+        "printedPage": "246"
+      },
+      {
+        "title": "8.3.6 规范等变网格 CNN",
+        "page": 266,
+        "depth": 3,
+        "printedPage": "248"
+      },
+      {
+        "title": "几何桥梁",
+        "page": 267,
+        "depth": 4,
+        "printedPage": "249"
+      },
+      {
+        "title": "8.4 案例研究：AlphaFold 2",
+        "page": 267,
+        "depth": 2,
+        "printedPage": "249"
+      },
+      {
+        "title": "8.4.1 问题设定与架构概述",
+        "page": 268,
+        "depth": 3,
+        "printedPage": "250"
+      },
+      {
+        "title": "8.4.2 结构模块概览",
+        "page": 269,
+        "depth": 3,
+        "printedPage": "251"
+      },
+      {
+        "title": "8.4.3 不变点注意力",
+        "page": 271,
+        "depth": 3,
+        "printedPage": "253"
+      },
+      {
+        "title": "8.4.4 标架更新",
+        "page": 273,
+        "depth": 3,
+        "printedPage": "255"
+      },
+      {
+        "title": "8.4.5 展望",
+        "page": 274,
+        "depth": 3,
+        "printedPage": "256"
+      },
+      {
+        "title": "消融实验",
+        "page": 274,
+        "depth": 4,
+        "printedPage": "256"
+      },
+      {
+        "title": "下一代模型",
+        "page": 275,
+        "depth": 4,
+        "printedPage": "257"
+      },
+      {
+        "title": "习题",
+        "page": 276,
+        "depth": 2,
+        "printedPage": "258"
+      },
+      {
+        "title": "第三部分 几何深度学习的前沿",
+        "page": 281,
+        "depth": 0,
+        "printedPage": "263"
+      },
+      {
+        "title": "第九章 进一步超越",
+        "page": 283,
+        "depth": 1,
+        "printedPage": "265"
+      },
+      {
+        "title": "9.1 为何超越群？",
+        "page": 284,
+        "depth": 2,
+        "printedPage": "266"
+      },
+      {
+        "title": "例 1：跨越不同范围的泛化",
+        "page": 284,
+        "depth": 4,
+        "printedPage": "266"
+      },
+      {
+        "title": "例 2：针对图定制的 GNN",
+        "page": 286,
+        "depth": 4,
+        "printedPage": "268"
+      },
+      {
+        "title": "9.2 群之外有什么？",
+        "page": 288,
+        "depth": 2,
+        "printedPage": "270"
+      },
+      {
+        "title": "9.2.1 幺半群：异步不变性",
+        "page": 288,
+        "depth": 3,
+        "printedPage": "270"
+      },
+      {
+        "title": "消息、状态与实参幺半群",
+        "page": 289,
+        "depth": 4,
+        "printedPage": "271"
+      },
+      {
+        "title": "幺半群作用与余圈",
+        "page": 289,
+        "depth": 4,
+        "printedPage": "271"
+      },
+      {
+        "title": "消息的幺半群同态",
+        "page": 290,
+        "depth": 4,
+        "printedPage": "272"
+      },
+      {
+        "title": "异步不变 GNN",
+        "page": 290,
+        "depth": 4,
+        "printedPage": "272"
+      },
+      {
+        "title": "消息聚合的异步性",
+        "page": 291,
+        "depth": 4,
+        "printedPage": "273"
+      },
+      {
+        "title": "状态更新的异步性",
+        "page": 292,
+        "depth": 4,
+        "printedPage": "274"
+      },
+      {
+        "title": "消息计算的异步性",
+        "page": 293,
+        "depth": 4,
+        "printedPage": "275"
+      },
+      {
+        "title": "旁论：深度尺度空间",
+        "page": 295,
+        "depth": 4,
+        "printedPage": "277"
+      },
+      {
+        "title": "9.2.2 群胚：自然图网络",
+        "page": 298,
+        "depth": 3,
+        "printedPage": "280"
+      },
+      {
+        "title": "邻接矩阵群胚",
+        "page": 298,
+        "depth": 4,
+        "printedPage": "280"
+      },
+      {
+        "title": "局部邻域群胚与局部 NGN",
+        "page": 300,
+        "depth": 4,
+        "printedPage": "282"
+      },
+      {
+        "title": "实用的局部 NGN：GCN²",
+        "page": 302,
+        "depth": 4,
+        "printedPage": "284"
+      },
+      {
+        "title": "9.2.3 范畴深度学习",
+        "page": 303,
+        "depth": 3,
+        "printedPage": "285"
+      },
+      {
+        "title": "作为单子的群作用",
+        "page": 305,
+        "depth": 4,
+        "printedPage": "287"
+      },
+      {
+        "title": "作为单子代数的表示",
+        "page": 306,
+        "depth": 4,
+        "printedPage": "288"
+      },
+      {
+        "title": "等变层就是单子代数同态",
+        "page": 307,
+        "depth": 4,
+        "printedPage": "289"
+      },
+      {
+        "title": "超越对称性",
+        "page": 308,
+        "depth": 4,
+        "printedPage": "290"
+      },
+      {
+        "title": "9.3 群从何而来？",
+        "page": 308,
+        "depth": 2,
+        "printedPage": "290"
+      },
+      {
+        "title": "直接从数据中发现对称性",
+        "page": 309,
+        "depth": 4,
+        "printedPage": "291"
+      },
+      {
+        "title": "理解部分可观测的几何",
+        "page": 309,
+        "depth": 4,
+        "printedPage": "291"
+      },
+      {
+        "title": "近似等变性",
+        "page": 310,
+        "depth": 4,
+        "printedPage": "292"
+      },
+      {
+        "title": "9.4 结束语",
+        "page": 311,
+        "depth": 2,
+        "printedPage": "293"
+      },
+      {
+        "title": "习题",
+        "page": 312,
+        "depth": 2,
+        "printedPage": "294"
+      },
+      {
+        "title": "参考文献",
+        "page": 317,
+        "depth": 1,
+        "printedPage": "299"
+      }
+    ],
+    "contentsFile": 0,
+    "contentsNote": "目录依据本次365页中文译本生成，链接直达PDF对应页面；页码显示译本印刷页码，前置材料采用罗马数字。"
   }
 }

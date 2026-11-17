@@ -29,3 +29,5 @@
 | 因果推断要素：基础与学习算法 | `elements-causal-inference.jpg` | 作者或出版社正式封面 | [原文来源](https://mitpress.mit.edu/9780262037310/elements-of-causal-inference/) | 出版社页面与冻结源书名、作者和版次对应。 |
 | 从统计学习到因果学习 | `statistical-causal-learning.jpg` | 译本首页降级 | [原文来源](https://ems.press/books/standalone/279/5610) | 对应讲义、课程资料、章节、论文或指定预印本；未找到可核实的对应正式封面。 |
 | 世界模型：CS 6804 课程课件 | `cs6804-world-models.jpg` | 译本首页降级 | [原文来源](https://people.cs.vt.edu/chris/cs6804_fall2026/) | 对应讲义、课程资料、章节、论文或指定预印本；未找到可核实的对应正式封面。 |
+
+| 几何深度学习（2026在线草稿） | `geometric-deep-learning-2026.jpg` | 译本首页降级封面 | [作者在线草稿页](https://geometricdeeplearning.com/book/)及[作者官网](https://geometricdeeplearning.com/)（2026-11-17核查） | 两页未提供可核实、对应2026在线草稿的正式书封；无可核实的正式封面，按规范使用本次365页译本首页。未采用官网背景插图或2021 proto-book封面。PDF SHA-256 `6a74e04cdbc556b517796e4eb3dae3aee91288854711a927b7c57f7f353aa060`。 |
