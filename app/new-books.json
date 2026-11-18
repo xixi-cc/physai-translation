@@ -1,5 +1,71 @@
 [
   {
+    "zh": "市场流体动力学",
+    "en": "Hydrodynamics of Markets: Hidden Links between Physics and Finance",
+    "field": "市场动力学与衍生品定价",
+    "date": "2026-11-17",
+    "scope": "完整九章 · 127页",
+    "author": "Alexander Lipton",
+    "year": "2024",
+    "cover": "/covers/hydrodynamics-of-markets.jpg",
+    "original": "https://www.cambridge.org/core/books/hydrodynamics-of-markets/1518AE3A15E7459C3847C946B6385D31",
+    "sourceLabel": "出版社页面",
+    "os": "Cambridge University Press",
+    "ts": "PDF",
+    "category": "金融量化",
+    "downloads": [
+      {
+        "label": "中文译本",
+        "url": "/pdfs/hydrodynamics-of-markets.pdf",
+        "size": "8.6 MB"
+      }
+    ]
+  },
+  {
+    "zh": "经济与金融物理导论",
+    "en": "Introduction to the Physics of the Economy and Finance",
+    "field": "经济物理与复杂系统",
+    "date": "2026-11-17",
+    "scope": "完整九章、习题与索引 · 240页",
+    "author": "João Pires da Cruz",
+    "year": "2025",
+    "cover": "/covers/physics-of-economy-and-finance.jpg",
+    "original": "https://link.springer.com/book/10.1007/978-3-032-04346-7",
+    "sourceLabel": "出版社页面",
+    "os": "Springer",
+    "ts": "PDF",
+    "category": "金融量化",
+    "downloads": [
+      {
+        "label": "中文译本",
+        "url": "/pdfs/physics-of-economy-and-finance.pdf",
+        "size": "5.6 MB"
+      }
+    ]
+  },
+  {
+    "zh": "量化金融：投资、资产定价与衍生品导论",
+    "en": "Quantitative Finance: An Introduction to Investments, Asset Pricing, and Derivatives",
+    "field": "投资、资产定价与衍生品",
+    "date": "2026-11-18",
+    "scope": "完整15章、A–E附录、习题与索引 · 444页",
+    "author": "Johan Walden",
+    "year": "2026",
+    "cover": "/covers/quantitative-finance-walden.jpg",
+    "original": "https://press.princeton.edu/books/hardcover/9780691270685/quantitative-finance",
+    "sourceLabel": "出版社页面",
+    "os": "Princeton University Press",
+    "ts": "PDF",
+    "category": "金融量化",
+    "downloads": [
+      {
+        "label": "中文译本",
+        "url": "/pdfs/quantitative-finance-walden.pdf",
+        "size": "6.8 MB"
+      }
+    ]
+  },
+  {
     "zh": "面向机器学习的物理学",
     "en": "Physics for Machine Learning",
     "field": "机器学习与物理",

@@ -6,10 +6,11 @@ import bookDetails from './book-details.json';
 import { ArrowLeft, ArrowUpRight, BookOpen, CircleHelp, Download, FileText, GitBranch, Languages, Menu, Moon, Search, Sun, X } from 'lucide-react';
 
 type Section = 'originals' | 'translations' | 'guide';
-type Category = '全部' | '物理' | 'AI';
+type BookCategory = '物理' | 'AI' | '金融量化';
+type Category = '全部' | BookCategory;
 const asset = (path:string) => `${import.meta.env.BASE_URL}${path.replace(/^\//,'')}`;
 type DownloadItem = { label:string; url:string; size:string };
-type Book = { zh:string; en:string; field:string; cover:string; original:string; sourceLabel:string; os:string; ts:string; date?:string; scope?:string; translation?:string; downloads?:DownloadItem[]; author?:string; year?:string; category?:'物理'|'AI' };
+type Book = { zh:string; en:string; field:string; cover:string; original:string; sourceLabel:string; os:string; ts:string; date?:string; scope?:string; translation?:string; downloads?:DownloadItem[]; author?:string; year?:string; category?:BookCategory };
 const publishedBooks: Book[] = [
   { zh:'场的统计物理', en:'Statistical Physics of Fields', field:'统计场论', cover:asset('/covers/statistical-physics-of-fields.jpg'), original:asset('/pdfs/statistical-physics-of-fields-original.pdf'), sourceLabel:'原著 PDF', translation:asset('/pdfs/statistical-physics-of-fields-zh.pdf'), os:'2.1 MB', ts:'2.7 MB' },
   { zh:'集群运动的物理学', en:'The Physics of Flocking', field:'非平衡物理', cover:asset('/covers/the-physics-of-flocking.jpg'), original:asset('/pdfs/the-physics-of-flocking-original.pdf'), sourceLabel:'原著 PDF', translation:asset('/pdfs/the-physics-of-flocking-zh.pdf'), os:'2.5 MB', ts:'2.4 MB' },
@@ -44,7 +45,7 @@ const publishedMetadata: Record<string, {author:string; year:string; category:'�
   'Deep Learning and Computational Physics':{author:'Deep Ray, Orazio Pinti, Assad A. Oberai',year:'2023',category:'AI'},
   'Mathematical Theory of Deep Learning':{author:'Philipp Petersen, Jakob Zech',year:'2026',category:'AI'},
 };
-const books: Book[] = [...newBooks.map(item => ({...item, category:item.category as '物理'|'AI', cover:asset(item.cover), downloads:item.downloads.map(file => ({...file, url:file.url.startsWith('https://') ? file.url : asset(file.url)}))})), ...publishedBooks.map(item => ({...item, ...publishedMetadata[item.en]}))];
+const books: Book[] = [...newBooks.map(item => ({...item, category:item.category as BookCategory, cover:asset(item.cover), downloads:item.downloads.map(file => ({...file, url:file.url.startsWith('https://') ? file.url : asset(file.url)}))})), ...publishedBooks.map(item => ({...item, ...publishedMetadata[item.en]}))];
 type ContentsRow = { title:string; page:number|null; depth:number; printedPage?:string };
 type BookDetails = { summary:string; contents:ContentsRow[]; contentsFile:number; contentsNote?:string };
 const details = bookDetails as Record<string, BookDetails>;
@@ -84,7 +85,7 @@ export default function Home() {
   const [detailId,setDetailId] = useState<string|null>(null);
   useEffect(() => { const sync=()=>{const match=window.location.hash.match(/^#book\/([a-z0-9-]+)$/);setDetailId(match ? match[1] : null)};sync();window.addEventListener('hashchange',sync);return ()=>window.removeEventListener('hashchange',sync); },[]);
   useEffect(() => { const saved=localStorage.getItem('wuyi-theme'); const value=saved?saved==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches; setDark(value); document.documentElement.dataset.theme=value?'dark':'light'; },[]);
-  const filtered=useMemo(()=>{const q=query.trim().toLowerCase(); return books.filter(b=>(category==='全部'||b.category===category)&&(!q||[b.zh,b.en,b.field,b.author,b.year].join(' ').toLowerCase().includes(q)));},[query,category]);
+  const filtered=useMemo(()=>{const q=query.trim().toLowerCase(); return books.filter(b=>(category==='全部'||b.category===category)&&(!q||[b.zh,b.en,b.field,b.author,b.year,b.category].join(' ').toLowerCase().includes(q)));},[query,category]);
   const active=navItems.find(item=>item.id===section)!;
   const selectedBook=detailId ? books.find(book=>bookId(book)===detailId && details[detailId]) : undefined;
   function change(next:Section){setSection(next);setQuery('');setMenuOpen(false);if(window.location.hash) history.replaceState(null,'',window.location.pathname+window.location.search);setDetailId(null);}
@@ -106,7 +107,7 @@ export default function Home() {
       <main className="main-content">
         {selectedBook ? <DetailPage book={selectedBook}/> : <>
         <div className="content-header"><div><span>{active.en}</span><h1>{active.label}</h1></div>{(section==='translations'||section==='originals')&&<p>共 {filtered.length} 项</p>}</div>
-        {(section==='translations'||section==='originals')&&<div className="category-tabs" aria-label="书籍分类">{(['全部','物理','AI'] as Category[]).map(c=><button key={c} type="button" className={category===c?'active':''} aria-pressed={category===c} onClick={()=>setCategory(c)}>{c}</button>)}</div>}
+        {(section==='translations'||section==='originals')&&<div className="category-tabs" aria-label="书籍分类">{(['全部','物理','AI','金融量化'] as Category[]).map(c=><button key={c} type="button" className={category===c?'active':''} aria-pressed={category===c} onClick={()=>setCategory(c)}>{c}</button>)}</div>}
         {section==='translations'&&<div className="translation-list">{filtered.length?filtered.map((item,index)=><article className="translation-card" key={item.en}>
           <a href={`#book/${bookId(item)}`} className="cover-link" aria-label={`查看${item.zh}详情`}><img className="book-cover" src={item.cover} alt={`${item.zh}封面`} loading={index===0?'eager':'lazy'} fetchPriority={index===0?'high':'auto'}/></a><div className="translation-copy"><span className="field">{item.category} · {item.field}</span><h2><a className="book-title-link" href={`#book/${bookId(item)}`}>{item.zh}</a></h2><p className="book-author">{item.author} · {item.year}</p><FileActions book={item}/></div>
         </article>):<div className="empty">没有找到匹配的译本。</div>}</div>}

@@ -28,5 +28,7 @@
 | 因果推断要素：基础与学习算法 | `elements-causal-inference.jpg` | 作者或出版社正式封面 | [原文来源](https://mitpress.mit.edu/9780262037310/elements-of-causal-inference/) | 出版社页面与冻结源书名、作者和版次对应。 |
 | 从统计学习到因果学习 | `statistical-causal-learning.jpg` | 译本首页降级 | [原文来源](https://ems.press/books/standalone/279/5610) | 对应讲义、课程资料、章节、论文或指定预印本；未找到可核实的对应正式封面。 |
 | 世界模型：CS 6804 课程课件 | `cs6804-world-models.jpg` | 译本首页降级 | [原文来源](https://people.cs.vt.edu/chris/cs6804_fall2026/) | 对应讲义、课程资料、章节、论文或指定预印本；未找到可核实的对应正式封面。 |
-
 | 几何深度学习 | `geometric-deep-learning-2026.jpg` | 译本首页降级封面 | [作者在线草稿页](https://geometricdeeplearning.com/book/)及[作者官网](https://geometricdeeplearning.com/)（2026-11-17核查） | 两页未提供可核实、对应2026在线草稿的正式书封；无可核实的正式封面，按规范使用本次365页译本首页。未采用官网背景插图或2021 proto-book封面。PDF SHA-256 `6a74e04cdbc556b517796e4eb3dae3aee91288854711a927b7c57f7f353aa060`。 |
+| 市场流体动力学 | `hydrodynamics-of-markets.jpg` | 出版社正式封面 | [出版社书页](https://www.cambridge.org/core/books/hydrodynamics-of-markets/1518AE3A15E7459C3847C946B6385D31) | Cambridge 在线版（2024），DOI `10.1017/9781009503129`。取出版社在线 PDF 的完整前封面，保留书名、作者和标识。 |
+| 经济与金融物理导论 | `physics-of-economy-and-finance.jpg` | 出版社正式封面 | [出版社书页](https://link.springer.com/book/10.1007/978-3-032-04346-7) | Springer 2025 年版，DOI `10.1007/978-3-032-04346-7`。使用出版社高分辨率封面，等比缩放。 |
+| 量化金融：投资、资产定价与衍生品导论 | `quantitative-finance-walden.jpg` | 出版社正式封面 | [出版社书页](https://press.princeton.edu/books/hardcover/9780691270685/quantitative-finance) | Princeton University Press 2026 年版，纸书 ISBN `9780691270685`，对应原书 PDF ISBN `9780691270715`。使用出版社书页提供的原版封面，等比缩放。 |

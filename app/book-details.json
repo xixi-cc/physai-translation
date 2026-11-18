@@ -32478,5 +32478,2342 @@
     ],
     "contentsFile": 0,
     "contentsNote": "目录依据本次365页中文译本生成，链接直达PDF对应页面；页码显示译本印刷页码，前置材料采用罗马数字。"
+  },
+  "hydrodynamics-of-markets": {
+    "summary": "本书从流体力学中的 Euler 方程、Navier–Stokes 方程与 Kelvin 波出发，讨论这些方法如何用于随机过程和金融建模。内容涵盖 Kolmogorov 与 Klein–Kramers 过程、转移概率密度、高斯与非高斯过程，并延伸到期权、波动率互换等金融工具的定价。\n适合具备微分方程、概率论和随机过程基础，希望理解物理方法与量化金融联系的读者。中文译本完整收录九章及参考文献，共127页；原书公式、书目疑点及个别原图遮挡保留说明。\n原作由 Alexander Lipton 著，Cambridge University Press 于2024年在线出版，DOI 10.1017/9781009503129。原作在线版采用 CC BY-NC 4.0（https://creativecommons.org/licenses/by-nc/4.0/）。本站提供由原作改编的中文译本，包含中文翻译、译注和重新排版。",
+    "contents": [
+      {
+        "title": "第一章 导论",
+        "page": 9,
+        "depth": 0,
+        "printedPage": "1"
+      },
+      {
+        "title": "1.1 背景",
+        "page": 9,
+        "depth": 1,
+        "printedPage": "1"
+      },
+      {
+        "title": "1.2 主要结果",
+        "page": 12,
+        "depth": 1,
+        "printedPage": "4"
+      },
+      {
+        "title": "1.3 本书结构",
+        "page": 12,
+        "depth": 1,
+        "printedPage": "4"
+      },
+      {
+        "title": "第二章 流体流动",
+        "page": 15,
+        "depth": 0,
+        "printedPage": "7"
+      },
+      {
+        "title": "2.1 Euler 方程与 Navier–Stokes 方程",
+        "page": 15,
+        "depth": 1,
+        "printedPage": "7"
+      },
+      {
+        "title": "2.2 线性流动",
+        "page": 15,
+        "depth": 1,
+        "printedPage": "7"
+      },
+      {
+        "title": "2.3 不可压缩流体中的 Kelvin 波",
+        "page": 16,
+        "depth": 1,
+        "printedPage": "8"
+      },
+      {
+        "title": "第三章 Kolmogorov 随机过程",
+        "page": 23,
+        "depth": 0,
+        "printedPage": "15"
+      },
+      {
+        "title": "3.1 背景",
+        "page": 23,
+        "depth": 1,
+        "printedPage": "15"
+      },
+      {
+        "title": "3.2 Kolmogorov 论文概要",
+        "page": 23,
+        "depth": 1,
+        "printedPage": "15"
+      },
+      {
+        "title": "3.3 问题与回应",
+        "page": 24,
+        "depth": 1,
+        "printedPage": "16"
+      },
+      {
+        "title": "3.4 直接验证",
+        "page": 28,
+        "depth": 1,
+        "printedPage": "20"
+      },
+      {
+        "title": "3.5 利用 Kelvin 波求解",
+        "page": 29,
+        "depth": 1,
+        "printedPage": "21"
+      },
+      {
+        "title": "3.6 利用坐标变换求解",
+        "page": 32,
+        "depth": 1,
+        "printedPage": "24"
+      },
+      {
+        "title": "3.7 一个有代表性的例子",
+        "page": 32,
+        "depth": 1,
+        "printedPage": "24"
+      },
+      {
+        "title": "第四章 Klein–Kramers 随机过程",
+        "page": 34,
+        "depth": 0,
+        "printedPage": "26"
+      },
+      {
+        "title": "4.1 背景",
+        "page": 34,
+        "depth": 1,
+        "printedPage": "26"
+      },
+      {
+        "title": "4.2 Langevin 方程",
+        "page": 34,
+        "depth": 1,
+        "printedPage": "26"
+      },
+      {
+        "title": "4.3 Klein–Kramers 方程",
+        "page": 35,
+        "depth": 1,
+        "printedPage": "27"
+      },
+      {
+        "title": "4.4 Chandrasekhar 的解",
+        "page": 35,
+        "depth": 1,
+        "printedPage": "27"
+      },
+      {
+        "title": "第五章 随机过程的转移概率密度",
+        "page": 37,
+        "depth": 0,
+        "printedPage": "29"
+      },
+      {
+        "title": "5.1 动机",
+        "page": 37,
+        "depth": 1,
+        "printedPage": "29"
+      },
+      {
+        "title": "5.2 后向方程与前向方程",
+        "page": 37,
+        "depth": 1,
+        "printedPage": "29"
+      },
+      {
+        "title": "5.3 增广方法",
+        "page": 41,
+        "depth": 1,
+        "printedPage": "33"
+      },
+      {
+        "title": "5.4 化简方法",
+        "page": 42,
+        "depth": 1,
+        "printedPage": "34"
+      },
+      {
+        "title": "第六章 高斯随机过程",
+        "page": 43,
+        "depth": 0,
+        "printedPage": "35"
+      },
+      {
+        "title": "6.1 正则高斯过程",
+        "page": 43,
+        "depth": 1,
+        "printedPage": "35"
+      },
+      {
+        "title": "6.1.1 利用 Kelvin 波求解",
+        "page": 44,
+        "depth": 2,
+        "printedPage": "36"
+      },
+      {
+        "title": "6.1.2 利用坐标变换求解",
+        "page": 47,
+        "depth": 2,
+        "printedPage": "39"
+      },
+      {
+        "title": "6.2 带杀灭的高斯过程",
+        "page": 48,
+        "depth": 1,
+        "printedPage": "40"
+      },
+      {
+        "title": "6.2.1 利用 Kelvin 波求解",
+        "page": 48,
+        "depth": 2,
+        "printedPage": "40"
+      },
+      {
+        "title": "6.3 例：Kolmogorov 过程",
+        "page": 50,
+        "depth": 1,
+        "printedPage": "42"
+      },
+      {
+        "title": "6.4 例：OU 过程",
+        "page": 51,
+        "depth": 1,
+        "printedPage": "43"
+      },
+      {
+        "title": "6.4.1 OU 过程",
+        "page": 51,
+        "depth": 2,
+        "printedPage": "43"
+      },
+      {
+        "title": "6.4.2 高斯增广 OU 过程",
+        "page": 53,
+        "depth": 2,
+        "printedPage": "45"
+      },
+      {
+        "title": "6.5 例：自由粒子与受谐势束缚粒子的扩散",
+        "page": 55,
+        "depth": 1,
+        "printedPage": "47"
+      },
+      {
+        "title": "6.6 例：二维流动的涡量",
+        "page": 58,
+        "depth": 1,
+        "printedPage": "50"
+      },
+      {
+        "title": "第七章 非高斯随机过程",
+        "page": 63,
+        "depth": 0,
+        "printedPage": "55"
+      },
+      {
+        "title": "7.1 正则非高斯过程",
+        "page": 63,
+        "depth": 1,
+        "printedPage": "55"
+      },
+      {
+        "title": "7.2 带杀灭的非高斯过程",
+        "page": 65,
+        "depth": 1,
+        "printedPage": "57"
+      },
+      {
+        "title": "7.3 例：反常 Kolmogorov 过程",
+        "page": 65,
+        "depth": 1,
+        "printedPage": "57"
+      },
+      {
+        "title": "7.4 例：Feller 过程",
+        "page": 70,
+        "depth": 1,
+        "printedPage": "62"
+      },
+      {
+        "title": "7.4.1 Feller 过程",
+        "page": 70,
+        "depth": 2,
+        "printedPage": "62"
+      },
+      {
+        "title": "常参数 Feller 过程",
+        "page": 70,
+        "depth": 4,
+        "printedPage": "62"
+      },
+      {
+        "title": "时变参数 Feller 过程",
+        "page": 73,
+        "depth": 4,
+        "printedPage": "65"
+      },
+      {
+        "title": "带跳跃的 Feller 过程",
+        "page": 76,
+        "depth": 4,
+        "printedPage": "68"
+      },
+      {
+        "title": "7.4.2 增广 Feller 过程，I",
+        "page": 76,
+        "depth": 2,
+        "printedPage": "68"
+      },
+      {
+        "title": "7.4.3 增广 Feller 过程，II",
+        "page": 80,
+        "depth": 2,
+        "printedPage": "72"
+      },
+      {
+        "title": "7.5 例：路径依赖过程",
+        "page": 84,
+        "depth": 1,
+        "printedPage": "76"
+      },
+      {
+        "title": "7.6 例：OU 类过程",
+        "page": 86,
+        "depth": 1,
+        "printedPage": "78"
+      },
+      {
+        "title": "7.6.1 反常 OU 过程",
+        "page": 86,
+        "depth": 2,
+        "printedPage": "78"
+      },
+      {
+        "title": "7.6.2 非高斯增广 OU 过程，I",
+        "page": 87,
+        "depth": 2,
+        "printedPage": "79"
+      },
+      {
+        "title": "7.6.3 非高斯增广 OU 过程，II",
+        "page": 88,
+        "depth": 2,
+        "printedPage": "80"
+      },
+      {
+        "title": "第八章 金融工具定价",
+        "page": 90,
+        "depth": 0,
+        "printedPage": "82"
+      },
+      {
+        "title": "8.1 背景",
+        "page": 90,
+        "depth": 1,
+        "printedPage": "82"
+      },
+      {
+        "title": "8.2 标的过程",
+        "page": 90,
+        "depth": 1,
+        "printedPage": "82"
+      },
+      {
+        "title": "8.3 欧式衍生品",
+        "page": 91,
+        "depth": 1,
+        "printedPage": "83"
+      },
+      {
+        "title": "8.3.1 远期、看涨期权、看跌期权和备兑看涨期权",
+        "page": 91,
+        "depth": 2,
+        "printedPage": "83"
+      },
+      {
+        "title": "8.3.2 Black–Scholes 模型",
+        "page": 92,
+        "depth": 2,
+        "printedPage": "84"
+      },
+      {
+        "title": "8.3.3 Heston 模型",
+        "page": 94,
+        "depth": 2,
+        "printedPage": "86"
+      },
+      {
+        "title": "8.3.4 Stein–Stein 模型",
+        "page": 95,
+        "depth": 2,
+        "printedPage": "87"
+      },
+      {
+        "title": "8.3.5 路径依赖波动率模型",
+        "page": 96,
+        "depth": 2,
+        "printedPage": "88"
+      },
+      {
+        "title": "8.3.6 Bachelier 模型",
+        "page": 97,
+        "depth": 2,
+        "printedPage": "89"
+      },
+      {
+        "title": "8.4 算术平均与几何平均亚式期权",
+        "page": 97,
+        "depth": 1,
+        "printedPage": "89"
+      },
+      {
+        "title": "8.5 波动率与方差互换及互换期权",
+        "page": 99,
+        "depth": 1,
+        "printedPage": "91"
+      },
+      {
+        "title": "8.5.1 波动率互换及互换期权",
+        "page": 99,
+        "depth": 2,
+        "printedPage": "91"
+      },
+      {
+        "title": "8.5.2 方差互换及互换期权",
+        "page": 100,
+        "depth": 2,
+        "printedPage": "92"
+      },
+      {
+        "title": "8.6 自动做市商",
+        "page": 101,
+        "depth": 1,
+        "printedPage": "93"
+      },
+      {
+        "title": "8.7 债券与债券期权",
+        "page": 108,
+        "depth": 1,
+        "printedPage": "100"
+      },
+      {
+        "title": "8.7.1 背景",
+        "page": 108,
+        "depth": 2,
+        "printedPage": "100"
+      },
+      {
+        "title": "8.7.2 Vasicek 模型",
+        "page": 108,
+        "depth": 2,
+        "printedPage": "100"
+      },
+      {
+        "title": "8.7.3 CIR 模型",
+        "page": 110,
+        "depth": 2,
+        "printedPage": "102"
+      },
+      {
+        "title": "8.8 随机利率下的欧式期权",
+        "page": 111,
+        "depth": 1,
+        "printedPage": "103"
+      },
+      {
+        "title": "第九章 结论",
+        "page": 113,
+        "depth": 0,
+        "printedPage": "105"
+      },
+      {
+        "title": "参考文献",
+        "page": 114,
+        "depth": 0,
+        "printedPage": "106"
+      },
+      {
+        "title": "致谢",
+        "page": 121,
+        "depth": 0,
+        "printedPage": "113"
+      },
+      {
+        "title": "作者简介",
+        "page": 122,
+        "depth": 0,
+        "printedPage": "114"
+      },
+      {
+        "title": "量化金融丛书",
+        "page": 123,
+        "depth": 0,
+        "printedPage": "115"
+      },
+      {
+        "title": "译本附录：原书疑点与使用边界",
+        "page": 124,
+        "depth": 0,
+        "printedPage": "116"
+      },
+      {
+        "title": "译本附录：术语对照",
+        "page": 126,
+        "depth": 0,
+        "printedPage": "118"
+      }
+    ],
+    "contentsFile": 0,
+    "contentsNote": "目录链接直达中文译本对应页面，页码按译本印刷页码显示。"
+  },
+  "physics-of-economy-and-finance": {
+    "summary": "面向具有物理学背景的读者，本书先介绍货币、金融工具、概率、随机过程与价格建模，再从测度、几何、网络和非平衡系统的角度讨论经济与金融问题。后半部分涉及膨胀系统、几何神经网络以及金融复杂性模型。\n中文译本完整收录九章、原有习题、逐章参考文献和索引，共240页。索引指向译本实际页面；原书中的建模假设、类比以及数学和科学疑点以原有强度保留，并作译注说明。",
+    "contents": [
+      {
+        "title": "原版书目信息",
+        "page": 3,
+        "depth": 0,
+        "printedPage": "i"
+      },
+      {
+        "title": "前言",
+        "page": 9,
+        "depth": 0,
+        "printedPage": "vii"
+      },
+      {
+        "title": "致谢",
+        "page": 11,
+        "depth": 0,
+        "printedPage": "ix"
+      },
+      {
+        "title": "利益冲突",
+        "page": 11,
+        "depth": 4,
+        "printedPage": "ix"
+      },
+      {
+        "title": "关于本书",
+        "page": 12,
+        "depth": 0,
+        "printedPage": "x"
+      },
+      {
+        "title": "第一部分 经典",
+        "page": 13,
+        "depth": 0,
+        "printedPage": "1"
+      },
+      {
+        "title": "第一章 导论",
+        "page": 14,
+        "depth": 1,
+        "printedPage": "2"
+      },
+      {
+        "title": "1.1 成为量化分析师",
+        "page": 14,
+        "depth": 2,
+        "printedPage": "2"
+      },
+      {
+        "title": "1.2 99.9999999999996%",
+        "page": 17,
+        "depth": 2,
+        "printedPage": "5"
+      },
+      {
+        "title": "1.3 经济学与经济",
+        "page": 18,
+        "depth": 2,
+        "printedPage": "6"
+      },
+      {
+        "title": "1.4 物理学家是如何进入这一领域的",
+        "page": 20,
+        "depth": 2,
+        "printedPage": "8"
+      },
+      {
+        "title": "1.5 目标",
+        "page": 21,
+        "depth": 2,
+        "printedPage": "9"
+      },
+      {
+        "title": "1.6 习题",
+        "page": 22,
+        "depth": 2,
+        "printedPage": "10"
+      },
+      {
+        "title": "参考文献",
+        "page": 23,
+        "depth": 2,
+        "printedPage": "11"
+      },
+      {
+        "title": "第二章 金融导论",
+        "page": 25,
+        "depth": 1,
+        "printedPage": "13"
+      },
+      {
+        "title": "2.1 货币",
+        "page": 25,
+        "depth": 2,
+        "printedPage": "13"
+      },
+      {
+        "title": "2.2 通货膨胀",
+        "page": 26,
+        "depth": 2,
+        "printedPage": "14"
+      },
+      {
+        "title": "2.3 货币的创造",
+        "page": 28,
+        "depth": 2,
+        "printedPage": "16"
+      },
+      {
+        "title": "2.4 货币的价值",
+        "page": 29,
+        "depth": 2,
+        "printedPage": "17"
+      },
+      {
+        "title": "2.5 风险",
+        "page": 32,
+        "depth": 2,
+        "printedPage": "20"
+      },
+      {
+        "title": "2.6 金融工具",
+        "page": 34,
+        "depth": 2,
+        "printedPage": "22"
+      },
+      {
+        "title": "2.7 债券与利率",
+        "page": 35,
+        "depth": 2,
+        "printedPage": "23"
+      },
+      {
+        "title": "2.8 外汇",
+        "page": 40,
+        "depth": 2,
+        "printedPage": "28"
+      },
+      {
+        "title": "2.9 互换",
+        "page": 42,
+        "depth": 2,
+        "printedPage": "30"
+      },
+      {
+        "title": "2.10 信用违约互换",
+        "page": 44,
+        "depth": 2,
+        "printedPage": "32"
+      },
+      {
+        "title": "2.11 担保债务凭证",
+        "page": 46,
+        "depth": 2,
+        "printedPage": "34"
+      },
+      {
+        "title": "2.12 期货",
+        "page": 48,
+        "depth": 2,
+        "printedPage": "36"
+      },
+      {
+        "title": "2.13 期权",
+        "page": 51,
+        "depth": 2,
+        "printedPage": "39"
+      },
+      {
+        "title": "2.14 其他非线性工具",
+        "page": 51,
+        "depth": 2,
+        "printedPage": "39"
+      },
+      {
+        "title": "2.15 伊斯兰金融",
+        "page": 53,
+        "depth": 2,
+        "printedPage": "41"
+      },
+      {
+        "title": "2.16 习题",
+        "page": 55,
+        "depth": 2,
+        "printedPage": "43"
+      },
+      {
+        "title": "参考文献",
+        "page": 59,
+        "depth": 2,
+        "printedPage": "47"
+      },
+      {
+        "title": "第三章 数据数学、物理与信息",
+        "page": 60,
+        "depth": 1,
+        "printedPage": "48"
+      },
+      {
+        "title": "3.1 概率论",
+        "page": 60,
+        "depth": 2,
+        "printedPage": "48"
+      },
+      {
+        "title": "3.2 系综",
+        "page": 62,
+        "depth": 2,
+        "printedPage": "50"
+      },
+      {
+        "title": "3.3 蒙特卡洛模拟",
+        "page": 64,
+        "depth": 2,
+        "printedPage": "52"
+      },
+      {
+        "title": "3.4 随机变量",
+        "page": 67,
+        "depth": 2,
+        "printedPage": "55"
+      },
+      {
+        "title": "3.5 不可避免事件",
+        "page": 69,
+        "depth": 2,
+        "printedPage": "57"
+      },
+      {
+        "title": "3.6 中心极限定理",
+        "page": 70,
+        "depth": 2,
+        "printedPage": "58"
+      },
+      {
+        "title": "3.7 概率不等式",
+        "page": 72,
+        "depth": 2,
+        "printedPage": "60"
+      },
+      {
+        "title": "3.8 随机过程",
+        "page": 76,
+        "depth": 2,
+        "printedPage": "64"
+      },
+      {
+        "title": "3.9 随机积分",
+        "page": 80,
+        "depth": 2,
+        "printedPage": "68"
+      },
+      {
+        "title": "3.10 随机微分方程",
+        "page": 87,
+        "depth": 2,
+        "printedPage": "75"
+      },
+      {
+        "title": "3.11 Poisson 过程",
+        "page": 89,
+        "depth": 2,
+        "printedPage": "77"
+      },
+      {
+        "title": "3.12 Lévy 稳定分布与分数布朗运动",
+        "page": 93,
+        "depth": 2,
+        "printedPage": "81"
+      },
+      {
+        "title": "3.13 习题",
+        "page": 99,
+        "depth": 2,
+        "printedPage": "87"
+      },
+      {
+        "title": "参考文献",
+        "page": 101,
+        "depth": 2,
+        "printedPage": "89"
+      },
+      {
+        "title": "第四章 金融工具建模",
+        "page": 103,
+        "depth": 1,
+        "printedPage": "91"
+      },
+      {
+        "title": "4.1 无套利定理",
+        "page": 103,
+        "depth": 2,
+        "printedPage": "91"
+      },
+      {
+        "title": "4.2 价格建模",
+        "page": 103,
+        "depth": 2,
+        "printedPage": "91"
+      },
+      {
+        "title": "4.3 树模型",
+        "page": 112,
+        "depth": 2,
+        "printedPage": "100"
+      },
+      {
+        "title": "4.4 具有附加现金流的价格建模",
+        "page": 116,
+        "depth": 2,
+        "printedPage": "104"
+      },
+      {
+        "title": "4.5 一般随机市场",
+        "page": 117,
+        "depth": 2,
+        "printedPage": "105"
+      },
+      {
+        "title": "4.6 希腊字母指标",
+        "page": 121,
+        "depth": 2,
+        "printedPage": "109"
+      },
+      {
+        "title": "4.7 利率模型",
+        "page": 124,
+        "depth": 2,
+        "printedPage": "112"
+      },
+      {
+        "title": "4.8 风险价值（VaR）",
+        "page": 128,
+        "depth": 2,
+        "printedPage": "116"
+      },
+      {
+        "title": "4.9 现代投资组合理论",
+        "page": 129,
+        "depth": 2,
+        "printedPage": "117"
+      },
+      {
+        "title": "4.10 金融数学",
+        "page": 133,
+        "depth": 2,
+        "printedPage": "121"
+      },
+      {
+        "title": "4.11 信用风险",
+        "page": 138,
+        "depth": 2,
+        "printedPage": "126"
+      },
+      {
+        "title": "4.12 信用风险与主方程",
+        "page": 142,
+        "depth": 2,
+        "printedPage": "130"
+      },
+      {
+        "title": "4.13 习题",
+        "page": 146,
+        "depth": 2,
+        "printedPage": "134"
+      },
+      {
+        "title": "参考文献",
+        "page": 149,
+        "depth": 2,
+        "printedPage": "137"
+      },
+      {
+        "title": "第二部分 复杂性",
+        "page": 151,
+        "depth": 0,
+        "printedPage": "139"
+      },
+      {
+        "title": "第五章 测度与几何",
+        "page": 152,
+        "depth": 1,
+        "printedPage": "140"
+      },
+      {
+        "title": "5.1 引言",
+        "page": 152,
+        "depth": 2,
+        "printedPage": "140"
+      },
+      {
+        "title": "5.2 度量空间",
+        "page": 154,
+        "depth": 2,
+        "printedPage": "142"
+      },
+      {
+        "title": "5.3 开集与闭集",
+        "page": 156,
+        "depth": 2,
+        "printedPage": "144"
+      },
+      {
+        "title": "5.4 欧氏空间",
+        "page": 159,
+        "depth": 2,
+        "printedPage": "147"
+      },
+      {
+        "title": "5.5 连续性",
+        "page": 160,
+        "depth": 2,
+        "printedPage": "148"
+      },
+      {
+        "title": "5.6 可测空间",
+        "page": 161,
+        "depth": 2,
+        "printedPage": "149"
+      },
+      {
+        "title": "5.7 Lebesgue 测度",
+        "page": 164,
+        "depth": 2,
+        "printedPage": "152"
+      },
+      {
+        "title": "5.8 Hausdorff 测度",
+        "page": 166,
+        "depth": 2,
+        "printedPage": "154"
+      },
+      {
+        "title": "参考文献",
+        "page": 172,
+        "depth": 2,
+        "printedPage": "160"
+      },
+      {
+        "title": "第六章 膨胀系统",
+        "page": 173,
+        "depth": 1,
+        "printedPage": "161"
+      },
+      {
+        "title": "6.1 引言",
+        "page": 173,
+        "depth": 2,
+        "printedPage": "161"
+      },
+      {
+        "title": "6.2 Galton–Watson 过程",
+        "page": 173,
+        "depth": 2,
+        "printedPage": "161"
+      },
+      {
+        "title": "6.3 乘性过程",
+        "page": 175,
+        "depth": 2,
+        "printedPage": "163"
+      },
+      {
+        "title": "6.4 复杂网络",
+        "page": 177,
+        "depth": 2,
+        "printedPage": "165"
+      },
+      {
+        "title": "6.5 SOC",
+        "page": 180,
+        "depth": 2,
+        "printedPage": "168"
+      },
+      {
+        "title": "参考文献",
+        "page": 185,
+        "depth": 2,
+        "printedPage": "173"
+      },
+      {
+        "title": "第七章 Riemann几何",
+        "page": 186,
+        "depth": 1,
+        "printedPage": "174"
+      },
+      {
+        "title": "7.1 引言",
+        "page": 186,
+        "depth": 2,
+        "printedPage": "174"
+      },
+      {
+        "title": "7.2 流形",
+        "page": 187,
+        "depth": 2,
+        "printedPage": "175"
+      },
+      {
+        "title": "7.3 曲线",
+        "page": 189,
+        "depth": 2,
+        "printedPage": "177"
+      },
+      {
+        "title": "7.4 纤维丛",
+        "page": 191,
+        "depth": 2,
+        "printedPage": "179"
+      },
+      {
+        "title": "7.5 张量",
+        "page": 192,
+        "depth": 2,
+        "printedPage": "180"
+      },
+      {
+        "title": "7.6 膨胀宇宙",
+        "page": 195,
+        "depth": 2,
+        "printedPage": "183"
+      },
+      {
+        "title": "7.7 相对论性SOC",
+        "page": 199,
+        "depth": 2,
+        "printedPage": "187"
+      },
+      {
+        "title": "参考文献",
+        "page": 202,
+        "depth": 2,
+        "printedPage": "190"
+      },
+      {
+        "title": "第八章 几何神经网络",
+        "page": 203,
+        "depth": 1,
+        "printedPage": "191"
+      },
+      {
+        "title": "8.1 引言",
+        "page": 203,
+        "depth": 2,
+        "printedPage": "191"
+      },
+      {
+        "title": "8.2 Ising模型与Boltzmann机",
+        "page": 204,
+        "depth": 2,
+        "printedPage": "192"
+      },
+      {
+        "title": "8.3 受限Boltzmann机",
+        "page": 206,
+        "depth": 2,
+        "printedPage": "194"
+      },
+      {
+        "title": "8.4 神经网络",
+        "page": 207,
+        "depth": 2,
+        "printedPage": "195"
+      },
+      {
+        "title": "8.5 自编码器",
+        "page": 210,
+        "depth": 2,
+        "printedPage": "198"
+      },
+      {
+        "title": "8.6 习题",
+        "page": 212,
+        "depth": 2,
+        "printedPage": "200"
+      },
+      {
+        "title": "参考文献",
+        "page": 214,
+        "depth": 2,
+        "printedPage": "202"
+      },
+      {
+        "title": "第九章 金融中的复杂性模型",
+        "page": 215,
+        "depth": 1,
+        "printedPage": "203"
+      },
+      {
+        "title": "9.1 引言",
+        "page": 215,
+        "depth": 2,
+        "printedPage": "203"
+      },
+      {
+        "title": "9.2 基于主体的模型",
+        "page": 216,
+        "depth": 2,
+        "printedPage": "204"
+      },
+      {
+        "title": "9.3 网络模型",
+        "page": 218,
+        "depth": 2,
+        "printedPage": "206"
+      },
+      {
+        "title": "9.4 市场微观结构模型",
+        "page": 220,
+        "depth": 2,
+        "printedPage": "208"
+      },
+      {
+        "title": "9.5 经济物理学",
+        "page": 222,
+        "depth": 2,
+        "printedPage": "210"
+      },
+      {
+        "title": "参考文献",
+        "page": 225,
+        "depth": 2,
+        "printedPage": "213"
+      },
+      {
+        "title": "索引",
+        "page": 227,
+        "depth": 1,
+        "printedPage": "215"
+      }
+    ],
+    "contentsFile": 0,
+    "contentsNote": "目录链接直达中文译本对应页面，页码按译本印刷页码显示。"
+  },
+  "quantitative-finance-walden": {
+    "summary": "本书从金融市场、决策和投资组合选择出发，系统介绍均衡资产定价与无套利方法，再进入单期、多期和连续时间模型、衍生品定价与数值方法。后续章节讨论连续时间投资与均衡、恢复定理，以及信息与分歧。\n中文译本完整收录15章、A–E附录、原有习题、参考文献和索引，共444页；附录涵盖数学预备知识、Lebesgue–Stieltjes 积分与 MATLAB 代码。原书公式和证明中的问题以可见译注保留，未将代码收录或算例核对表述为数值模拟复现。",
+    "contents": [
+      {
+        "title": "第一章 导论",
+        "page": 11,
+        "depth": 0,
+        "printedPage": "1"
+      },
+      {
+        "title": "1.1 使用本书教学",
+        "page": 13,
+        "depth": 1,
+        "printedPage": "3"
+      },
+      {
+        "title": "1.2 本书的缘起与方法",
+        "page": 14,
+        "depth": 1,
+        "printedPage": "4"
+      },
+      {
+        "title": "第一部分 投资与资产定价",
+        "page": 15,
+        "depth": 0,
+        "printedPage": "5"
+      },
+      {
+        "title": "第二章 金融市场",
+        "page": 16,
+        "depth": 1,
+        "printedPage": "6"
+      },
+      {
+        "title": "2.1 资产与收益率",
+        "page": 17,
+        "depth": 2,
+        "printedPage": "7"
+      },
+      {
+        "title": "2.2 收益率的衡量",
+        "page": 18,
+        "depth": 2,
+        "printedPage": "8"
+      },
+      {
+        "title": "2.3 债券与收益率",
+        "page": 21,
+        "depth": 2,
+        "printedPage": "11"
+      },
+      {
+        "title": "2.4 历史收益率与重要问题",
+        "page": 22,
+        "depth": 2,
+        "printedPage": "12"
+      },
+      {
+        "title": "第三章 不确定性下的决策",
+        "page": 24,
+        "depth": 1,
+        "printedPage": "14"
+      },
+      {
+        "title": "3.1 彩票",
+        "page": 26,
+        "depth": 2,
+        "printedPage": "16"
+      },
+      {
+        "title": "3.2 期望效用",
+        "page": 28,
+        "depth": 2,
+        "printedPage": "18"
+      },
+      {
+        "title": "3.2.1 公理化推导",
+        "page": 29,
+        "depth": 3,
+        "printedPage": "19"
+      },
+      {
+        "title": "3.3 状态空间",
+        "page": 33,
+        "depth": 2,
+        "printedPage": "23"
+      },
+      {
+        "title": "3.4 风险厌恶的量化",
+        "page": 34,
+        "depth": 2,
+        "printedPage": "24"
+      },
+      {
+        "title": "3.5 主观期望效用理论",
+        "page": 37,
+        "depth": 2,
+        "printedPage": "27"
+      },
+      {
+        "title": "3.6 模糊厌恶",
+        "page": 38,
+        "depth": 2,
+        "printedPage": "28"
+      },
+      {
+        "title": "3.7 行为经济学与决策",
+        "page": 38,
+        "depth": 2,
+        "printedPage": "28"
+      },
+      {
+        "title": "3.8 引入时间维度",
+        "page": 40,
+        "depth": 2,
+        "printedPage": "30"
+      },
+      {
+        "title": "3.9 Epstein–Zin 偏好",
+        "page": 41,
+        "depth": 2,
+        "printedPage": "31"
+      },
+      {
+        "title": "3.10 风险增加的定义",
+        "page": 44,
+        "depth": 2,
+        "printedPage": "34"
+      },
+      {
+        "title": "3.11 习题",
+        "page": 50,
+        "depth": 2,
+        "printedPage": "40"
+      },
+      {
+        "title": "第四章 投资组合的选择",
+        "page": 53,
+        "depth": 1,
+        "printedPage": "43"
+      },
+      {
+        "title": "4.1 引言",
+        "page": 53,
+        "depth": 2,
+        "printedPage": "43"
+      },
+      {
+        "title": "4.2 多种风险资产",
+        "page": 61,
+        "depth": 2,
+        "printedPage": "51"
+      },
+      {
+        "title": "4.3 一般问题",
+        "page": 64,
+        "depth": 2,
+        "printedPage": "54"
+      },
+      {
+        "title": "4.4 现代投资组合理论",
+        "page": 67,
+        "depth": 2,
+        "printedPage": "57"
+      },
+      {
+        "title": "4.4.1 对风险分布的限制",
+        "page": 76,
+        "depth": 3,
+        "printedPage": "66"
+      },
+      {
+        "title": "4.4.2 对冲组合",
+        "page": 78,
+        "depth": 3,
+        "printedPage": "68"
+      },
+      {
+        "title": "4.4.3 分散化的力量",
+        "page": 79,
+        "depth": 3,
+        "printedPage": "69"
+      },
+      {
+        "title": "4.5 纳入时点0的消费",
+        "page": 79,
+        "depth": 2,
+        "printedPage": "69"
+      },
+      {
+        "title": "4.6 估计预期收益率的困难",
+        "page": 82,
+        "depth": 2,
+        "printedPage": "72"
+      },
+      {
+        "title": "4.7 动态投资组合选择",
+        "page": 85,
+        "depth": 2,
+        "printedPage": "75"
+      },
+      {
+        "title": "4.7.1 增长最优组合",
+        "page": 89,
+        "depth": 3,
+        "printedPage": "79"
+      },
+      {
+        "title": "欧洲轮盘的例子",
+        "page": 91,
+        "depth": 4,
+        "printedPage": "81"
+      },
+      {
+        "title": "4.7.2 通用投资组合",
+        "page": 92,
+        "depth": 3,
+        "printedPage": "82"
+      },
+      {
+        "title": "三个状态的例子",
+        "page": 95,
+        "depth": 4,
+        "printedPage": "85"
+      },
+      {
+        "title": "4.8 习题",
+        "page": 96,
+        "depth": 2,
+        "printedPage": "86"
+      },
+      {
+        "title": "第五章 确定资产价格",
+        "page": 99,
+        "depth": 1,
+        "printedPage": "89"
+      },
+      {
+        "title": "5.1 均衡定价",
+        "page": 99,
+        "depth": 2,
+        "printedPage": "89"
+      },
+      {
+        "title": "异质信息的例子",
+        "page": 100,
+        "depth": 4,
+        "printedPage": "90"
+      },
+      {
+        "title": "5.2 资本资产定价模型（CAPM）",
+        "page": 102,
+        "depth": 2,
+        "printedPage": "92"
+      },
+      {
+        "title": "5.2.1 CARA—正态 CAPM 模型",
+        "page": 103,
+        "depth": 3,
+        "printedPage": "93"
+      },
+      {
+        "title": "例：对称单因子市场模型",
+        "page": 104,
+        "depth": 4,
+        "printedPage": "94"
+      },
+      {
+        "title": "例：均衡、影响力投资与撤资",
+        "page": 106,
+        "depth": 4,
+        "printedPage": "96"
+      },
+      {
+        "title": "5.2.2 通过回归理解 CAPM",
+        "page": 110,
+        "depth": 3,
+        "printedPage": "100"
+      },
+      {
+        "title": "5.2.3 市场组合未知时的 CAPM",
+        "page": 110,
+        "depth": 3,
+        "printedPage": "100"
+      },
+      {
+        "title": "5.3 Black—Litterman 模型",
+        "page": 111,
+        "depth": 2,
+        "printedPage": "101"
+      },
+      {
+        "title": "一个例子",
+        "page": 115,
+        "depth": 4,
+        "printedPage": "105"
+      },
+      {
+        "title": "5.4 基于消费的模型",
+        "page": 115,
+        "depth": 2,
+        "printedPage": "105"
+      },
+      {
+        "title": "5.4.1 Arrow—Debreu 模型",
+        "page": 116,
+        "depth": 3,
+        "printedPage": "106"
+      },
+      {
+        "title": "5.4.2 效率",
+        "page": 123,
+        "depth": 3,
+        "printedPage": "113"
+      },
+      {
+        "title": "5.4.3 均衡随机贴现因子",
+        "page": 124,
+        "depth": 3,
+        "printedPage": "114"
+      },
+      {
+        "title": "5.4.4 股权溢价之谜",
+        "page": 125,
+        "depth": 3,
+        "printedPage": "115"
+      },
+      {
+        "title": "5.4.5 HARA 效用与习惯形成",
+        "page": 127,
+        "depth": 3,
+        "printedPage": "117"
+      },
+      {
+        "title": "5.4.6 罕见灾难",
+        "page": 129,
+        "depth": 3,
+        "printedPage": "119"
+      },
+      {
+        "title": "5.4.7 不完全市场",
+        "page": 130,
+        "depth": 3,
+        "printedPage": "120"
+      },
+      {
+        "title": "5.4.8 Epstein—Zin 偏好",
+        "page": 133,
+        "depth": 3,
+        "printedPage": "123"
+      },
+      {
+        "title": "5.4.9 Lucas 模型",
+        "page": 135,
+        "depth": 3,
+        "printedPage": "125"
+      },
+      {
+        "title": "5.4.10 Lucas 模型的均衡存在性",
+        "page": 137,
+        "depth": 3,
+        "printedPage": "127"
+      },
+      {
+        "title": "步骤1",
+        "page": 138,
+        "depth": 4,
+        "printedPage": "128"
+      },
+      {
+        "title": "步骤2",
+        "page": 139,
+        "depth": 4,
+        "printedPage": "129"
+      },
+      {
+        "title": "5.4.11 关于基于消费的资产定价的进一步讨论",
+        "page": 142,
+        "depth": 3,
+        "printedPage": "132"
+      },
+      {
+        "title": "5.4.12 EZ 偏好与股权溢价之谜",
+        "page": 144,
+        "depth": 3,
+        "printedPage": "134"
+      },
+      {
+        "title": "5.5 套利定价理论（APT）",
+        "page": 147,
+        "depth": 2,
+        "printedPage": "137"
+      },
+      {
+        "title": "5.5.1 无特质风险的单因子模型",
+        "page": 149,
+        "depth": 3,
+        "printedPage": "139"
+      },
+      {
+        "title": "5.5.2 无特质风险的双因子模型",
+        "page": 149,
+        "depth": 3,
+        "printedPage": "139"
+      },
+      {
+        "title": "5.5.3 存在特质风险时的因子定价",
+        "page": 151,
+        "depth": 3,
+        "printedPage": "141"
+      },
+      {
+        "title": "5.6 习题",
+        "page": 155,
+        "depth": 2,
+        "printedPage": "145"
+      },
+      {
+        "title": "第二部分 无套利定价与衍生品",
+        "page": 160,
+        "depth": 0,
+        "printedPage": "150"
+      },
+      {
+        "title": "第六章 无套利定价导论",
+        "page": 161,
+        "depth": 1,
+        "printedPage": "151"
+      },
+      {
+        "title": "第七章 单期模型",
+        "page": 163,
+        "depth": 1,
+        "printedPage": "153"
+      },
+      {
+        "title": "7.1 预备记号",
+        "page": 163,
+        "depth": 2,
+        "printedPage": "153"
+      },
+      {
+        "title": "7.2 资本市场",
+        "page": 163,
+        "depth": 2,
+        "printedPage": "153"
+      },
+      {
+        "title": "7.3 市场建模",
+        "page": 164,
+        "depth": 2,
+        "printedPage": "154"
+      },
+      {
+        "title": "7.4 基本定理",
+        "page": 171,
+        "depth": 2,
+        "printedPage": "161"
+      },
+      {
+        "title": "7.4.1 第一基本定理",
+        "page": 171,
+        "depth": 3,
+        "printedPage": "161"
+      },
+      {
+        "title": "7.4.2 第二基本定理",
+        "page": 174,
+        "depth": 3,
+        "printedPage": "164"
+      },
+      {
+        "title": "7.4.3 一价定律（LOOP）",
+        "page": 175,
+        "depth": 3,
+        "printedPage": "165"
+      },
+      {
+        "title": "7.4.4 讨论与例子",
+        "page": 176,
+        "depth": 3,
+        "printedPage": "166"
+      },
+      {
+        "title": "7.5 概率论 I",
+        "page": 177,
+        "depth": 2,
+        "printedPage": "167"
+      },
+      {
+        "title": "7.6 风险中性定价与随机贴现因子",
+        "page": 179,
+        "depth": 2,
+        "printedPage": "169"
+      },
+      {
+        "title": "7.7 进一步讨论衍生品合约",
+        "page": 180,
+        "depth": 2,
+        "printedPage": "170"
+      },
+      {
+        "title": "7.8 不完全市场中的价格界",
+        "page": 184,
+        "depth": 2,
+        "printedPage": "174"
+      },
+      {
+        "title": "7.9 习题",
+        "page": 188,
+        "depth": 2,
+        "printedPage": "178"
+      },
+      {
+        "title": "第八章 多期模型",
+        "page": 192,
+        "depth": 1,
+        "printedPage": "182"
+      },
+      {
+        "title": "8.1 两期例子",
+        "page": 192,
+        "depth": 2,
+        "printedPage": "182"
+      },
+      {
+        "title": "8.2 概率论 II",
+        "page": 195,
+        "depth": 2,
+        "printedPage": "185"
+      },
+      {
+        "title": "8.3 更多概率论与随机过程",
+        "page": 200,
+        "depth": 2,
+        "printedPage": "190"
+      },
+      {
+        "title": "8.3.1 σ 代数",
+        "page": 201,
+        "depth": 3,
+        "printedPage": "191"
+      },
+      {
+        "title": "8.3.2 随机过程",
+        "page": 202,
+        "depth": 3,
+        "printedPage": "192"
+      },
+      {
+        "title": "8.4 信息随时间细化",
+        "page": 202,
+        "depth": 2,
+        "printedPage": "192"
+      },
+      {
+        "title": "8.5 一般多期模型",
+        "page": 202,
+        "depth": 2,
+        "printedPage": "192"
+      },
+      {
+        "title": "8.6 多期基本定理",
+        "page": 206,
+        "depth": 2,
+        "printedPage": "196"
+      },
+      {
+        "title": "8.7 二项模型的极限",
+        "page": 208,
+        "depth": 2,
+        "printedPage": "198"
+      },
+      {
+        "title": "8.8 习题",
+        "page": 213,
+        "depth": 2,
+        "printedPage": "203"
+      },
+      {
+        "title": "第九章 连续时间模型",
+        "page": 217,
+        "depth": 1,
+        "printedPage": "207"
+      },
+      {
+        "title": "9.1 Brownian 运动",
+        "page": 217,
+        "depth": 2,
+        "printedPage": "207"
+      },
+      {
+        "title": "9.2 随机积分",
+        "page": 222,
+        "depth": 2,
+        "printedPage": "212"
+      },
+      {
+        "title": "9.2.1 经典微积分",
+        "page": 222,
+        "depth": 3,
+        "printedPage": "212"
+      },
+      {
+        "title": "9.2.2 连续时间中的投资组合投资",
+        "page": 223,
+        "depth": 3,
+        "printedPage": "213"
+      },
+      {
+        "title": "9.2.3 Riemann–Stieltjes 积分",
+        "page": 224,
+        "depth": 3,
+        "printedPage": "214"
+      },
+      {
+        "title": "9.2.4 曲折函数的积分",
+        "page": 227,
+        "depth": 3,
+        "printedPage": "217"
+      },
+      {
+        "title": "对另一种 $h_t$ 选择的一种错误方法",
+        "page": 228,
+        "depth": 4,
+        "printedPage": "218"
+      },
+      {
+        "title": "正确方法",
+        "page": 229,
+        "depth": 4,
+        "printedPage": "219"
+      },
+      {
+        "title": "9.2.5 Itô 积分",
+        "page": 230,
+        "depth": 3,
+        "printedPage": "220"
+      },
+      {
+        "title": "9.2.6 一个确定性例子",
+        "page": 232,
+        "depth": 3,
+        "printedPage": "222"
+      },
+      {
+        "title": "9.2.7 微分公式",
+        "page": 235,
+        "depth": 3,
+        "printedPage": "225"
+      },
+      {
+        "title": "9.2.8 Itô 引理",
+        "page": 236,
+        "depth": 3,
+        "printedPage": "226"
+      },
+      {
+        "title": "多维 Itô 引理",
+        "page": 238,
+        "depth": 4,
+        "printedPage": "228"
+      },
+      {
+        "title": "乘积法则的 Itô 版本",
+        "page": 238,
+        "depth": 4,
+        "printedPage": "228"
+      },
+      {
+        "title": "9.3 连续时间投资组合",
+        "page": 239,
+        "depth": 2,
+        "printedPage": "229"
+      },
+      {
+        "title": "9.4 常微分方程、随机微分方程和偏微分方程",
+        "page": 240,
+        "depth": 2,
+        "printedPage": "230"
+      },
+      {
+        "title": "9.4.1 常微分方程入门",
+        "page": 240,
+        "depth": 3,
+        "printedPage": "230"
+      },
+      {
+        "title": "9.4.2 随机微分方程",
+        "page": 244,
+        "depth": 3,
+        "printedPage": "234"
+      },
+      {
+        "title": "9.4.3 偏微分方程",
+        "page": 245,
+        "depth": 3,
+        "printedPage": "235"
+      },
+      {
+        "title": "9.4.4 Feynman–Kac 定理与 Kolmogorov 方程",
+        "page": 249,
+        "depth": 3,
+        "printedPage": "239"
+      },
+      {
+        "title": "9.5 连续时间中的无套利定价",
+        "page": 253,
+        "depth": 2,
+        "printedPage": "243"
+      },
+      {
+        "title": "9.5.1 Black–Scholes 偏微分方程与定价公式",
+        "page": 253,
+        "depth": 3,
+        "printedPage": "243"
+      },
+      {
+        "title": "9.5.2 Black–Scholes 偏微分方程的证明",
+        "page": 255,
+        "depth": 3,
+        "printedPage": "245"
+      },
+      {
+        "title": "9.5.3 风险中性表述",
+        "page": 258,
+        "depth": 3,
+        "printedPage": "248"
+      },
+      {
+        "title": "9.5.4 变化的波动率与利率",
+        "page": 260,
+        "depth": 3,
+        "printedPage": "250"
+      },
+      {
+        "title": "9.6 Girsanov 定理",
+        "page": 261,
+        "depth": 2,
+        "printedPage": "251"
+      },
+      {
+        "title": "9.6.1 一个有启发性的例子",
+        "page": 263,
+        "depth": 3,
+        "printedPage": "253"
+      },
+      {
+        "title": "9.7 习题",
+        "page": 267,
+        "depth": 2,
+        "printedPage": "257"
+      },
+      {
+        "title": "第十章 应用",
+        "page": 271,
+        "depth": 1,
+        "printedPage": "261"
+      },
+      {
+        "title": "10.1 股息",
+        "page": 271,
+        "depth": 2,
+        "printedPage": "261"
+      },
+      {
+        "title": "10.2 障碍期权",
+        "page": 272,
+        "depth": 2,
+        "printedPage": "262"
+      },
+      {
+        "title": "一个富有启发性的例子",
+        "page": 273,
+        "depth": 4,
+        "printedPage": "263"
+      },
+      {
+        "title": "一般情形",
+        "page": 274,
+        "depth": 4,
+        "printedPage": "264"
+      },
+      {
+        "title": "10.3 连续时间债券定价",
+        "page": 276,
+        "depth": 2,
+        "printedPage": "266"
+      },
+      {
+        "title": "一个简单例子",
+        "page": 278,
+        "depth": 4,
+        "printedPage": "268"
+      },
+      {
+        "title": "10.3.1 一个推广的例子",
+        "page": 283,
+        "depth": 3,
+        "printedPage": "273"
+      },
+      {
+        "title": "10.3.2 例：Vasicek 模型",
+        "page": 283,
+        "depth": 3,
+        "printedPage": "273"
+      },
+      {
+        "title": "10.3.3 例：Cox–Ingersoll–Ross（CIR）模型",
+        "page": 284,
+        "depth": 3,
+        "printedPage": "274"
+      },
+      {
+        "title": "10.4 多维 Black–Scholes 模型",
+        "page": 285,
+        "depth": 2,
+        "printedPage": "275"
+      },
+      {
+        "title": "10.4.1 交换期权的例子",
+        "page": 286,
+        "depth": 3,
+        "printedPage": "276"
+      },
+      {
+        "title": "10.5 计价单位变换",
+        "page": 288,
+        "depth": 2,
+        "printedPage": "278"
+      },
+      {
+        "title": "10.6 连续时间的远期与期货合约",
+        "page": 290,
+        "depth": 2,
+        "printedPage": "280"
+      },
+      {
+        "title": "10.7 习题",
+        "page": 293,
+        "depth": 2,
+        "printedPage": "283"
+      },
+      {
+        "title": "第十一章 数值方法",
+        "page": 297,
+        "depth": 1,
+        "printedPage": "287"
+      },
+      {
+        "title": "11.1 二项树方法",
+        "page": 299,
+        "depth": 2,
+        "printedPage": "289"
+      },
+      {
+        "title": "11.1.1 二维问题",
+        "page": 303,
+        "depth": 3,
+        "printedPage": "293"
+      },
+      {
+        "title": "11.2 常微分方程的有限差分法",
+        "page": 304,
+        "depth": 2,
+        "printedPage": "294"
+      },
+      {
+        "title": "11.3 Black–Scholes 方程的有限差分法",
+        "page": 306,
+        "depth": 2,
+        "printedPage": "296"
+      },
+      {
+        "title": "11.3.1 进一步讨论稳定性",
+        "page": 309,
+        "depth": 3,
+        "printedPage": "299"
+      },
+      {
+        "title": "11.4 Monte Carlo 方法",
+        "page": 313,
+        "depth": 2,
+        "printedPage": "303"
+      },
+      {
+        "title": "第三部分 进阶专题",
+        "page": 315,
+        "depth": 0,
+        "printedPage": "305"
+      },
+      {
+        "title": "第十二章 连续时间的投资组合选择与均衡",
+        "page": 316,
+        "depth": 1,
+        "printedPage": "306"
+      },
+      {
+        "title": "12.1 连续时间投资组合选择",
+        "page": 316,
+        "depth": 2,
+        "printedPage": "306"
+      },
+      {
+        "title": "12.1.1 变化的投资机会集",
+        "page": 320,
+        "depth": 3,
+        "printedPage": "310"
+      },
+      {
+        "title": "12.1.2 含中间消费的解",
+        "page": 326,
+        "depth": 3,
+        "printedPage": "316"
+      },
+      {
+        "title": "12.2 跨期资本资产定价模型（ICAPM）",
+        "page": 330,
+        "depth": 2,
+        "printedPage": "320"
+      },
+      {
+        "title": "对数效用。",
+        "page": 333,
+        "depth": 4,
+        "printedPage": "323"
+      },
+      {
+        "title": "12.3 连续时间Lucas模型",
+        "page": 333,
+        "depth": 2,
+        "printedPage": "323"
+      },
+      {
+        "title": "12.4 生产经济",
+        "page": 336,
+        "depth": 2,
+        "printedPage": "326"
+      },
+      {
+        "title": "12.4.1 在单树模型中加入生产",
+        "page": 336,
+        "depth": 3,
+        "printedPage": "326"
+      },
+      {
+        "title": "12.4.2 Cox–Ingersoll–Ross（CIR）经济",
+        "page": 340,
+        "depth": 3,
+        "printedPage": "330"
+      },
+      {
+        "title": "第十三章 衍生品定价的进一步讨论",
+        "page": 343,
+        "depth": 1,
+        "printedPage": "333"
+      },
+      {
+        "title": "13.1 方差常弹性（CEV）模型",
+        "page": 343,
+        "depth": 2,
+        "printedPage": "333"
+      },
+      {
+        "title": "13.2 跳跃",
+        "page": 345,
+        "depth": 2,
+        "printedPage": "335"
+      },
+      {
+        "title": "13.3 过程与分布的进一步分类",
+        "page": 350,
+        "depth": 2,
+        "printedPage": "340"
+      },
+      {
+        "title": "13.4 随机波动率",
+        "page": 353,
+        "depth": 2,
+        "printedPage": "343"
+      },
+      {
+        "title": "13.4.1 Fourier 变换与 Fourier 方法",
+        "page": 357,
+        "depth": 3,
+        "printedPage": "347"
+      },
+      {
+        "title": "13.4.2 求解随机波动率问题",
+        "page": 358,
+        "depth": 3,
+        "printedPage": "348"
+      },
+      {
+        "title": "13.5 方差 Gamma 模型",
+        "page": 360,
+        "depth": 2,
+        "printedPage": "350"
+      },
+      {
+        "title": "13.6 波动率指数 VIX",
+        "page": 364,
+        "depth": 2,
+        "printedPage": "354"
+      },
+      {
+        "title": "第十四章 恢复定理",
+        "page": 368,
+        "depth": 1,
+        "printedPage": "358"
+      },
+      {
+        "title": "14.1 Ross 恢复模型",
+        "page": 370,
+        "depth": 2,
+        "printedPage": "360"
+      },
+      {
+        "title": "14.2 扩散过程的恢复",
+        "page": 374,
+        "depth": 2,
+        "printedPage": "364"
+      },
+      {
+        "title": "14.3 有界观测下的误差界",
+        "page": 380,
+        "depth": 2,
+        "printedPage": "370"
+      },
+      {
+        "title": "14.4 误设的恢复",
+        "page": 382,
+        "depth": 2,
+        "printedPage": "372"
+      },
+      {
+        "title": "第十五章 信息与分歧",
+        "page": 384,
+        "depth": 1,
+        "printedPage": "374"
+      },
+      {
+        "title": "15.1 对分歧达成共识",
+        "page": 384,
+        "depth": 2,
+        "printedPage": "374"
+      },
+      {
+        "title": "15.2 含噪理性预期均衡（NREE）模型",
+        "page": 393,
+        "depth": 2,
+        "printedPage": "383"
+      },
+      {
+        "title": "15.3 策略性投资者",
+        "page": 396,
+        "depth": 2,
+        "printedPage": "386"
+      },
+      {
+        "title": "致谢",
+        "page": 401,
+        "depth": 1,
+        "printedPage": "391"
+      },
+      {
+        "title": "附录 A 集合与函数",
+        "page": 403,
+        "depth": 1,
+        "printedPage": "393"
+      },
+      {
+        "title": "A.1 集合",
+        "page": 403,
+        "depth": 2,
+        "printedPage": "393"
+      },
+      {
+        "title": "A.2 函数",
+        "page": 405,
+        "depth": 2,
+        "printedPage": "395"
+      },
+      {
+        "title": "附录 B 拓扑与线性代数",
+        "page": 406,
+        "depth": 1,
+        "printedPage": "396"
+      },
+      {
+        "title": "B.1 度量空间",
+        "page": 406,
+        "depth": 2,
+        "printedPage": "396"
+      },
+      {
+        "title": "B.2 向量空间",
+        "page": 407,
+        "depth": 2,
+        "printedPage": "397"
+      },
+      {
+        "title": "B.3 向量与矩阵",
+        "page": 410,
+        "depth": 2,
+        "printedPage": "400"
+      },
+      {
+        "title": "B.4 线性代数",
+        "page": 412,
+        "depth": 2,
+        "printedPage": "402"
+      },
+      {
+        "title": "B.5 随机矩阵",
+        "page": 414,
+        "depth": 2,
+        "printedPage": "404"
+      },
+      {
+        "title": "附录 C 实分析",
+        "page": 417,
+        "depth": 1,
+        "printedPage": "407"
+      },
+      {
+        "title": "C.1 序列与级数的极限",
+        "page": 417,
+        "depth": 2,
+        "printedPage": "407"
+      },
+      {
+        "title": "重要极限",
+        "page": 417,
+        "depth": 4,
+        "printedPage": "407"
+      },
+      {
+        "title": "极限运算",
+        "page": 417,
+        "depth": 4,
+        "printedPage": "407"
+      },
+      {
+        "title": "级数",
+        "page": 417,
+        "depth": 4,
+        "printedPage": "407"
+      },
+      {
+        "title": "重要级数极限与收敛判别",
+        "page": 418,
+        "depth": 4,
+        "printedPage": "408"
+      },
+      {
+        "title": "C.2 连续性",
+        "page": 418,
+        "depth": 2,
+        "printedPage": "408"
+      },
+      {
+        "title": "C.3 导数与 Taylor 展开",
+        "page": 419,
+        "depth": 2,
+        "printedPage": "409"
+      },
+      {
+        "title": "C.4 多元微积分",
+        "page": 420,
+        "depth": 2,
+        "printedPage": "410"
+      },
+      {
+        "title": "C.5 最优化",
+        "page": 422,
+        "depth": 2,
+        "printedPage": "412"
+      },
+      {
+        "title": "附录 D Lebesgue–Stieltjes 积分",
+        "page": 424,
+        "depth": 1,
+        "printedPage": "414"
+      },
+      {
+        "title": "附录 E MATLAB 代码",
+        "page": 427,
+        "depth": 1,
+        "printedPage": "417"
+      },
+      {
+        "title": "参考文献",
+        "page": 429,
+        "depth": 1,
+        "printedPage": "419"
+      },
+      {
+        "title": "索引",
+        "page": 439,
+        "depth": 1,
+        "printedPage": "429"
+      }
+    ],
+    "contentsFile": 0,
+    "contentsNote": "目录链接直达中文译本对应页面，页码按译本印刷页码显示。"
   }
 }
